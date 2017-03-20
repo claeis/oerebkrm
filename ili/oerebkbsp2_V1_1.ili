@@ -1,0 +1,22 @@
+INTERLIS 2.3;
+
+/** Beispiel eines Themenmodells, dass die OEREBK-Grundstruktur ergänzt.
+ */
+!!@ furtherInformation=http://www.cadastre.ch/oereb-public
+!!@ technicalContact=mailto:infovd@swisstopo.ch
+MODEL oerebkbsp2_V1_1 (de)
+AT "http://models.geo.admin.ch/V_D/OeREB/"
+VERSION "2016-08-15"  =
+  IMPORTS GeometryCHLV95_V1;
+
+  TOPIC Bauzone =
+
+    CLASS Zonenflaeche =
+      Zonenart : MANDATORY TEXT*20;
+      PerimeterDerFlaeche : MANDATORY GeometryCHLV95_V1.Area;
+      gueltigAb : MANDATORY FORMAT INTERLIS.XMLDate "1970-1-1" .. "2100-12-31";
+    END Zonenflaeche;
+
+  END Bauzone;
+
+END oerebkbsp2_V1_1.
