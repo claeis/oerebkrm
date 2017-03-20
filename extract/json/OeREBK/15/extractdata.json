@@ -104,6 +104,11 @@
       		"minimum":0,
       		"maximum":999999999
       	},
+      	"Length":{
+      		"type" : "number",
+      		"minimum":0,
+      		"maximum":999999999
+      	},
       	"PointPropertyType":{
       		"coordinates" :{
       			"type" : "array",
@@ -114,6 +119,20 @@
       	},
       	"CurvePropertyType":{
       		"coordinates" :{
+      			"type" : "array",
+      			"items" : { "type":"number"},
+      			"minItems": 2
+      		},
+      		"crs" :{"type":"string"},
+  		"isosqlmmwkb" :{ "$ref": "#/definitions/base64Binary" }
+      	},
+      	"EnvelopeType":{
+      		"lowerCorner" :{
+      			"type" : "array",
+      			"items" : { "type":"number"},
+      			"minItems": 2
+      		},
+      		"upperCorner" :{
       			"type" : "array",
       			"items" : { "type":"number"},
       			"minItems": 2
@@ -146,6 +165,9 @@
   	"ThemeCode" : {
   		"pattern" : "LandUsePlans|MotorwaysProjectPlaningZones|MotorwaysBuildingLines|RailwaysProjectPlanningZones|RailwaysBuildingLines|AirportsProjectPlanningZones|AirportsBuildingLines|AirportsSecurityZonePlans|ContaminatedSites|ContaminatedMilitarySites|ContaminatedCivilAviationSites|ContaminatedPublicTransportSites|GroundwaterProtectionZones|GroundwaterProtectionSites|NoiseSensitivityLevels|ForestPerimeters|ForestDistanceLines|(ch.[A-Z]{2}.[a-zA-Z][a-zA-Z0-9]*)|(ch.[0-9]{4}.[a-zA-Z][a-zA-Z0-9]*)|(fl.[a-zA-Z][a-zA-Z0-9]*)"
   	},
+  	"DocumentTypeCode" : {
+  		"pattern" : "LegalProvision|Law|Hint"
+  	},
   	"LegendEntry" : {
   		"Symbol" :{ "$ref": "#/definitions/base64Binary"},
   		"SymbolRef" :{ "$ref": "#/definitions/anyURI"},
@@ -164,13 +186,17 @@
       		"OtherLegend" :{ 
       			"type":"array",
       			"items":{"type":{"$ref": "#/definitions/LegendEntry"}} 
-      		}
+      		},
+      		"minmaxXY" :{"$ref": "#/definitions/EnvelopeType"},
+      		"layerIndex" : { "type":"number","minimum":-1000,"maximum":1000},
+      		"layerOpacity" : {"type":"number","minimum":0.000, "maximum":1.000}
       	},
   	"Glossary" : {
   		"Title" :{ "$ref": "#/definitions/MultilingualText" },
   		"Content" :{ "$ref": "#/definitions/MultilingualMText" }
   	},
       	"Document":{
+            "DocumentType"  :{ "$ref": "#/definitions/DocumentTypeCode"},
             "TextAtWeb"  :{ "$ref": "#/definitions/MultilingualUri"},
             "Lawstatus"  :{ "$ref": "#/definitions/Lawstatus"},
             "Title"  :{ "$ref": "#/definitions/MultilingualText"},
@@ -193,7 +219,7 @@
             	    "items" : { "type":{"$ref": "#/definitions/Document"}}
             }
       	},
-        "LawstatusCode" :{
+        "Lawstatus" :{
           "Code" :{ "$ref": "#/definitions/LawstatusCode"},
           "Text" :{ "$ref": "#/definitions/LocalisedText"}
         },
@@ -208,12 +234,14 @@
         	"maxLength" : 20
         },
         "Article" :{
+          "DocumentType"  :{ "$ref": "#/definitions/DocumentTypeCode"},
           "Number" :{ "$ref": "#/definitions/ArticleNumber"},
           "Text" :{ "$ref": "#/definitions/MultilingualMText"}
         },
         "DocumentBase":{
-        	"TextAtWeb" :{ "$ref": "#/definitions/MultilingualUri"},
-        	"Lawstatus" :{ "$ref": "#/definitions/Lawstatus"}
+            "DocumentType"  :{ "$ref": "#/definitions/DocumentTypeCode"},
+            "TextAtWeb" :{ "$ref": "#/definitions/MultilingualUri"},
+            "Lawstatus" :{ "$ref": "#/definitions/Lawstatus"}
         },
         "Geometry" :{
         	"Point":{ "$ref": "#/definitions/PointPropertyType"},
@@ -232,8 +260,10 @@
       		"TypeCode" :{ "$ref": "#/definitions/RestrictiontypeCode"},
       		"TypeCodelist" :{ "$ref": "#/definitions/anyURI"},
       		"Lawstatus" :{ "$ref": "#/definitions/Lawstatus"},
-      		"Area" :{ "$ref": "#/definitions/Area"},
-      		"PartInPercent": {"type":"number","minimum":0,"maximum":100},
+      		"AreaShare" :{ "$ref": "#/definitions/Area"},
+      		"LengthShare" :{ "$ref": "#/definitions/Length"},
+      		"NrOfPoints" : {"type":"number","minimum":0,"maximum":100},
+      		"PartInPercent": {"type":"number","minimum":0,"maximum":10000000},
       		"Symbol" :{ "$ref": "#/definitions/base64Binary"},
       		"SymbolRef" :{ "$ref": "#/definitions/anyURI"},
       		"Geometry" :{ 
@@ -265,6 +295,7 @@
       			"minItems": 0
       		},
       		"PlanForLandRegister":{ "$ref": "#/definitions/Map"},
+      		"PlanForLandRegisterMainPage":{ "$ref": "#/definitions/Map"},
       		"Reference" :{ 
       			"type" :"array",
       			"items" : { "type" : {	"$ref": "#/definitions/Document"}},
@@ -338,7 +369,9 @@
 	  	  "items" : {"type": {"$ref": "#/definitions/ExclusionOfLiability"}},
 	  	  "minItems" : 0
 	  },
-	  "PLRCadastreAuthority": { "$ref":"#/definitions/Office"}
+	  "PLRCadastreAuthority": { "$ref":"#/definitions/Office"},
+	  "Certification" : { "$ref": "#/definitions/MultilingualMText" },
+	  "CertificationAtWeb" : { "$ref": "#/definitions/MultilingualUri" }
 	}
 
   	
