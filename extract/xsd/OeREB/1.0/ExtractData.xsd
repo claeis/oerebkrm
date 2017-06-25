@@ -1,10 +1,10 @@
 <?xml version="1.0" encoding="UTF-8" ?>
 <xsd:schema xmlns:xsd="http://www.w3.org/2001/XMLSchema" 
-  xmlns="http://schemas.geo.admin.ch/swisstopo/OeREBK/15/ExtractData" 
+  xmlns="http://schemas.geo.admin.ch/V_D/OeREB/1.0/ExtractData" 
   xmlns:gml="http://www.opengis.net/gml/3.2"
   xmlns:xmlsig="http://www.w3.org/2000/09/xmldsig#" 
   targetNamespace=
-"http://schemas.geo.admin.ch/swisstopo/OeREBK/15/ExtractData" 
+  "http://schemas.geo.admin.ch/V_D/OeREB/1.0/ExtractData" 
   elementFormDefault="qualified" attributeFormDefault="unqualified"
   version="1.1.1"
   >

@@ -1,14 +1,14 @@
 <?xml version="1.0" encoding="UTF-8" ?>
 <xsd:schema xmlns:xsd="http://www.w3.org/2001/XMLSchema"
-  xmlns="http://schemas.geo.admin.ch/swisstopo/OeREBK/15/Extract"
-  xmlns:data="http://schemas.geo.admin.ch/swisstopo/OeREBK/15/ExtractData"
+  xmlns="http://schemas.geo.admin.ch/V_D/OeREB/1.0/Extract"
+  xmlns:data="http://schemas.geo.admin.ch/V_D/OeREB/1.0/ExtractData"
   targetNamespace=
-  "http://schemas.geo.admin.ch/swisstopo/OeREBK/15/Extract"
+  "http://schemas.geo.admin.ch/V_D/OeREB/1.0/Extract"
   elementFormDefault="qualified" attributeFormDefault="unqualified"
-  version="0.8"
+  version="1.0.0"
 >
   <xsd:import namespace=
-"http://schemas.geo.admin.ch/swisstopo/OeREBK/15/ExtractData"
+    "http://schemas.geo.admin.ch/V_D/OeREB/1.0/ExtractData"
 schemaLocation="ExtractData.xsd"/>
 
   <xsd:simpleType name="FlavourType">
