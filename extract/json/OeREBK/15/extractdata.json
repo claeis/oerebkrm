@@ -187,7 +187,10 @@
       			"type":"array",
       			"items":{"type":{"$ref": "#/definitions/LegendEntry"}} 
       		},
-      		"minmaxXY" :{"$ref": "#/definitions/EnvelopeType"},
+      		"min_NS03" :{"$ref": "#/definitions/PointPropertyType"},
+      		"max_NS03" :{"$ref": "#/definitions/PointPropertyType"},
+      		"min_NS95" :{"$ref": "#/definitions/PointPropertyType"},
+      		"max_NS95" :{"$ref": "#/definitions/PointPropertyType"},
       		"layerIndex" : { "type":"number","minimum":-1000,"maximum":1000},
       		"layerOpacity" : {"type":"number","minimum":0.000, "maximum":1.000}
       	},
