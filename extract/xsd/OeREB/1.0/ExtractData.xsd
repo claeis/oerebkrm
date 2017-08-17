@@ -6,7 +6,7 @@
   targetNamespace=
   "http://schemas.geo.admin.ch/V_D/OeREB/1.0/ExtractData" 
   elementFormDefault="qualified" attributeFormDefault="unqualified"
-  version="1.0.2"
+  version="1.0.3"
   >
   <xsd:import namespace="http://www.opengis.net/gml/3.2" 
   schemaLocation="http://schemas.opengis.net/gml/3.2.1/gml.xsd"/>
@@ -362,7 +362,7 @@
             </xsd:element>
             <xsd:element name="OfficialTitle" type="MultilingualText" minOccurs="0">
             </xsd:element>
-            <xsd:element name="Abbrevation" type="MultilingualText" minOccurs="0">
+            <xsd:element name="Abbreviation" type="MultilingualText" minOccurs="0">
             </xsd:element>
             <xsd:element name="OfficialNumber" minOccurs="0">
               <xsd:simpleType>
