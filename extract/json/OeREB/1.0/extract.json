@@ -1,6 +1,6 @@
 {
 	"$schema": "http://json-schema.org/draft-04/schema#",
-	"id": "http://schemas.geo.admin.ch/V_D/OeREB/1.0/extract.json",
+	"$id": "http://schemas.geo.admin.ch/V_D/OeREB/1.0/extract.json",
 	"type": "object",
 	"anyOf": [{
 			"$ref": "#/definitions/GetExtractByIdResponse"
