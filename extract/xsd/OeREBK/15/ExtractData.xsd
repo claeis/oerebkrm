@@ -5,7 +5,7 @@
   xmlns:xmlsig="http://www.w3.org/2000/09/xmldsig#"
   targetNamespace="http://schemas.geo.admin.ch/swisstopo/OeREBK/15/ExtractData"
   elementFormDefault="qualified" attributeFormDefault="unqualified"
-  version="0.4">
+  version="2020-05-18">
 
   <xsd:import namespace="http://www.opengis.net/gml/3.2"
   schemaLocation="http://schemas.opengis.net/gml/3.2.1/gml.xsd"/>
@@ -95,13 +95,15 @@
     <xsd:sequence>
       <xsd:element name="Code" type="ThemeCode">
       </xsd:element>
+      <xsd:element name="SubTheme" type="ThemeCode" minOccurs="0">
+      </xsd:element>
       <xsd:element name="Text" type="LocalisedText">
       </xsd:element>
     </xsd:sequence>
   </xsd:complexType>
   <xsd:simpleType name="ThemeCode">
     <xsd:restriction base="xsd:string">
-      <xsd:pattern value="LandUsePlans|MotorwaysProjectPlaningZones|MotorwaysBuildingLines|RailwaysProjectPlanningZones|RailwaysBuildingLines|AirportsProjectPlanningZones|AirportsBuildingLines|AirportsSecurityZonePlans|ContaminatedSites|ContaminatedMilitarySites|ContaminatedCivilAviationSites|ContaminatedPublicTransportSites|GroundwaterProtectionZones|GroundwaterProtectionSites|NoiseSensitivityLevels|ForestPerimeters|ForestDistanceLines|(ch\.[A-Z]{2}\.[a-zA-Z][a-zA-Z0-9]*)|(ch\.[0-9]{4}\.[a-zA-Z][a-zA-Z0-9]*)|(fl\.[a-zA-Z][a-zA-Z0-9]*)"/>
+      <xsd:pattern value="(ch\.[a-zA-Z][a-zA-Z0-9]*)|(ch\.[A-Z]{2}\.[a-zA-Z][a-zA-Z0-9]*)|(ch\.[0-9]{4}\.[a-zA-Z][a-zA-Z0-9]*)|(fl\.[a-zA-Z][a-zA-Z0-9]*)"/>
     </xsd:restriction>
   </xsd:simpleType>
   <xsd:complexType  name="LocalisedUri">
@@ -265,13 +267,6 @@
       <xsd:element name="TypeCode" type="RestrictiontypeCode"/>
       <xsd:element name="TypeCodelist" type="xsd:anyURI"/>
       <xsd:element name="Theme" type="Theme"/>
-      <xsd:element name="SubTheme" minOccurs="0">
-        <xsd:simpleType>
-          <xsd:restriction base="xsd:normalizedString">
-            <xsd:maxLength value="60"/>
-          </xsd:restriction>
-        </xsd:simpleType>
-      </xsd:element>
       <xsd:element ref="extensions" minOccurs="0"/>
     </xsd:sequence>
   </xsd:complexType>
@@ -347,13 +342,6 @@
       <xsd:element name="Information" type="MultilingualMText">
       </xsd:element>
       <xsd:element name="Theme" type="Theme"/>
-      <xsd:element name="SubTheme" minOccurs="0">
-        <xsd:simpleType>
-          <xsd:restriction base="xsd:normalizedString">
-            <xsd:maxLength value="60"/>
-          </xsd:restriction>
-        </xsd:simpleType>
-      </xsd:element>
       <xsd:element name="TypeCode" type="RestrictiontypeCode" minOccurs="0"/>
       <xsd:element name="TypeCodelist" type="xsd:anyURI" minOccurs="0"/>
       <xsd:element name="Lawstatus" type="Lawstatus"/>
