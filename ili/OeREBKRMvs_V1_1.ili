@@ -1,6 +1,6 @@
 INTERLIS 2.3;
 
-/** Basisdefinition für Erlasse (Rechtsvorschriften, Hinweise auf Gesetzliche Grundlagen)
+/** Basisdefinition fÃ¼r Erlasse (Rechtsvorschriften, Hinweise auf Gesetzliche Grundlagen)
  */
 !!@ furtherInformation=http://www.cadastre.ch/oereb-public
 !!@ technicalContact=mailto:infovd@swisstopo.ch
@@ -9,16 +9,16 @@ AT "http://models.geo.admin.ch/V_D/OeREB/"
 VERSION "2016-08-15"  =
   IMPORTS OeREBKRM_V1_1,CHAdminCodes_V1,LocalisationCH_V1;
 
-  /** Dieses Teilmodell definiert die Struktur für die Erlasse im Allgemeinen.
-   * OID als URIs damit der Verweis auf Grundlagenerlasse (z.B. Kantonale Gesetze auf Bundesgesetze) in einem anderen Behälter (da durch eine andere Stelle erfasst/nachgeführt) verweisen können.
+  /** Dieses Teilmodell definiert die Struktur fÃ¼r die Erlasse im Allgemeinen.
+   * OID als URIs damit der Verweis auf Grundlagenerlasse (z.B. Kantonale Gesetze auf Bundesgesetze) in einem anderen BehÃ¤lter (da durch eine andere Stelle erfasst/nachgefÃ¼hrt) verweisen kÃ¶nnen.
    */
   TOPIC Vorschriften =
     OID AS OeREBKRM_V1_1.OEREBOID;
 
-    /** Eine organisatorische Einheit innerhalb der öffentlichen Verwaltung, z.B. eine für Geobasisdaten zuständige Stelle.
+    /** Eine organisatorische Einheit innerhalb der Ã¶ffentlichen Verwaltung, z.B. eine fÃ¼r Geobasisdaten zustÃ¤ndige Stelle.
      */
     CLASS Amt =
-      /** Name des Amtes z.B. "Amt für Gemeinden und Raumordnung des Kantons Bern".
+      /** Name des Amtes z.B. "Amt fÃ¼r Gemeinden und Raumordnung des Kantons Bern".
        */
       Name : MANDATORY LocalisationCH_V1.MultilingualText;
       /** Verweis auf die Website des Amtes z.B. "http://www.jgk.be.ch/jgk/de/index/direktion/organisation/agr.html".
@@ -38,7 +38,7 @@ VERSION "2016-08-15"  =
       /** Status, ob dieses Element in Kraft ist
        */
       Rechtsstatus : MANDATORY OeREBKRM_V1_1.RechtsStatus;
-      /** Datum, ab dem dieses Element in Auszügen erscheint
+      /** Datum, ab dem dieses Element in AuszÃ¼gen erscheint
        */
       publiziertAb : MANDATORY OeREBKRM_V1_1.Datum;
     END DokumentBasis;
@@ -62,16 +62,16 @@ VERSION "2016-08-15"  =
       /** Titel (oder falls vorhanden Kurztitel) des Dokuments; z.B. "Raumplanungsgesetz"
        */
       Titel : MANDATORY LocalisationCH_V1.MultilingualText;
-      /** Offizieller Titel des Dokuments; z.B.  "Bundesgesetz über die Raumplanung"
+      /** Offizieller Titel des Dokuments; z.B.  "Bundesgesetz Ã¼ber die Raumplanung"
        */
       OffiziellerTitel : LocalisationCH_V1.MultilingualText;
-      /** Abkürzung des Gesetzes; z.B. "RPG"
+      /** AbkÃ¼rzung des Gesetzes; z.B. "RPG"
        */
       Abkuerzung : LocalisationCH_V1.MultilingualText;
       /** Offizielle Nummer des Gesetzes; z.B. "SR 700"
        */
       OffizielleNr : TEXT*20;
-      /** Kantonskürzel falls Vorschrift des Kantons oder der Gemeinde. Falls die Angabe fehlt, ist es eine Vorschrift des Bundes. z.B. "BE"
+      /** KantonskÃ¼rzel falls Vorschrift des Kantons oder der Gemeinde. Falls die Angabe fehlt, ist es eine Vorschrift des Bundes. z.B. "BE"
        */
       Kanton : CHAdminCodes_V1.CHCantonCode;
       /** Falls die Angabe fehlt, ist es ein Erlass des Kantons oder des Bundes. z.B. "942"
@@ -82,7 +82,7 @@ VERSION "2016-08-15"  =
       Dokument : BLACKBOX BINARY;
     END Dokument;
 
-    /** Reglemente, Vorschriften etc. die generell konkret sind (generell für die Person, die nicht bekannt ist, konkret für dass der Raumbezug mit Karte definiert ist), die zusammen mit der exakten geometrischen Definition als Einheit die Eigentumsbeschränkung unmittelbar beschreiben und innerhalb desselben Verfahrens verabschiedet worden sind.
+    /** Reglemente, Vorschriften etc. die generell konkret sind (generell fÃ¼r die Person, die nicht bekannt ist, konkret fÃ¼r dass der Raumbezug mit Karte definiert ist), die zusammen mit der exakten geometrischen Definition als Einheit die EigentumsbeschrÃ¤nkung unmittelbar beschreiben und innerhalb desselben Verfahrens verabschiedet worden sind.
      */
     CLASS Rechtsvorschrift
     EXTENDS Dokument =
@@ -110,8 +110,8 @@ VERSION "2016-08-15"  =
 
   END Vorschriften;
 
-  /** Dieses Teilmodell definiert die Struktur für die Hinweise auf die gesetzlichen Grundlagen, die als solche nicht Teil des ÖREB-Katasters sind, von diesem aber referenziert werden können.
-   * OID als URIs damit der Verweis auf Grundlagengesetze (z.B. Kantonale Gesetze auf Bundesgesetze) in einem anderen Behälter (da durch eine andere Stelle erfasst/nachgeführt) verweisen können.
+  /** Dieses Teilmodell definiert die Struktur fÃ¼r die Hinweise auf die gesetzlichen Grundlagen, die als solche nicht Teil des Ã–REB-Katasters sind, von diesem aber referenziert werden kÃ¶nnen.
+   * OID als URIs damit der Verweis auf Grundlagengesetze (z.B. Kantonale Gesetze auf Bundesgesetze) in einem anderen BehÃ¤lter (da durch eine andere Stelle erfasst/nachgefÃ¼hrt) verweisen kÃ¶nnen.
    */
   TOPIC HinweiseGesetzlicheGrundlagen
   EXTENDS OeREBKRMvs_V1_1.Vorschriften =

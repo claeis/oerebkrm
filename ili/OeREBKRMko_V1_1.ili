@@ -9,14 +9,14 @@ AT "http://models.geo.admin.ch/V_D/OeREB/"
 VERSION "2016-08-15"  =
   IMPORTS OeREBKRM_V1_1,LocalisationCH_V1;
 
-  /** Zum Zweck der Nachvollziehbarkeit müssen innerhalb der ÖREB-Katasterorganisation des Kantons Metadaten gem. diesem Teilmodell geführt werden.
+  /** Zum Zweck der Nachvollziehbarkeit mÃ¼ssen innerhalb der Ã–REB-Katasterorganisation des Kantons Metadaten gem. diesem Teilmodell gefÃ¼hrt werden.
    */
   TOPIC MetadatenKO =
 
-    /** Eine organisatorische Einheit innerhalb der öffentlichen Verwaltung, z.B. eine für Geobasisdaten zuständige Stelle.
+    /** Eine organisatorische Einheit innerhalb der Ã¶ffentlichen Verwaltung, z.B. eine fÃ¼r Geobasisdaten zustÃ¤ndige Stelle.
      */
     CLASS Amt =
-      /** Name des Amtes z.B. "Amt für Gemeinden und Raumordnung des Kantons Bern".
+      /** Name des Amtes z.B. "Amt fÃ¼r Gemeinden und Raumordnung des Kantons Bern".
        */
       Name : MANDATORY LocalisationCH_V1.MultilingualText;
       /** Verweis auf die Website des Amtes z.B. "http://www.jgk.be.ch/site/agr/".
@@ -30,10 +30,10 @@ VERSION "2016-08-15"  =
     /** Angaben zur Datenlieferung an die Katasterorganisation des Kantons.
      */
     CLASS DatenAufnahme =
-      /** Zeitpunkt der Aufnahme oder der letzten Änderung der Daten
+      /** Zeitpunkt der Aufnahme oder der letzten Ã„nderung der Daten
        */
       Datum : MANDATORY FORMAT INTERLIS.XMLDate "2010-1-1" .. "2050-12-31";
-      /** BasketId oder Dateiname oder vollständiger WFS-Request.
+      /** BasketId oder Dateiname oder vollstÃ¤ndiger WFS-Request.
        */
       DatensatzIdentifikation : MANDATORY URI;
     END DatenAufnahme;

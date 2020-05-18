@@ -19,7 +19,7 @@ VERSION "2016-08-15"  =
     END Bauzone;
 
     CLASS Geometrie (EXTENDED) =
-      /** Nur Fl‰chen sind zul‰ssig
+      /** Nur Fl√§chen sind zul√§ssig
        */
       MANDATORY CONSTRAINT DEFINED(Flaeche_LV03) OR DEFINED(Flaeche_LV95);
     END Geometrie;

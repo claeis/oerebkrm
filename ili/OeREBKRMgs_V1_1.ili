@@ -1,6 +1,6 @@
 INTERLIS 2.3;
 
-/** Grundstruktur zur Verwendung innerhalb der zuständigen Stelle für die Geobasisdaten eines OeREBK-Themas.
+/** Grundstruktur zur Verwendung innerhalb der zustÃ¤ndigen Stelle fÃ¼r die Geobasisdaten eines OeREBK-Themas.
  */
 !!@ furtherInformation=http://www.cadastre.ch/oereb-public
 !!@ technicalContact=mailto:infovd@swisstopo.ch
@@ -9,7 +9,7 @@ AT "http://models.geo.admin.ch/V_D/OeREB/"
 VERSION "2016-08-15"  =
   IMPORTS OeREBKRMvs_V1_1,OeREBKRM_V1_1,LocalisationCH_V1;
 
-  /** Um aus den Geodaten und den Rechtsvorschriften die konkreten öffentlichrechtlichen Eigentumsbeschränkungen zu bilden, werden Definitionen für die Zuordnung (OEREB-Definitionen) benötigt.
+  /** Um aus den Geodaten und den Rechtsvorschriften die konkreten Ã¶ffentlichrechtlichen EigentumsbeschrÃ¤nkungen zu bilden, werden Definitionen fÃ¼r die Zuordnung (OEREB-Definitionen) benÃ¶tigt.
    */
   TOPIC Grundstruktur
   EXTENDS OeREBKRMvs_V1_1.Vorschriften =
@@ -22,21 +22,21 @@ VERSION "2016-08-15"  =
       AttributWert = TEXT;
     STRUCTURE AttributWert_ = value : MANDATORY AttributWert; END AttributWert_;
 
-    /** Abstrakte Definition der Eigentumsbeschränkung.
+    /** Abstrakte Definition der EigentumsbeschrÃ¤nkung.
      */
     CLASS OerebDefinition =
-      /** Textliche Beschreibung der Beschränkung; z.B. "Wohnen W3"
+      /** Textliche Beschreibung der BeschrÃ¤nkung; z.B. "Wohnen W3"
        */
       Aussage : MANDATORY LocalisationCH_V1.MultilingualMText;
       /** Definition des Raumbezugs in Prosa, z.B. "Im Abstand von 5m zum Strassenrand".
        */
       UmschreibungRaumbezug : LocalisationCH_V1.MultilingualMText;
-      /** Einordnung der Eigentumsbeschränkung in ein OEREB-Katasterthema
+      /** Einordnung der EigentumsbeschrÃ¤nkung in ein OEREB-Katasterthema
        */
       OerebkThema : MANDATORY OeREBKRM_V1_1.Thema;
     END OerebDefinition;
 
-    /** Formale/maschinen-interpretierbare  Definition der Eigentumsbeschränkung (insbesondere des Raumbezugs)
+    /** Formale/maschinen-interpretierbare  Definition der EigentumsbeschrÃ¤nkung (insbesondere des Raumbezugs)
      */
     CLASS TechOerebDef (ABSTRACT) =
     END TechOerebDef;
@@ -54,7 +54,7 @@ VERSION "2016-08-15"  =
       /** Name des Id-Attributs z.B. "BiotopNr"
        */
       IdAttributName : MANDATORY TEXT;
-      /** Wert des Identifikators für diese Eigentumsbeschränkung z.B. "34".
+      /** Wert des Identifikators fÃ¼r diese EigentumsbeschrÃ¤nkung z.B. "34".
        */
       IdAttributWert : MANDATORY AttributWert;
       /** Name des Attributs mit der Gueltigkeit z.B. "gueltigAb"
@@ -75,7 +75,7 @@ VERSION "2016-08-15"  =
       /** Name des Typ-/Art-Attributs z.B. "Zonenart"
        */
       TypAttributName : TEXT;
-      /** Werte des Art-Attributs die für diese Eigentumsbeschränkung massgebend sind z.B. "W3".
+      /** Werte des Art-Attributs die fÃ¼r diese EigentumsbeschrÃ¤nkung massgebend sind z.B. "W3".
        */
       TypAttributWert : BAG {0..*} OF AttributWert_;
       /** Name des Attributs mit der Gueltigkeit z.B. "gueltigAb"
@@ -85,7 +85,7 @@ VERSION "2016-08-15"  =
 
     ASSOCIATION HinweisVorschrift =
       Eigentumsbeschraenkung -- {0..*} OerebDefinition;
-      /** Verweis auf die Rechtsvorschrift (oder das Gesetz/den Artikel für abstrakte Eigentumsbeschränkungen). Kann in einem anderen Behälter sein.
+      /** Verweis auf die Rechtsvorschrift (oder das Gesetz/den Artikel fÃ¼r abstrakte EigentumsbeschrÃ¤nkungen). Kann in einem anderen BehÃ¤lter sein.
        */
       Vorschrift (EXTERNAL) -- {1..*} OeREBKRMvs_V1_1.Vorschriften.DokumentBasis;
       /** Hinweis auf spezifische Artikel.
@@ -94,15 +94,15 @@ VERSION "2016-08-15"  =
     END HinweisVorschrift;
 
     ASSOCIATION TechOerebDefOerebDefinition =
-      /** Verweis auf die abstrakte OeREB-Definition (kann in einem anderen Behälter sein)
+      /** Verweis auf die abstrakte OeREB-Definition (kann in einem anderen BehÃ¤lter sein)
        */
       OerebDefinition (EXTERNAL) -<#> {1} OerebDefinition;
-      /** Formale/maschinen-interpretierbare  Definition der Eigentumsbeschränkung (insbesondere des Raumbezugs)
+      /** Formale/maschinen-interpretierbare  Definition der EigentumsbeschrÃ¤nkung (insbesondere des Raumbezugs)
        */
       TechOerebDef -- {1} TechOerebDef;
     END TechOerebDefOerebDefinition;
 
-    /** OEREB-Definitionen können im Interesse einfacherer Definitionen auf anderen OEREB-Definitionen aufbauen.
+    /** OEREB-Definitionen kÃ¶nnen im Interesse einfacherer Definitionen auf anderen OEREB-Definitionen aufbauen.
      */
     ASSOCIATION VerfeinerungBasis =
       Verfeinerung -- {0..*} OerebDefinition;
@@ -111,14 +111,14 @@ VERSION "2016-08-15"  =
 
   END Grundstruktur;
 
-  /** Metadaten zu den Geodaten innerhalb der für die Geobasisdaten zuständigen Stelle (zur Aufbereitung der Transferstruktur)
+  /** Metadaten zu den Geodaten innerhalb der fÃ¼r die Geobasisdaten zustÃ¤ndigen Stelle (zur Aufbereitung der Transferstruktur)
    */
   TOPIC OerebMetadaten =
 
-    /** Eine organisatorische Einheit innerhalb der öffentlichen Verwaltung, z.B. eine für Geobasisdaten zuständige Stelle.
+    /** Eine organisatorische Einheit innerhalb der Ã¶ffentlichen Verwaltung, z.B. eine fÃ¼r Geobasisdaten zustÃ¤ndige Stelle.
      */
     CLASS Amt =
-      /** Name des Amtes z.B. "Amt für Gemeinden und Raumordnung des Kantons Bern".
+      /** Name des Amtes z.B. "Amt fÃ¼r Gemeinden und Raumordnung des Kantons Bern".
        */
       Name : MANDATORY LocalisationCH_V1.MultilingualText;
       /** Verweis auf die Website des Amtes z.B. "http://www.jgk.be.ch/jgk/de/index/direktion/organisation/agr.html".
@@ -132,7 +132,7 @@ VERSION "2016-08-15"  =
     /** Angaben zum Darstellungsdienst.
      */
     CLASS Darstellungsdienst =
-      /** WMS GetMap-Request (für Maschine-Maschine-Kommunikation), z.B. "https://wms.geo.admin.ch/?SERVICE=WMS&REQUEST=GetMap&VERSION=1.1.1&STYLES=default&SRS=EPSG:21781&BBOX=475000,60000,845000,310000&WIDTH=740&HEIGHT=500&FORMAT=image/png&LAYERS=ch.bazl.kataster-belasteter-standorte-zivilflugplaetze.oereb"
+      /** WMS GetMap-Request (fÃ¼r Maschine-Maschine-Kommunikation), z.B. "https://wms.geo.admin.ch/?SERVICE=WMS&REQUEST=GetMap&VERSION=1.1.1&STYLES=default&SRS=EPSG:21781&BBOX=475000,60000,845000,310000&WIDTH=740&HEIGHT=500&FORMAT=image/png&LAYERS=ch.bazl.kataster-belasteter-standorte-zivilflugplaetze.oereb"
        */
       VerweisWMS : MANDATORY URI;
       /** Verweis auf ein Dokument das die Karte beschreibt; z.B. "https://wms.geo.admin.ch/?SERVICE=WMS&REQUEST=GetLegendGraphic&VERSION=1.1.1&FORMAT=image/png&LAYER=ch.bazl.kataster-belasteter-standorte-zivilflugplaetze.oereb"
@@ -143,7 +143,7 @@ VERSION "2016-08-15"  =
     /** OEREB-Metadaten zu den Geodaten
      */
     CLASS OerebMetadaten =
-      /** BasketId oder Dateiname oder vollständiger WFS-Request.
+      /** BasketId oder Dateiname oder vollstÃ¤ndiger WFS-Request.
        */
       DatensatzIdentifikator : MANDATORY URI;
       /** Verweis auf weitere, maschinenlesbare, Metadaten (XML) der Geodaten.
@@ -152,14 +152,14 @@ VERSION "2016-08-15"  =
     END OerebMetadaten;
 
     ASSOCIATION AmtMetadaten =
-      /** Amt das für die Geodaten zuständig ist.
+      /** Amt das fÃ¼r die Geodaten zustÃ¤ndig ist.
        */
       Amt -- {1} Amt;
       Metadaten -<#> {1} OerebMetadaten;
     END AmtMetadaten;
 
     ASSOCIATION DarstellungsdienstMetadaten =
-      /** Darstellungsdienst für die Geodaten.
+      /** Darstellungsdienst fÃ¼r die Geodaten.
        */
       Darstellungsdienst -- {1} Darstellungsdienst;
       Metadaten -<#> {1} OerebMetadaten;

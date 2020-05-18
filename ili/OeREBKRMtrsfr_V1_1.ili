@@ -1,6 +1,6 @@
 INTERLIS 2.3;
 
-/** Schnittstelle zwischen zuständiger Stelle für die Geobasisdaten und Katasterorganisation des Kantons.
+/** Schnittstelle zwischen zustÃ¤ndiger Stelle fÃ¼r die Geobasisdaten und Katasterorganisation des Kantons.
  */
 !!@ furtherInformation=http://www.cadastre.ch/oereb-public
 !!@ technicalContact=mailto:infovd@swisstopo.ch
@@ -9,19 +9,19 @@ AT "http://models.geo.admin.ch/V_D/OeREB/"
 VERSION "2016-08-15"  =
   IMPORTS OeREBKRM_V1_1,OeREBKRMvs_V1_1,CHAdminCodes_V1,LocalisationCH_V1,GeometryCHLV03_V1,GeometryCHLV95_V1;
 
-  /** Dieses Teilmodell definiert die Struktur der Daten, wie sie von der zuständigen Stelle für die Geobasisdaten an die Abgabestelle des ÖREB-Kataster-Auszugs geliefert werden müssen. Dieses Datenmodell definiert somit, welche Daten ein minimales Datenmodell enthalten muss, um als ÖREB-Kataster fähiges Datenmodell zu gelten.
+  /** Dieses Teilmodell definiert die Struktur der Daten, wie sie von der zustÃ¤ndigen Stelle fÃ¼r die Geobasisdaten an die Abgabestelle des Ã–REB-Kataster-Auszugs geliefert werden mÃ¼ssen. Dieses Datenmodell definiert somit, welche Daten ein minimales Datenmodell enthalten muss, um als Ã–REB-Kataster fÃ¤higes Datenmodell zu gelten.
    */
   TOPIC Transferstruktur
   EXTENDS OeREBKRMvs_V1_1.Vorschriften =
     DEPENDS ON OeREBKRMvs_V1_1.HinweiseGesetzlicheGrundlagen;
 
-    /** Wurzelelement für Informationen über eine Beschränkung des Grundeigentums, die rechtskräftig, z.B. auf Grund einer Genehmigung oder eines richterlichen Entscheids, zustande gekommen ist.
+    /** Wurzelelement fÃ¼r Informationen Ã¼ber eine BeschrÃ¤nkung des Grundeigentums, die rechtskrÃ¤ftig, z.B. auf Grund einer Genehmigung oder eines richterlichen Entscheids, zustande gekommen ist.
      */
     CLASS Eigentumsbeschraenkung =
-      /** Textliche Beschreibung der Beschränkung; z.B. "Wohnen W3"
+      /** Textliche Beschreibung der BeschrÃ¤nkung; z.B. "Wohnen W3"
        */
       Aussage : MANDATORY LocalisationCH_V1.MultilingualMText;
-      /** Einordnung der Eigentumsbeschränkung in ein ÖREBK-Thema
+      /** Einordnung der EigentumsbeschrÃ¤nkung in ein Ã–REBK-Thema
        */
       Thema : MANDATORY OeREBKRM_V1_1.Thema;
       /** z.B. Planungszonen innerhalb Nutzungsplanung
@@ -30,43 +30,43 @@ VERSION "2016-08-15"  =
       /** z.B. kantonale Themen. Der Code wird nach folgendem Muster gebildet: ch.{canton}.{topic}
        * fl.{topic}
        * ch.{bfsnr}.{topic}
-       * Wobei {canton} das offizielle zwei-stellige Kürzel des Kantons ist, {to-pic} der Themenname und {bfsnr} die Gemeindenummer gem. BFS.
+       * Wobei {canton} das offizielle zwei-stellige KÃ¼rzel des Kantons ist, {to-pic} der Themenname und {bfsnr} die Gemeindenummer gem. BFS.
        */
       WeiteresThema : OeREBKRM_V1_1.WeiteresThema;
-      /** Themenspezifische, maschinen-lesbare Art gem. Originalmodell der Eigentumsbeschränkung
+      /** Themenspezifische, maschinen-lesbare Art gem. Originalmodell der EigentumsbeschrÃ¤nkung
        */
       ArtCode : OeREBKRM_V1_1.ArtEigentumsbeschraenkung;
-      /** Identifikation der Codeliste bzw. des Wertebereichs für ArtCode
+      /** Identifikation der Codeliste bzw. des Wertebereichs fÃ¼r ArtCode
        */
       ArtCodeliste : URI;
-      /** Status, ob diese Eigentumsbeschränkung in Kraft ist
+      /** Status, ob diese EigentumsbeschrÃ¤nkung in Kraft ist
        */
       Rechtsstatus : MANDATORY OeREBKRM_V1_1.RechtsStatus;
-      /** Datum, ab dem diese Eigentumsbeschränkung in Auszügen erscheint
+      /** Datum, ab dem diese EigentumsbeschrÃ¤nkung in AuszÃ¼gen erscheint
        */
       publiziertAb : MANDATORY OeREBKRM_V1_1.Datum;
       MANDATORY CONSTRAINT Thema!=#WeiteresThema OR DEFINED(WeiteresThema);
     END Eigentumsbeschraenkung;
 
-    /** Punkt-, linien-, oder flächenförmige Geometrie. Neu zu definierende Eigentumsbeschränkungen sollten i.d.R. flächenförmig sein.
+    /** Punkt-, linien-, oder flÃ¤chenfÃ¶rmige Geometrie. Neu zu definierende EigentumsbeschrÃ¤nkungen sollten i.d.R. flÃ¤chenfÃ¶rmig sein.
      */
     CLASS Geometrie =
       /** Punktgeometrie
        */
       Punkt_LV03 : GeometryCHLV03_V1.Coord2;
       Punkt_LV95 : GeometryCHLV95_V1.Coord2;
-      /** Linienförmige Geometrie
+      /** LinienfÃ¶rmige Geometrie
        */
       Linie_LV03 : GeometryCHLV03_V1.Line;
       Linie_LV95 : GeometryCHLV95_V1.Line;
-      /** Flächenförmige Geometrie
+      /** FlÃ¤chenfÃ¶rmige Geometrie
        */
       Flaeche_LV03 : GeometryCHLV03_V1.Surface;
       Flaeche_LV95 : GeometryCHLV95_V1.Surface;
       /** Status, ob diese Geometrie in Kraft ist
        */
       Rechtsstatus : MANDATORY OeREBKRM_V1_1.RechtsStatus;
-      /** Datum, ab dem diese Geometrie in Auszügen erscheint
+      /** Datum, ab dem diese Geometrie in AuszÃ¼gen erscheint
        */
       publiziertAb : MANDATORY OeREBKRM_V1_1.Datum;
       /** Verweis auf maschinenlesbare Metadaten (XML) der zugrundeliegenden Geobasisdaten. z.B. http://www.geocat.ch/geonetwork/srv/deu/gm03.xml?id=705
@@ -75,16 +75,16 @@ VERSION "2016-08-15"  =
       MANDATORY CONSTRAINT DEFINED(Punkt_LV03) OR DEFINED(Linie_LV03) OR DEFINED(Flaeche_LV03) OR DEFINED(Punkt_LV95) OR DEFINED(Linie_LV95) OR DEFINED(Flaeche_LV95);
     END Geometrie;
 
-    /** Definition für Hinweise, die unabhängig von einer konkreten Eigentumsbeschränkung gelten (z.B. der Hinweis auf eine Systematische Rechtssammlung). Der Hinweis kann aber beschränkt werden auf eine bestimmtes ÖREB-Thema und/oder Kanton und/oder Gemeinde.
+    /** Definition fÃ¼r Hinweise, die unabhÃ¤ngig von einer konkreten EigentumsbeschrÃ¤nkung gelten (z.B. der Hinweis auf eine Systematische Rechtssammlung). Der Hinweis kann aber beschrÃ¤nkt werden auf eine bestimmtes Ã–REB-Thema und/oder Kanton und/oder Gemeinde.
      */
     CLASS HinweisDefinition =
-      /** Thema falls der Hinweis für ein bestimmtes ÖREB-Thema gilt. Falls die Angabe fehlt, ist es ein Hinweis der für alle ÖREB-Themen gilt.
+      /** Thema falls der Hinweis fÃ¼r ein bestimmtes Ã–REB-Thema gilt. Falls die Angabe fehlt, ist es ein Hinweis der fÃ¼r alle Ã–REB-Themen gilt.
        */
       Thema : OeREBKRM_V1_1.Thema;
-      /** Kantonskürzel falls der Hinweis für ein Kantons-oder Gemeindegebiet gilt. Falls die Angabe fehlt, ist es ein Hinweis der für alle Kantone gilt. z.B. "BE".
+      /** KantonskÃ¼rzel falls der Hinweis fÃ¼r ein Kantons-oder Gemeindegebiet gilt. Falls die Angabe fehlt, ist es ein Hinweis der fÃ¼r alle Kantone gilt. z.B. "BE".
        */
       Kanton : CHAdminCodes_V1.CHCantonCode;
-      /** BFSNr falls der Hinweis für ein Gemeindegebiet gilt. Falls die Angabe fehlt, ist es ein Hinweis der für den Kanton oder die Schweiz gilt. z.B. "942".
+      /** BFSNr falls der Hinweis fÃ¼r ein Gemeindegebiet gilt. Falls die Angabe fehlt, ist es ein Hinweis der fÃ¼r den Kanton oder die Schweiz gilt. z.B. "942".
        */
       Gemeinde : CHAdminCodes_V1.CHMunicipalityCode;
     END HinweisDefinition;
@@ -92,19 +92,19 @@ VERSION "2016-08-15"  =
     /** Ein Eintrag in der Planlegende.
      */
     STRUCTURE LegendeEintrag =
-      /** Grafischer Teil des Legendeneintrages für die Darstellung. Im PNG-Format mit 300dpi oder im SVG-Format
+      /** Grafischer Teil des Legendeneintrages fÃ¼r die Darstellung. Im PNG-Format mit 300dpi oder im SVG-Format
        */
       Symbol : MANDATORY BLACKBOX BINARY;
       /** Text des Legendeneintrages
        */
       LegendeText : MANDATORY LocalisationCH_V1.MultilingualText;
-      /** Art der Eigentumsbeschränkung, die durch diesen Legendeneintrag dargestellt wird
+      /** Art der EigentumsbeschrÃ¤nkung, die durch diesen Legendeneintrag dargestellt wird
        */
       ArtCode : MANDATORY OeREBKRM_V1_1.ArtEigentumsbeschraenkung;
-      /** Codeliste der Eigentumsbeschränkung, die durch diesen Legendeneintrag dargestellt wird
+      /** Codeliste der EigentumsbeschrÃ¤nkung, die durch diesen Legendeneintrag dargestellt wird
        */
       ArtCodeliste : MANDATORY URI;
-      /** Zu welchem ÖREB-Thema der Legendeneintrag gehört
+      /** Zu welchem Ã–REB-Thema der Legendeneintrag gehÃ¶rt
        */
       Thema : MANDATORY OeREBKRM_V1_1.Thema;
       /** z.B. Planungszonen innerhalb Nutzungsplanung
@@ -117,7 +117,7 @@ VERSION "2016-08-15"  =
     /** Angaben zum Darstellungsdienst.
      */
     CLASS DarstellungsDienst =
-      /** WMS GetMap-Request (für Maschine-Maschine-Kommunikation) inkl. alle benötigten Parameter, z.B. "https://wms.geo.admin.ch/?SERVICE=WMS&REQUEST=GetMap&VERSION=1.1.1&STYLES=default&SRS=EPSG:21781&BBOX=475000,60000,845000,310000&WIDTH=740&HEIGHT=500&FORMAT=image/png&LAYERS=ch.bazl.kataster-belasteter-standorte-zivilflugplaetze.oereb"
+      /** WMS GetMap-Request (fÃ¼r Maschine-Maschine-Kommunikation) inkl. alle benÃ¶tigten Parameter, z.B. "https://wms.geo.admin.ch/?SERVICE=WMS&REQUEST=GetMap&VERSION=1.1.1&STYLES=default&SRS=EPSG:21781&BBOX=475000,60000,845000,310000&WIDTH=740&HEIGHT=500&FORMAT=image/png&LAYERS=ch.bazl.kataster-belasteter-standorte-zivilflugplaetze.oereb"
        */
       VerweisWMS : MANDATORY URI;
       /** Verweis auf ein Dokument das die Karte beschreibt; z.B. "https://wms.geo.admin.ch/?SERVICE=WMS&REQUEST=GetLegendGraphic&VERSION=1.1.1&FORMAT=image/png&LAYER=ch.bazl.kataster-belasteter-standorte-zivilflugplaetze.oereb"
@@ -128,7 +128,7 @@ VERSION "2016-08-15"  =
     END DarstellungsDienst;
 
     ASSOCIATION GeometrieEigentumsbeschraenkung =
-      /** Geometrie der Eigentumsbeschränkung, die Rechtswirkung hat (als Basis für den Verschnitt mit den Liegenschaften)
+      /** Geometrie der EigentumsbeschrÃ¤nkung, die Rechtswirkung hat (als Basis fÃ¼r den Verschnitt mit den Liegenschaften)
        */
       Geometrie -- {0..*} Geometrie;
       Eigentumsbeschraenkung -<#> {1} Eigentumsbeschraenkung;
@@ -151,7 +151,7 @@ VERSION "2016-08-15"  =
 
     ASSOCIATION HinweisVorschrift =
       Eigentumsbeschraenkung -- {0..*} Eigentumsbeschraenkung;
-      /** Rechtsvorschrift der Eigentumsbeschränkung
+      /** Rechtsvorschrift der EigentumsbeschrÃ¤nkung
        */
       Vorschrift -- {1..*} OeREBKRMvs_V1_1.Vorschriften.DokumentBasis;
       /** Hinweis auf spezifische Artikel.
@@ -160,7 +160,7 @@ VERSION "2016-08-15"  =
     END HinweisVorschrift;
 
     ASSOCIATION ZustaendigeStelleEigentumsbeschraenkung =
-      /** Zuständige Stelle für die Geobasisdaten (Originaldaten) gem. GeoIG Art. 8 Abs. 1
+      /** ZustÃ¤ndige Stelle fÃ¼r die Geobasisdaten (Originaldaten) gem. GeoIG Art. 8 Abs. 1
        */
       ZustaendigeStelle -- {1} OeREBKRMvs_V1_1.Vorschriften.Amt;
       Eigentumsbeschraenkung -<> {0..*} Eigentumsbeschraenkung;
@@ -172,7 +172,7 @@ VERSION "2016-08-15"  =
     END ZustaendigeStelleGeometrie;
 
     ASSOCIATION DarstellungsDienstEigentumsbeschraenkung =
-      /** Darstellungsdienst, auf dem diese Eigentumsbeschränkung sichtbar, aber nicht hervorgehoben, ist.
+      /** Darstellungsdienst, auf dem diese EigentumsbeschrÃ¤nkung sichtbar, aber nicht hervorgehoben, ist.
        */
       DarstellungsDienst -- {0..1} DarstellungsDienst;
       Eigentumsbeschraenkung -<> {1..*} Eigentumsbeschraenkung;
