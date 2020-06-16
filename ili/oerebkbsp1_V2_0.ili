@@ -4,16 +4,16 @@ INTERLIS 2.3;
  */
 !!@ furtherInformation=http://www.cadastre.ch/oereb-public
 !!@ technicalContact=mailto:infovd@swisstopo.ch
-MODEL oerebkbsp1_V1_1 (de)
+MODEL oerebkbsp1_V2_0 (de)
 AT "http://models.geo.admin.ch/V_D/OeREB/"
 VERSION "2016-08-15"  =
-  IMPORTS OeREBKRMtrsfr_V1_1,CHAdminCodes_V1;
+  IMPORTS OeREBKRMtrsfr_V2_0,CHAdminCodes_V1;
 
   TOPIC Bauzonen
-  EXTENDS OeREBKRMtrsfr_V1_1.Transferstruktur =
+  EXTENDS OeREBKRMtrsfr_V2_0.Transferstruktur =
 
     CLASS Bauzone
-    EXTENDS OeREBKRMtrsfr_V1_1.Transferstruktur.Eigentumsbeschraenkung =
+    EXTENDS OeREBKRMtrsfr_V2_0.Transferstruktur.Eigentumsbeschraenkung =
       Kanton : MANDATORY CHAdminCodes_V1.CHCantonCode;
       Gemeinde : MANDATORY CHAdminCodes_V1.CHMunicipalityCode;
     END Bauzone;

@@ -4,10 +4,10 @@ INTERLIS 2.3;
  */
 !!@ furtherInformation=http://www.cadastre.ch/oereb-public
 !!@ technicalContact=mailto:infovd@swisstopo.ch
-MODEL OeREBKRMko_V1_1 (de)
+MODEL OeREBKRMko_V2_0 (de)
 AT "http://models.geo.admin.ch/V_D/OeREB/"
 VERSION "2016-08-15"  =
-  IMPORTS OeREBKRM_V1_1,LocalisationCH_V1;
+  IMPORTS OeREBKRM_V2_0,LocalisationCH_V1;
 
   /** Zum Zweck der Nachvollziehbarkeit müssen innerhalb der ÖREB-Katasterorganisation des Kantons Metadaten gem. diesem Teilmodell geführt werden.
    */
@@ -21,10 +21,10 @@ VERSION "2016-08-15"  =
       Name : MANDATORY LocalisationCH_V1.MultilingualText;
       /** Verweis auf die Website des Amtes z.B. "http://www.jgk.be.ch/site/agr/".
        */
-      AmtImWeb : OeREBKRM_V1_1.WebReferenz;
+      AmtImWeb : OeREBKRM_V2_0.WebReferenz;
       /** UID der organisatorischen Einheit
        */
-      UID : OeREBKRM_V1_1.UID;
+      UID : OeREBKRM_V2_0.UID;
     END Amt;
 
     /** Angaben zur Datenlieferung an die Katasterorganisation des Kantons.
@@ -45,4 +45,4 @@ VERSION "2016-08-15"  =
 
   END MetadatenKO;
 
-END OeREBKRMko_V1_1.
+END OeREBKRMko_V2_0.

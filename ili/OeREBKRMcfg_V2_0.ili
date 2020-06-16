@@ -2,17 +2,17 @@ INTERLIS 2.3;
 
 /** Zusatzdaten für statischen OEREB-Auszug
  */
-MODEL OeREB_ExtractAnnex_V1_1 (de)
+MODEL OeREBKRMcfg_V2_0 (de)
 AT "mailto:ce@eisenhutinformatik.ch"
 VERSION "2020-05-08"  =
-  IMPORTS OeREBKRM_V1_1,CHAdminCodes_V1,LocalisationCH_V1,CatalogueObjects_V1;
+  IMPORTS OeREBKRM_V2_0,CHAdminCodes_V1,LocalisationCH_V1,CatalogueObjects_V1;
 
     DOMAIN
       Code = TEXT*60;
       
       STRUCTURE ThemaRef = 
-		  Thema : MANDATORY OeREBKRM_V1_1.Thema;
-		  SubThema : OeREBKRM_V1_1.Thema;
+		  Thema : MANDATORY OeREBKRM_V2_0.Thema;
+		  SubThema : OeREBKRM_V2_0.Thema;
       END ThemaRef;
       
     TOPIC Annex =
@@ -48,8 +48,8 @@ VERSION "2020-05-08"  =
 		  /** OfficeAtWeb wird für die Referenzierung verwendet!
 		   *  solange UID nicht generell zugeordnet.
 		   */
-		  OfficeAtWeb : MANDATORY OeREBKRM_V1_1.WebReferenz;
-		  UID : OeREBKRM_V1_1.UID;
+		  OfficeAtWeb : MANDATORY OeREBKRM_V2_0.WebReferenz;
+		  UID : OeREBKRM_V2_0.UID;
 		  /** Falls im statischen Auszug mehr Informationen angezeigt 
 		   *  werden sollen als im Rahmenmodell möglich ist zu erfassen. 
 		   *  Im Rahmenmodell können nur die Attribute Name, AmtImWeb, UID erfasst werden.
@@ -96,4 +96,4 @@ VERSION "2020-05-08"  =
 	END Annex;
     
 
-END OeREB_ExtractAnnex_V1_1.
+END OeREBKRMcfg_V2_0.

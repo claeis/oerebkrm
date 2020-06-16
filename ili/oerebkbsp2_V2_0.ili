@@ -4,7 +4,7 @@ INTERLIS 2.3;
  */
 !!@ furtherInformation=http://www.cadastre.ch/oereb-public
 !!@ technicalContact=mailto:infovd@swisstopo.ch
-MODEL oerebkbsp2_V1_1 (de)
+MODEL oerebkbsp2_V2_0 (de)
 AT "http://models.geo.admin.ch/V_D/OeREB/"
 VERSION "2016-08-15"  =
   IMPORTS GeometryCHLV95_V1;
@@ -19,4 +19,4 @@ VERSION "2016-08-15"  =
 
   END Bauzone;
 
-END oerebkbsp2_V1_1.
+END oerebkbsp2_V2_0.

@@ -4,16 +4,16 @@ INTERLIS 2.3;
  */
 !!@ furtherInformation=http://www.cadastre.ch/oereb-public
 !!@ technicalContact=mailto:infovd@swisstopo.ch
-MODEL OeREBKRMgs_V1_1 (de)
+MODEL OeREBKRMgs_V2_0 (de)
 AT "http://models.geo.admin.ch/V_D/OeREB/"
 VERSION "2016-08-15"  =
-  IMPORTS OeREBKRMvs_V1_1,OeREBKRM_V1_1,LocalisationCH_V1;
+  IMPORTS OeREBKRMvs_V2_0,OeREBKRM_V2_0,LocalisationCH_V1;
 
   /** Um aus den Geodaten und den Rechtsvorschriften die konkreten öffentlichrechtlichen Eigentumsbeschränkungen zu bilden, werden Definitionen für die Zuordnung (OEREB-Definitionen) benötigt.
    */
   TOPIC Grundstruktur
-  EXTENDS OeREBKRMvs_V1_1.Vorschriften =
-    OID AS OeREBKRM_V1_1.OEREBOID;
+  EXTENDS OeREBKRMvs_V2_0.Vorschriften =
+    OID AS OeREBKRM_V2_0.OEREBOID;
 
     DOMAIN
 
@@ -33,7 +33,7 @@ VERSION "2016-08-15"  =
       UmschreibungRaumbezug : LocalisationCH_V1.MultilingualMText;
       /** Einordnung der Eigentumsbeschränkung in ein OEREB-Katasterthema
        */
-      OerebkThema : MANDATORY OeREBKRM_V1_1.Thema;
+      OerebkThema : MANDATORY OeREBKRM_V2_0.Thema;
     END OerebDefinition;
 
     /** Formale/maschinen-interpretierbare  Definition der Eigentumsbeschränkung (insbesondere des Raumbezugs)
@@ -87,10 +87,10 @@ VERSION "2016-08-15"  =
       Eigentumsbeschraenkung -- {0..*} OerebDefinition;
       /** Verweis auf die Rechtsvorschrift (oder das Gesetz/den Artikel für abstrakte Eigentumsbeschränkungen). Kann in einem anderen Behälter sein.
        */
-      Vorschrift (EXTERNAL) -- {1..*} OeREBKRMvs_V1_1.Vorschriften.DokumentBasis;
+      Vorschrift (EXTERNAL) -- {1..*} OeREBKRMvs_V2_0.Vorschriften.DokumentBasis;
       /** Hinweis auf spezifische Artikel.
        */
-      ArtikelNr : BAG {0..*} OF OeREBKRM_V1_1.ArtikelNummer_;
+      ArtikelNr : BAG {0..*} OF OeREBKRM_V2_0.ArtikelNummer_;
     END HinweisVorschrift;
 
     ASSOCIATION TechOerebDefOerebDefinition =
@@ -123,10 +123,10 @@ VERSION "2016-08-15"  =
       Name : MANDATORY LocalisationCH_V1.MultilingualText;
       /** Verweis auf die Website des Amtes z.B. "http://www.jgk.be.ch/jgk/de/index/direktion/organisation/agr.html".
        */
-      AmtImWeb : OeREBKRM_V1_1.WebReferenz;
+      AmtImWeb : OeREBKRM_V2_0.WebReferenz;
       /** UID der organisatorischen Einheit
        */
-      UID : OeREBKRM_V1_1.UID;
+      UID : OeREBKRM_V2_0.UID;
     END Amt;
 
     /** Angaben zum Darstellungsdienst.
@@ -137,7 +137,7 @@ VERSION "2016-08-15"  =
       VerweisWMS : MANDATORY URI;
       /** Verweis auf ein Dokument das die Karte beschreibt; z.B. "https://wms.geo.admin.ch/?SERVICE=WMS&REQUEST=GetLegendGraphic&VERSION=1.1.1&FORMAT=image/png&LAYER=ch.bazl.kataster-belasteter-standorte-zivilflugplaetze.oereb"
        */
-      LegendeImWeb : MANDATORY OeREBKRM_V1_1.WebReferenz;
+      LegendeImWeb : MANDATORY OeREBKRM_V2_0.WebReferenz;
     END Darstellungsdienst;
 
     /** OEREB-Metadaten zu den Geodaten
@@ -167,4 +167,4 @@ VERSION "2016-08-15"  =
 
   END OerebMetadaten;
 
-END OeREBKRMgs_V1_1.
+END OeREBKRMgs_V2_0.
