@@ -6,7 +6,7 @@ INTERLIS 2.3;
 !!@ technicalContact=mailto:infovd@swisstopo.ch
 MODEL OeREBKRMtrsfr_V1_1 (de)
 AT "http://models.geo.admin.ch/V_D/OeREB/"
-VERSION "2016-08-15"  =
+VERSION "2020-05-18"  =
   IMPORTS OeREBKRM_V1_1,OeREBKRMvs_V1_1,CHAdminCodes_V1,LocalisationCH_V1,GeometryCHLV03_V1,GeometryCHLV95_V1;
 
   /** Dieses Teilmodell definiert die Struktur der Daten, wie sie von der zuständigen Stelle für die Geobasisdaten an die Abgabestelle des ÖREB-Kataster-Auszugs geliefert werden müssen. Dieses Datenmodell definiert somit, welche Daten ein minimales Datenmodell enthalten muss, um als ÖREB-Kataster fähiges Datenmodell zu gelten.
@@ -26,13 +26,7 @@ VERSION "2016-08-15"  =
       Thema : MANDATORY OeREBKRM_V1_1.Thema;
       /** z.B. Planungszonen innerhalb Nutzungsplanung
        */
-      SubThema : OeREBKRM_V1_1.SubThema;
-      /** z.B. kantonale Themen. Der Code wird nach folgendem Muster gebildet: ch.{canton}.{topic}
-       * fl.{topic}
-       * ch.{bfsnr}.{topic}
-       * Wobei {canton} das offizielle zwei-stellige Kürzel des Kantons ist, {to-pic} der Themenname und {bfsnr} die Gemeindenummer gem. BFS.
-       */
-      WeiteresThema : OeREBKRM_V1_1.WeiteresThema;
+      SubThema : OeREBKRM_V1_1.Thema;
       /** Themenspezifische, maschinen-lesbare Art gem. Originalmodell der Eigentumsbeschränkung
        */
       ArtCode : OeREBKRM_V1_1.ArtEigentumsbeschraenkung;
@@ -45,7 +39,6 @@ VERSION "2016-08-15"  =
       /** Datum, ab dem diese Eigentumsbeschränkung in Auszügen erscheint
        */
       publiziertAb : MANDATORY OeREBKRM_V1_1.Datum;
-      MANDATORY CONSTRAINT Thema!=#WeiteresThema OR DEFINED(WeiteresThema);
     END Eigentumsbeschraenkung;
 
     /** Punkt-, linien-, oder flächenförmige Geometrie. Neu zu definierende Eigentumsbeschränkungen sollten i.d.R. flächenförmig sein.
@@ -109,9 +102,7 @@ VERSION "2016-08-15"  =
       Thema : MANDATORY OeREBKRM_V1_1.Thema;
       /** z.B. Planungszonen innerhalb Nutzungsplanung
        */
-      SubThema : OeREBKRM_V1_1.SubThema;
-      WeiteresThema : OeREBKRM_V1_1.WeiteresThema;
-      MANDATORY CONSTRAINT Thema!=#WeiteresThema OR DEFINED(WeiteresThema);
+      SubThema : OeREBKRM_V1_1.Thema;
     END LegendeEintrag;
 
     /** Angaben zum Darstellungsdienst.

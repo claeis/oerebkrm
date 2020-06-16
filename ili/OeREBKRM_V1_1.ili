@@ -6,7 +6,7 @@ INTERLIS 2.3;
 !!@ technicalContact=mailto:infovd@swisstopo.ch
 MODEL OeREBKRM_V1_1 (de)
 AT "http://models.geo.admin.ch/V_D/OeREB/"
-VERSION "2016-08-15"  =
+VERSION "2020-05-18"  =
   IMPORTS LocalisationCH_V1,InternationalCodes_V1,CatalogueObjects_V1;
 
   DOMAIN
@@ -40,66 +40,15 @@ VERSION "2016-08-15"  =
       laufendeAenderung
     );
 
-    SubThema = TEXT*60;
-
-    /** Liste der Geobasisdaten die ÖREB-Themen sind (Wird durch den Bundesrat definiert). Die Liste kann durch Kantone erweitert werden.
+    /** Code für ein Thema oder Sub-Thema.
+        Der Code wird nach folgendem Muster gebildet:
+		ch.{topic}
+		ch.{canton}.{topic}
+		fl.{topic}
+		ch.{bfsnr}.{topic}
+		Wobei {canton} das offizielle zwei-stellige Kürzel des Kantons ist, {to-pic} der Themenname und {bfsnr} die Gemeindenummer gem. BFS.
      */
-    Thema = (
-      /** GeoIV Datensatz 73
-       */
-      Nutzungsplanung,
-      /** 87
-       */
-      ProjektierungszonenNationalstrassen,
-      /** 88
-       */
-      BaulinienNationalstrassen,
-      /** 96
-       */
-      ProjektierungszonenEisenbahnanlagen,
-      /** 97
-       */
-      BaulinienEisenbahnanlagen,
-      /** 103
-       */
-      ProjektierungszonenFlughafenanlagen,
-      /** 104
-       */
-      BaulinienFlughafenanlagen,
-      /** 108
-       */
-      SicherheitszonenplanFlughafen,
-      /** 116
-       */
-      BelasteteStandorte,
-      /** 117
-       */
-      BelasteteStandorteMilitaer,
-      /** 118
-       */
-      BelasteteStandorteZivileFlugplaetze,
-      /** 119
-       */
-      BelasteteStandorteOeffentlicherVerkehr,
-      /** 131
-       */
-      Grundwasserschutzzonen,
-      /** 132
-       */
-      Grundwasserschutzareale,
-      /** 145
-       */
-      Laermemfindlichkeitsstufen,
-      /** 157
-       */
-      Waldgrenzen,
-      /** 159
-       */
-      Waldabstandslinien,
-      /** Fuer weitere Themen
-       */
-      WeiteresThema
-    );
+    Thema = TEXT*120;
 
     /** Unternehmensindentifikation (gemäss. Bundesgesetz über die Unternehmens-Identifikationsnummer SR 431.03) ohne Formatierung z.B. CHE116068369
      */
@@ -109,12 +58,6 @@ VERSION "2016-08-15"  =
      */
     WebReferenz = URI;
 
-    /** z.B. kantonale Themen. Der Code wird nach folgendem Muster gebildet: ch.{canton}.{topic}
-     * fl.{topic}
-     * ch.{bfsnr}.{topic}
-     * Wobei {canton} das offizielle zwei-stellige Kürzel des Kantons ist, {to-pic} der Themenname und {bfsnr} die Gemeindenummer gem. BFS.
-     */
-    WeiteresThema = TEXT*120;
   STRUCTURE ArtikelNummer_ = value : MANDATORY ArtikelNummer; END ArtikelNummer_;
   STRUCTURE Datum_ = value : MANDATORY Datum; END Datum_;
   STRUCTURE Thema_ = value : MANDATORY Thema; END Thema_;
@@ -154,6 +97,7 @@ VERSION "2016-08-15"  =
     CLASS ThemaTxt
     EXTENDS CatalogueObjects_V1.Catalogues.Item =
       Code : MANDATORY OeREBKRM_V1_1.Thema;
+      SubThema : OeREBKRM_V1_1.Thema;
       Titel : MANDATORY LocalisationCH_V1.MultilingualText;
       UNIQUE Code;
     END ThemaTxt;
