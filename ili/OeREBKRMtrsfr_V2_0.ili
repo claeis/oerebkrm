@@ -6,39 +6,40 @@ INTERLIS 2.3;
 !!@ technicalContact=mailto:infovd@swisstopo.ch
 MODEL OeREBKRMtrsfr_V2_0 (de)
 AT "http://models.geo.admin.ch/V_D/OeREB/"
-VERSION "2020-05-18"  =
+VERSION "2020-06-27"  =
   IMPORTS OeREBKRM_V2_0,OeREBKRMvs_V2_0,CHAdminCodes_V1,LocalisationCH_V1,GeometryCHLV03_V1,GeometryCHLV95_V1;
 
   /** Dieses Teilmodell definiert die Struktur der Daten, wie sie von der zuständigen Stelle für die Geobasisdaten an die Abgabestelle des ÖREB-Kataster-Auszugs geliefert werden müssen. Dieses Datenmodell definiert somit, welche Daten ein minimales Datenmodell enthalten muss, um als ÖREB-Kataster fähiges Datenmodell zu gelten.
    */
   TOPIC Transferstruktur
   EXTENDS OeREBKRMvs_V2_0.Vorschriften =
-    DEPENDS ON OeREBKRMvs_V2_0.HinweiseGesetzlicheGrundlagen;
+
+    /** Angaben zum Darstellungsdienst.
+     */
+    CLASS DarstellungsDienst =
+      /** WMS GetMap-Request (für Maschine-Maschine-Kommunikation) inkl. alle benötigten Parameter, z.B. "https://wms.geo.admin.ch/?SERVICE=WMS&REQUEST=GetMap&VERSION=1.1.1&STYLES=default&SRS=EPSG:21781&BBOX=475000,60000,845000,310000&WIDTH=740&HEIGHT=500&FORMAT=image/png&LAYERS=ch.bazl.kataster-belasteter-standorte-zivilflugplaetze.oereb"
+       */
+      VerweisWMS : MANDATORY OeREBKRM_V2_0.MultilingualUri;
+    END DarstellungsDienst;
 
     /** Wurzelelement für Informationen über eine Beschränkung des Grundeigentums, die rechtskräftig, z.B. auf Grund einer Genehmigung oder eines richterlichen Entscheids, zustande gekommen ist.
      */
     CLASS Eigentumsbeschraenkung =
-      /** Textliche Beschreibung der Beschränkung; z.B. "Wohnen W3"
-       */
-      Aussage : MANDATORY LocalisationCH_V1.MultilingualMText;
       /** Einordnung der Eigentumsbeschränkung in ein ÖREBK-Thema
        */
       Thema : MANDATORY OeREBKRM_V2_0.Thema;
       /** z.B. Planungszonen innerhalb Nutzungsplanung
        */
       SubThema : OeREBKRM_V2_0.Thema;
-      /** Themenspezifische, maschinen-lesbare Art gem. Originalmodell der Eigentumsbeschränkung
-       */
-      ArtCode : OeREBKRM_V2_0.ArtEigentumsbeschraenkung;
-      /** Identifikation der Codeliste bzw. des Wertebereichs für ArtCode
-       */
-      ArtCodeliste : URI;
       /** Status, ob diese Eigentumsbeschränkung in Kraft ist
        */
       Rechtsstatus : MANDATORY OeREBKRM_V2_0.RechtsStatus;
       /** Datum, ab dem diese Eigentumsbeschränkung in Auszügen erscheint
        */
       publiziertAb : MANDATORY OeREBKRM_V2_0.Datum;
+      /** Datum, an/ab dem diese Eigentumsbeschränkung nicht mehr in Auszügen erscheint
+       */
+      publiziertBis : OeREBKRM_V2_0.Datum;
     END Eigentumsbeschraenkung;
 
     /** Punkt-, linien-, oder flächenförmige Geometrie. Neu zu definierende Eigentumsbeschränkungen sollten i.d.R. flächenförmig sein.
@@ -62,6 +63,9 @@ VERSION "2020-05-18"  =
       /** Datum, ab dem diese Geometrie in Auszügen erscheint
        */
       publiziertAb : MANDATORY OeREBKRM_V2_0.Datum;
+      /** Datum, an/ab dem diese Geometrie nicht mehr in Auszügen erscheint
+       */
+      publiziertBis : OeREBKRM_V2_0.Datum;
       /** Verweis auf maschinenlesbare Metadaten (XML) der zugrundeliegenden Geobasisdaten. z.B. http://www.geocat.ch/geonetwork/srv/deu/gm03.xml?id=705
        */
       MetadatenGeobasisdaten : URI;
@@ -84,39 +88,35 @@ VERSION "2020-05-18"  =
 
     /** Ein Eintrag in der Planlegende.
      */
-    STRUCTURE LegendeEintrag =
+    CLASS LegendeEintrag =
       /** Grafischer Teil des Legendeneintrages für die Darstellung. Im PNG-Format mit 300dpi oder im SVG-Format
        */
-      Symbol : MANDATORY BLACKBOX BINARY;
+      SymbolPunkt : BLACKBOX BINARY;
+      SymbolLinie : TEXT*20;
+      SymbolFlaeche : TEXT*20;
       /** Text des Legendeneintrages
        */
       LegendeText : MANDATORY LocalisationCH_V1.MultilingualText;
-      /** Art der Eigentumsbeschränkung, die durch diesen Legendeneintrag dargestellt wird
-       */
-      ArtCode : MANDATORY OeREBKRM_V2_0.ArtEigentumsbeschraenkung;
-      /** Codeliste der Eigentumsbeschränkung, die durch diesen Legendeneintrag dargestellt wird
-       */
-      ArtCodeliste : MANDATORY URI;
       /** Zu welchem ÖREB-Thema der Legendeneintrag gehört
        */
       Thema : MANDATORY OeREBKRM_V2_0.Thema;
       /** z.B. Planungszonen innerhalb Nutzungsplanung
        */
       SubThema : OeREBKRM_V2_0.Thema;
+      MANDATORY CONSTRAINT DEFINED(SymbolPunkt) OR DEFINED(SymbolLinie) OR DEFINED(SymbolFlaeche);
     END LegendeEintrag;
 
-    /** Angaben zum Darstellungsdienst.
-     */
-    CLASS DarstellungsDienst =
-      /** WMS GetMap-Request (für Maschine-Maschine-Kommunikation) inkl. alle benötigten Parameter, z.B. "https://wms.geo.admin.ch/?SERVICE=WMS&REQUEST=GetMap&VERSION=1.1.1&STYLES=default&SRS=EPSG:21781&BBOX=475000,60000,845000,310000&WIDTH=740&HEIGHT=500&FORMAT=image/png&LAYERS=ch.bazl.kataster-belasteter-standorte-zivilflugplaetze.oereb"
+    ASSOCIATION DarstellungsDienstEigentumsbeschraenkung =
+      /** Darstellungsdienst, auf dem diese Eigentumsbeschränkung sichtbar, aber nicht hervorgehoben, ist.
        */
-      VerweisWMS : MANDATORY URI;
-      /** Verweis auf ein Dokument das die Karte beschreibt; z.B. "https://wms.geo.admin.ch/?SERVICE=WMS&REQUEST=GetLegendGraphic&VERSION=1.1.1&FORMAT=image/png&LAYER=ch.bazl.kataster-belasteter-standorte-zivilflugplaetze.oereb"
-       */
-      LegendeImWeb : OeREBKRM_V2_0.WebReferenz;
-      Legende : BAG {0..*} OF LegendeEintrag;
-      MANDATORY CONSTRAINT DEFINED(LegendeImWeb) OR INTERLIS.elementCount(Legende)>0;
-    END DarstellungsDienst;
+      DarstellungsDienst -- {0..1} DarstellungsDienst;
+      Eigentumsbeschraenkung -<> {1..*} Eigentumsbeschraenkung;
+    END DarstellungsDienstEigentumsbeschraenkung;
+
+    ASSOCIATION EigentumsbeschraenkungLegende =
+      Eigentumsbeschraenkung -<> {0..*} Eigentumsbeschraenkung;
+      Legende -- {1} LegendeEintrag;
+    END EigentumsbeschraenkungLegende;
 
     ASSOCIATION GeometrieEigentumsbeschraenkung =
       /** Geometrie der Eigentumsbeschränkung, die Rechtswirkung hat (als Basis für den Verschnitt mit den Liegenschaften)
@@ -137,37 +137,32 @@ VERSION "2020-05-18"  =
 
     ASSOCIATION HinweisDefinitionZustaendigeStelle =
       HinweisDefinition -<> {0..*} HinweisDefinition;
-      ZustaendigeStelle -- {1} OeREBKRMvs_V2_0.Vorschriften.Amt;
+      ZustaendigeStelle (EXTERNAL) -- {1} OeREBKRM_V2_0.Amt.Amt;
     END HinweisDefinitionZustaendigeStelle;
 
     ASSOCIATION HinweisVorschrift =
       Eigentumsbeschraenkung -- {0..*} Eigentumsbeschraenkung;
-      /** Rechtsvorschrift der Eigentumsbeschränkung
+      /** Rechtsvorschrift/Hinweis zur Eigentumsbeschränkung
        */
-      Vorschrift -- {1..*} OeREBKRMvs_V2_0.Vorschriften.DokumentBasis;
-      /** Hinweis auf spezifische Artikel.
-       */
-      ArtikelNr : BAG {0..*} OF OeREBKRM_V2_0.ArtikelNummer_;
+      Vorschrift -- {1..*} OeREBKRMvs_V2_0.Vorschriften.Dokument;
     END HinweisVorschrift;
+
+    ASSOCIATION LegendeDarstellungsdienst =
+      Legende -- {0..*} LegendeEintrag;
+      DarstellungsDienst -<#> {1} DarstellungsDienst;
+    END LegendeDarstellungsdienst;
 
     ASSOCIATION ZustaendigeStelleEigentumsbeschraenkung =
       /** Zuständige Stelle für die Geobasisdaten (Originaldaten) gem. GeoIG Art. 8 Abs. 1
        */
-      ZustaendigeStelle -- {1} OeREBKRMvs_V2_0.Vorschriften.Amt;
+      ZustaendigeStelle (EXTERNAL) -- {1} OeREBKRM_V2_0.Amt.Amt;
       Eigentumsbeschraenkung -<> {0..*} Eigentumsbeschraenkung;
     END ZustaendigeStelleEigentumsbeschraenkung;
 
     ASSOCIATION ZustaendigeStelleGeometrie =
-      ZustaendigeStelle -- {1} OeREBKRMvs_V2_0.Vorschriften.Amt;
+      ZustaendigeStelle (EXTERNAL) -- {1} OeREBKRM_V2_0.Amt.Amt;
       Geometrie -<> {0..*} Geometrie;
     END ZustaendigeStelleGeometrie;
-
-    ASSOCIATION DarstellungsDienstEigentumsbeschraenkung =
-      /** Darstellungsdienst, auf dem diese Eigentumsbeschränkung sichtbar, aber nicht hervorgehoben, ist.
-       */
-      DarstellungsDienst -- {0..1} DarstellungsDienst;
-      Eigentumsbeschraenkung -<> {1..*} Eigentumsbeschraenkung;
-    END DarstellungsDienstEigentumsbeschraenkung;
 
   END Transferstruktur;
 

@@ -6,24 +6,35 @@ INTERLIS 2.3;
 !!@ technicalContact=mailto:infovd@swisstopo.ch
 MODEL OeREBKRM_V2_0 (de)
 AT "http://models.geo.admin.ch/V_D/OeREB/"
-VERSION "2020-05-18"  =
-  IMPORTS LocalisationCH_V1,InternationalCodes_V1,CatalogueObjects_V1;
+VERSION "2020-06-27"  =
+  IMPORTS LocalisationCH_V1,InternationalCodes_V1;
 
   DOMAIN
-
-    /** Themenspezifische, maschinen-lesbare Art der Eigentumsbeschränkung
-     */
-    ArtEigentumsbeschraenkung = TEXT*40;
-
-    /** Wertebereich für den Artikeltext einer Rechtsvorschrift oder einer gesetzlichen Grundlage.
-     */
-    ArtikelInhalt = MTEXT;
 
     /** Nummer eines Artikels in einer Rechtsvorschrift oder gesetzlichen Grundlage.
      */
     ArtikelNummer = TEXT*20;
 
     Datum = FORMAT INTERLIS.XMLDate "1848-1-1" .. "2100-12-31";
+
+    DokumentTyp = (
+      Rechtsvorschrift,
+      Gesetz,
+      Hinweis
+    );
+
+    /** gem. DM01 der AV
+     */
+    GrundstueckArt = (
+      Liegenschaft,
+      SelbstRecht(
+        Baurecht,
+        Quellenrecht,
+        Konzessionsrecht,
+        weitere
+      ),
+      Bergwerk
+    );
 
     /** Wertebereich für Objektidentifikatoren. Der Wert soll mit einem gültigen Internet Domain-Name anfangen, z.B. "ch.admin.sr.720"
      */
@@ -35,18 +46,17 @@ VERSION "2020-05-18"  =
       /** Die Eigentumsbeschränkung ist in Kraft.
        */
       inKraft,
-      /** gem. OeREBKV Art. 12 Abs. 2
-       */
-      laufendeAenderung
+      AenderungMitVorwirkung,
+      AenderungOhneVorwirkung
     );
 
     /** Code für ein Thema oder Sub-Thema.
-        Der Code wird nach folgendem Muster gebildet:
-		ch.{topic}
-		ch.{canton}.{topic}
-		fl.{topic}
-		ch.{bfsnr}.{topic}
-		Wobei {canton} das offizielle zwei-stellige Kürzel des Kantons ist, {to-pic} der Themenname und {bfsnr} die Gemeindenummer gem. BFS.
+     * Der Code wird nach folgendem Muster gebildet:
+     * ch.{topic}
+     * ch.{canton}.{topic}
+     * fl.{topic}
+     * ch.{bfsnr}.{topic}
+     * Wobei {canton} das offizielle zwei-stellige Kürzel des Kantons ist, {topic} der Themenname und {bfsnr} die Gemeindenummer gem. BFS.
      */
     Thema = TEXT*120;
 
@@ -57,51 +67,62 @@ VERSION "2020-05-18"  =
     /** Verweis auf ein Dokument im Web (z.B. eine HTML Seite oder ein PDF-Dokument)
      */
     WebReferenz = URI;
-
   STRUCTURE ArtikelNummer_ = value : MANDATORY ArtikelNummer; END ArtikelNummer_;
   STRUCTURE Datum_ = value : MANDATORY Datum; END Datum_;
   STRUCTURE Thema_ = value : MANDATORY Thema; END Thema_;
   STRUCTURE WebReferenz_ = value : MANDATORY WebReferenz; END WebReferenz_;
 
-  /** Wertebereich für den Artikeltext einer Rechtsvorschrift oder einer gesetzlichen Grundlage.
-   */
-  STRUCTURE ArtikelInhaltMehrsprachig
-  EXTENDS LocalisationCH_V1.MultilingualMText =
-  END ArtikelInhaltMehrsprachig;
+  STRUCTURE LocalisedBlob =
+    Language : InternationalCodes_V1.LanguageCode_ISO639_1;
+    Blob : MANDATORY BLACKBOX BINARY;
+  END LocalisedBlob;
 
   STRUCTURE LocalisedUri =
     Language : InternationalCodes_V1.LanguageCode_ISO639_1;
     Text : MANDATORY URI;
   END LocalisedUri;
 
+  STRUCTURE MultilingualBlob =
+    LocalisedBlob : BAG {1..*} OF OeREBKRM_V2_0.LocalisedBlob;
+    UNIQUE (LOCAL) LocalisedBlob:Language;
+  END MultilingualBlob;
+
   STRUCTURE MultilingualUri =
     LocalisedText : BAG {1..*} OF OeREBKRM_V2_0.LocalisedUri;
     UNIQUE (LOCAL) LocalisedText:Language;
   END MultilingualUri;
 
-  /** Anzeigetexte für Aufzählungen des Rahmenmodells
+  /** Qualifzierter Verweis auf ein Thema oder Subthema.
    */
-  TOPIC CodelistenText =
+  STRUCTURE ThemaRef =
+    Thema : MANDATORY Thema;
+    SubThema : Thema;
+  END ThemaRef;
 
-    /** Anzeigetexte für die Aufzählung RechtsStatus
+  TOPIC Amt =
+    OID AS OEREBOID;
+
+    /** Eine organisatorische Einheit innerhalb der öffentlichen Verwaltung, z.B. eine für Geobasisdaten zuständige Stelle.
      */
-    CLASS RechtsStatusTxt
-    EXTENDS CatalogueObjects_V1.Catalogues.Item =
-      Code : MANDATORY OeREBKRM_V2_0.RechtsStatus;
-      Titel : MANDATORY LocalisationCH_V1.MultilingualText;
-      UNIQUE Code;
-    END RechtsStatusTxt;
+    CLASS Amt =
+      /** Name des Amtes z.B. "Amt für Gemeinden und Raumordnung des Kantons Bern".
+       */
+      Name : MANDATORY LocalisationCH_V1.MultilingualText;
+      /** Verweis auf die Website des Amtes z.B. "http://www.jgk.be.ch/jgk/de/index/direktion/organisation/agr.html".
+       */
+      AmtImWeb : OeREBKRM_V2_0.MultilingualUri;
+      /** UID der organisatorischen Einheit
+       */
+      UID : OeREBKRM_V2_0.UID;
+      Zeile1 : TEXT*80;
+      Zeile2 : TEXT*80;
+      Strasse : TEXT*100;
+      Hausnr : TEXT*7;
+      PLZ : TEXT*4;
+      Ort : TEXT*60;
+      UNIQUE UID;
+    END Amt;
 
-    /** Anzeigetexte für die Aufzählung Thema
-     */
-    CLASS ThemaTxt
-    EXTENDS CatalogueObjects_V1.Catalogues.Item =
-      Code : MANDATORY OeREBKRM_V2_0.Thema;
-      SubThema : OeREBKRM_V2_0.Thema;
-      Titel : MANDATORY LocalisationCH_V1.MultilingualText;
-      UNIQUE Code;
-    END ThemaTxt;
-
-  END CodelistenText;
+  END Amt;
 
 END OeREBKRM_V2_0.

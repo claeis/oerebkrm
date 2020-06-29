@@ -6,7 +6,7 @@ INTERLIS 2.3;
 !!@ technicalContact=mailto:infovd@swisstopo.ch
 MODEL OeREBKRMgs_V2_0 (de)
 AT "http://models.geo.admin.ch/V_D/OeREB/"
-VERSION "2016-08-15"  =
+VERSION "2020-06-27"  =
   IMPORTS OeREBKRMvs_V2_0,OeREBKRM_V2_0,LocalisationCH_V1;
 
   /** Um aus den Geodaten und den Rechtsvorschriften die konkreten öffentlichrechtlichen Eigentumsbeschränkungen zu bilden, werden Definitionen für die Zuordnung (OEREB-Definitionen) benötigt.
@@ -87,10 +87,7 @@ VERSION "2016-08-15"  =
       Eigentumsbeschraenkung -- {0..*} OerebDefinition;
       /** Verweis auf die Rechtsvorschrift (oder das Gesetz/den Artikel für abstrakte Eigentumsbeschränkungen). Kann in einem anderen Behälter sein.
        */
-      Vorschrift (EXTERNAL) -- {1..*} OeREBKRMvs_V2_0.Vorschriften.DokumentBasis;
-      /** Hinweis auf spezifische Artikel.
-       */
-      ArtikelNr : BAG {0..*} OF OeREBKRM_V2_0.ArtikelNummer_;
+      Vorschrift (EXTERNAL) -- {1..*} OeREBKRMvs_V2_0.Vorschriften.Dokument;
     END HinweisVorschrift;
 
     ASSOCIATION TechOerebDefOerebDefinition =
