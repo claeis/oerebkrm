@@ -2,10 +2,10 @@ INTERLIS 2.3;
 
 /** Zusatzstrukturen zur Verwendung innerhalb der Katasterorganisation des Kantons
  */
-!!@ furtherInformation=http://www.cadastre.ch/oereb-public
+!!@ furtherInformation=https://www.cadastre.ch/oereb-public
 !!@ technicalContact=mailto:infovd@swisstopo.ch
 MODEL OeREBKRMko_V2_0 (de)
-AT "http://models.geo.admin.ch/V_D/OeREB/"
+AT "https://models.geo.admin.ch/V_D/OeREB/"
 VERSION "2020-06-27"  =
   IMPORTS OeREBKRM_V2_0,LocalisationCH_V1,CHAdminCodes_V1,OeREBKRMvs_V2_0,CatalogueObjects_V1;
 

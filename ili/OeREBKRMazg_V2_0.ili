@@ -2,10 +2,10 @@ INTERLIS 2.3;
 
 /** Katasterauszug (Die Datenstruktur wird zwar als INTERLIS-Modell definiert, das Transferformat wird jedoch durch ein durch die Eidg. Vermessungsdirektion festgelegtes XML-Schema definiert).
  */
-!!@ furtherInformation=http://www.cadastre.ch/oereb-public
+!!@ furtherInformation=https://www.cadastre.ch/oereb-public
 !!@ technicalContact=mailto:infovd@swisstopo.ch
 MODEL OeREBKRMazg_V2_0 (de)
-AT "http://models.geo.admin.ch/V_D/OeREB/"
+AT "https://models.geo.admin.ch/V_D/OeREB/"
 VERSION "2020-06-27"  =
   IMPORTS OeREBKRM_V2_0,CHAdminCodes_V1,LocalisationCH_V1,GeometryCHLV03_V1,GeometryCHLV95_V1;
 
@@ -84,6 +84,12 @@ VERSION "2020-06-27"  =
       /** Text des Legendeneintrages
        */
       LegendeText : MANDATORY LocalisationCH_V1.MultilingualText;
+      /** Art der Eigentumsbeschränkung, die durch diesen Legendeneintrag dargestellt wird
+       */
+      ArtCode : MANDATORY OeREBKRM_V2_0.ArtEigentumsbeschraenkung;
+      /** Codeliste der Eigentumsbeschränkung, die durch diesen Legendeneintrag dargestellt wird
+       */
+      ArtCodeliste : MANDATORY URI;
       /** Zu welchem ÖREB-Thema der Legendeneintrag gehört
        */
       Thema : MANDATORY OeREBKRM_V2_0.Thema;
@@ -126,15 +132,12 @@ VERSION "2020-06-27"  =
     STRUCTURE Geometrie =
       /** Punktgeometrie
        */
-      Punkt_LV03 : GeometryCHLV03_V1.Coord2;
       Punkt_LV95 : GeometryCHLV95_V1.Coord2;
       /** Linienförmige Geometrie
        */
-      Linie_LV03 : GeometryCHLV03_V1.Line;
       Linie_LV95 : GeometryCHLV95_V1.Line;
       /** Flächenförmige Geometrie
        */
-      Flaeche_LV03 : GeometryCHLV03_V1.Surface;
       Flaeche_LV95 : GeometryCHLV95_V1.Surface;
       /** Status, ob die zugrundeliegende Geometrie in Kraft ist
        */
@@ -143,7 +146,7 @@ VERSION "2020-06-27"  =
        */
       MetadatenGeobasisdaten : URI;
       ZustaendigeStelle : MANDATORY Amt;
-      MANDATORY CONSTRAINT DEFINED(Punkt_LV03) OR DEFINED(Linie_LV03) OR DEFINED(Flaeche_LV03) OR  DEFINED(Punkt_LV95) OR DEFINED(Linie_LV95) OR DEFINED(Flaeche_LV95);
+      MANDATORY CONSTRAINT DEFINED(Punkt_LV95) OR DEFINED(Linie_LV95) OR DEFINED(Flaeche_LV95);
     END Geometrie;
 
     /** Die Angaben zu einer Ebene der grafischen Darstellung im Katasterauszug. Eine Kartenebene im Katasterauszug kann mehrere Eigentumsbeschränkungen darstellen, oder im Falle des Grundbuchplans mehrere AV-Datenebenen.
@@ -155,10 +158,8 @@ VERSION "2020-06-27"  =
       /** WMS GetMap-Request (für Maschine-Maschine-Kommunikation) inkl. alle benötigten Parameter, z.B. "https://wms.geo.admin.ch/?SERVICE=WMS&REQUEST=GetMap&VERSION=1.1.1&STYLES=default&SRS=EPSG:21781&BBOX=475000,60000,845000,310000&WIDTH=740&HEIGHT=500&FORMAT=image/png&LAYERS=ch.bazl.kataster-belasteter-standorte-zivilflugplaetze.oereb"
        */
       VerweisWMS : OeREBKRM_V2_0.MultilingualUri;
-      min_LV03 : GeometryCHLV03_V1.Coord2;
-      max_LV03 : GeometryCHLV03_V1.Coord2;
-      min_LV95 : GeometryCHLV95_V1.Coord2;
-      max_LV95 : GeometryCHLV95_V1.Coord2;
+      min_LV95 : MANDATORY GeometryCHLV95_V1.Coord2;
+      max_LV95 : MANDATORY GeometryCHLV95_V1.Coord2;
       layerIndex : -1000 .. 1000;
       layerDeckkraft : 0.000 .. 1.000;
       UebrigeLegende : BAG {0..*} OF LegendeEintrag;
@@ -170,13 +171,19 @@ VERSION "2020-06-27"  =
     STRUCTURE Eigentumsbeschraenkung =
       /** Textliche Beschreibung der Beschränkung; z.B. "Wohnen W3"
        */
-      Aussage : MANDATORY LocalisationCH_V1.MultilingualMText;
+      LegendeText : MANDATORY LocalisationCH_V1.MultilingualMText;
       /** Einordnung der Eigentumsbeschränkung in ein ÖREB-Katasterthema
        */
       Thema : MANDATORY OeREBKRM_V2_0.Thema;
       /** z.B. Planungszonen innerhalb Nutzungsplanung
        */
       SubThema : OeREBKRM_V2_0.Thema;
+      /** Themenspezifische, maschinen-lesbare Art gem. Originalmodell der Eigentumsbeschränkung
+       */
+      ArtCode : MANDATORY OeREBKRM_V2_0.ArtEigentumsbeschraenkung;
+      /** Identifikation der Codeliste bzw. des Wertebereichs für ArtCode
+       */
+      ArtCodeliste : MANDATORY URI;
       /** Status, ob diese Eigentumsbeschränkung in Kraft ist
        */
       Rechtsstatus : MANDATORY OeREBKRM_V2_0.RechtsStatus;
@@ -248,8 +255,7 @@ VERSION "2020-06-27"  =
       Grundbuchflaeche : MANDATORY Flaechenmass;
       /** Grenze des Grundstücks
        */
-      Grenze_LV03 : GeometryCHLV03_V1.MultiSurface;
-      Grenze_LV95 : GeometryCHLV95_V1.MultiSurface;
+      Grenze_LV95 : MANDATORY GeometryCHLV95_V1.MultiSurface;
       /** Eigentumsbeschränkungen zu diesem Grundstück
        */
       Eigentumsbeschraenkung : BAG {0..*} OF Eigentumsbeschraenkung;
@@ -259,7 +265,6 @@ VERSION "2020-06-27"  =
       GrundbuchPlanTitelseite : MANDATORY Karte;
       Hinweis : BAG {0..*} OF Dokument;
       MANDATORY CONSTRAINT DEFINED(EGRID) OR (DEFINED(Nummer) AND DEFINED(NBIdent));
-      MANDATORY CONSTRAINT DEFINED(Grenze_LV03) OR DEFINED(Grenze_LV95);
     END Liegenschaft_SDR;
 
     /** Wurzelelement für einen Katasterauszug. Ein Katasterauszug enthält den Inhalt des ÖREB-Katasters in Bezug auf mindestens eine Liegenschaft oder ein SDR.
@@ -303,11 +308,11 @@ VERSION "2020-06-27"  =
       QRCode : BLACKBOX BINARY;
       /** Allgemeine Information gemäss. Textvorgabe in Weisung "Statischer Auszug"
        */
-      AllgemeineInformation : BAG {0..*} OF LocalisationCH_V1.MultilingualMText;
+      AllgemeineInformation : LIST {0..*} OF LocalisationCH_V1.MultilingualMText;
       Beglaubigung : LocalisationCH_V1.MultilingualMText;
       Haftungsausschluss : BAG {0..*} OF Haftungsausschluss;
       Glossar : BAG {0..*} OF Glossar;
-      /** Liste der Grundstück für die dieser Auszug erstellt wurde.
+      /** Grundstück für das dieser Auszug erstellt wurde.
        */
       Grundstueck : MANDATORY Liegenschaft_SDR;
       KatasterFuehrendeStelle : MANDATORY Amt;

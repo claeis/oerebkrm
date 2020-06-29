@@ -2,10 +2,10 @@ INTERLIS 2.3;
 
 /** Schnittstelle zwischen zuständiger Stelle für die Geobasisdaten und Katasterorganisation des Kantons.
  */
-!!@ furtherInformation=http://www.cadastre.ch/oereb-public
+!!@ furtherInformation=https://www.cadastre.ch/oereb-public
 !!@ technicalContact=mailto:infovd@swisstopo.ch
 MODEL OeREBKRMtrsfr_V2_0 (de)
-AT "http://models.geo.admin.ch/V_D/OeREB/"
+AT "https://models.geo.admin.ch/V_D/OeREB/"
 VERSION "2020-06-27"  =
   IMPORTS OeREBKRM_V2_0,OeREBKRMvs_V2_0,CHAdminCodes_V1,LocalisationCH_V1,GeometryCHLV03_V1,GeometryCHLV95_V1;
 
@@ -47,15 +47,12 @@ VERSION "2020-06-27"  =
     CLASS Geometrie =
       /** Punktgeometrie
        */
-      Punkt_LV03 : GeometryCHLV03_V1.Coord2;
       Punkt_LV95 : GeometryCHLV95_V1.Coord2;
       /** Linienförmige Geometrie
        */
-      Linie_LV03 : GeometryCHLV03_V1.Line;
       Linie_LV95 : GeometryCHLV95_V1.Line;
       /** Flächenförmige Geometrie
        */
-      Flaeche_LV03 : GeometryCHLV03_V1.Surface;
       Flaeche_LV95 : GeometryCHLV95_V1.Surface;
       /** Status, ob diese Geometrie in Kraft ist
        */
@@ -69,7 +66,7 @@ VERSION "2020-06-27"  =
       /** Verweis auf maschinenlesbare Metadaten (XML) der zugrundeliegenden Geobasisdaten. z.B. http://www.geocat.ch/geonetwork/srv/deu/gm03.xml?id=705
        */
       MetadatenGeobasisdaten : URI;
-      MANDATORY CONSTRAINT DEFINED(Punkt_LV03) OR DEFINED(Linie_LV03) OR DEFINED(Flaeche_LV03) OR DEFINED(Punkt_LV95) OR DEFINED(Linie_LV95) OR DEFINED(Flaeche_LV95);
+      MANDATORY CONSTRAINT DEFINED(Punkt_LV95) OR DEFINED(Linie_LV95) OR DEFINED(Flaeche_LV95);
     END Geometrie;
 
     /** Definition für Hinweise, die unabhängig von einer konkreten Eigentumsbeschränkung gelten (z.B. der Hinweis auf eine Systematische Rechtssammlung). Der Hinweis kann aber beschränkt werden auf eine bestimmtes ÖREB-Thema und/oder Kanton und/oder Gemeinde.
@@ -92,11 +89,17 @@ VERSION "2020-06-27"  =
       /** Grafischer Teil des Legendeneintrages für die Darstellung. Im PNG-Format mit 300dpi oder im SVG-Format
        */
       SymbolPunkt : BLACKBOX BINARY;
-      SymbolLinie : TEXT*20;
-      SymbolFlaeche : TEXT*20;
+      SymbolLinie : BLACKBOX BINARY;
+      SymbolFlaeche : BLACKBOX BINARY;
       /** Text des Legendeneintrages
        */
       LegendeText : MANDATORY LocalisationCH_V1.MultilingualText;
+      /** Art der Eigentumsbeschränkung, die durch diesen Legendeneintrag dargestellt wird
+       */
+      ArtCode : MANDATORY OeREBKRM_V2_0.ArtEigentumsbeschraenkung;
+      /** Codeliste der Eigentumsbeschränkung, die durch diesen Legendeneintrag dargestellt wird
+       */
+      ArtCodeliste : MANDATORY URI;
       /** Zu welchem ÖREB-Thema der Legendeneintrag gehört
        */
       Thema : MANDATORY OeREBKRM_V2_0.Thema;

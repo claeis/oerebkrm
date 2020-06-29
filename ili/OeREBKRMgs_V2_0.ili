@@ -2,10 +2,10 @@ INTERLIS 2.3;
 
 /** Grundstruktur zur Verwendung innerhalb der zuständigen Stelle für die Geobasisdaten eines OeREBK-Themas.
  */
-!!@ furtherInformation=http://www.cadastre.ch/oereb-public
+!!@ furtherInformation=https://www.cadastre.ch/oereb-public
 !!@ technicalContact=mailto:infovd@swisstopo.ch
 MODEL OeREBKRMgs_V2_0 (de)
-AT "http://models.geo.admin.ch/V_D/OeREB/"
+AT "https://models.geo.admin.ch/V_D/OeREB/"
 VERSION "2020-06-27"  =
   IMPORTS OeREBKRMvs_V2_0,OeREBKRM_V2_0,LocalisationCH_V1;
 
