@@ -6,7 +6,7 @@ INTERLIS 2.3;
 !!@ technicalContact=mailto:infovd@swisstopo.ch
 MODEL OeREBKRMazg_V2_0 (de)
 AT "https://models.geo.admin.ch/V_D/OeREB/"
-VERSION "2020-06-27"  =
+VERSION "2020-07-02"  =
   IMPORTS OeREBKRM_V2_0,CHAdminCodes_V1,LocalisationCH_V1,GeometryCHLV03_V1,GeometryCHLV95_V1;
 
   /** Dieses Teilmodell definiert die Struktur der Daten, wie sie von einem Nutzer des ÖREB-Katasters von einer OEREB-Katasterorganistion des Kantons bezogen werden können.
@@ -27,7 +27,7 @@ VERSION "2020-06-27"  =
       Name : MANDATORY LocalisationCH_V1.MultilingualText;
       /** Verweis auf die Website des Amtes z.B. "http://www.jgk.be.ch/jgk/de/index/direktion/organisation/agr.html".
        */
-      AmtImWeb : OeREBKRM_V2_0.WebReferenz;
+      AmtImWeb : OeREBKRM_V2_0.MultilingualUri;
       /** UID der organisatorischen Einheit
        */
       UID : OeREBKRM_V2_0.UID;
@@ -171,7 +171,7 @@ VERSION "2020-06-27"  =
     STRUCTURE Eigentumsbeschraenkung =
       /** Textliche Beschreibung der Beschränkung; z.B. "Wohnen W3"
        */
-      LegendeText : MANDATORY LocalisationCH_V1.MultilingualMText;
+      LegendeText : MANDATORY LocalisationCH_V1.MultilingualText;
       /** Einordnung der Eigentumsbeschränkung in ein ÖREB-Katasterthema
        */
       Thema : MANDATORY OeREBKRM_V2_0.Thema;
@@ -214,6 +214,7 @@ VERSION "2020-06-27"  =
        */
       ZustaendigeStelle : MANDATORY Amt;
       MANDATORY CONSTRAINT DEFINED(SymbolPunkt) OR DEFINED(SymbolLinie) OR DEFINED(SymbolFlaeche);
+      MANDATORY CONSTRAINT DEFINED(FlaecheAnteil) OR DEFINED(LaengeAnteil) OR DEFINED(PunkteAufGrundstueck);
     END Eigentumsbeschraenkung;
 
     /** Liegenschaften und SDR im Sinne von ZGB Art. 655, soweit sie in der amtlichen Vermessung mit Flächengeometrie erfasst sind (d.h. alle Objekte der Tabellen Liegenschaft und SDR gem. TOPIC Liegenschaften des DM01).
@@ -285,9 +286,6 @@ VERSION "2020-06-27"  =
       /** Liste der OEREB-Themen, zu denen noch keine Daten vorhanden sind
        */
       ThemaOhneDaten : BAG {0..*} OF OeREBKRM_V2_0.Thema_;
-      /** Angabe, ob es sich um einen reduzierten Auszug handelt (gem. OeREBKV Art. 11)
-       */
-      istReduziert : MANDATORY BOOLEAN;
       /** Logo des OEREBK im PNG-Format mit 300dpi oder im SVG-Format
        */
       LogoOEREBK : MANDATORY BLACKBOX BINARY;
@@ -310,13 +308,13 @@ VERSION "2020-06-27"  =
        */
       AllgemeineInformation : LIST {0..*} OF LocalisationCH_V1.MultilingualMText;
       Beglaubigung : LocalisationCH_V1.MultilingualMText;
+      BeglaubigungImWeb : OeREBKRM_V2_0.MultilingualUri;
       Haftungsausschluss : BAG {0..*} OF Haftungsausschluss;
       Glossar : BAG {0..*} OF Glossar;
       /** Grundstück für das dieser Auszug erstellt wurde.
        */
       Grundstueck : MANDATORY Liegenschaft_SDR;
       KatasterFuehrendeStelle : MANDATORY Amt;
-      BeglaubigungImWeb : OeREBKRM_V2_0.MultilingualUri;
       MANDATORY CONSTRAINT INTERLIS.elementCount(BetroffenesThema)>0 OR INTERLIS.elementCount(NichtbetroffenesThema)>0 OR INTERLIS.elementCount(ThemaOhneDaten)>0;
     END Auszug;
 

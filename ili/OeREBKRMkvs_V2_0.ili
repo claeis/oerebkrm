@@ -4,10 +4,10 @@ INTERLIS 2.3;
  */
 !!@ furtherInformation=https://www.cadastre.ch/oereb-public
 !!@ technicalContact=mailto:infovd@swisstopo.ch
-MODEL OeREBKRMko_V2_0 (de)
+MODEL OeREBKRMkvs_V2_0 (de)
 AT "https://models.geo.admin.ch/V_D/OeREB/"
-VERSION "2020-06-27"  =
-  IMPORTS OeREBKRM_V2_0,LocalisationCH_V1,CHAdminCodes_V1,OeREBKRMvs_V2_0,CatalogueObjects_V1;
+VERSION "2020-07-02"  =
+  IMPORTS OeREBKRM_V2_0,LocalisationCH_V1,CHAdminCodes_V1,OeREBKRMvs_V2_0;
 
   TOPIC Konfiguration =
 
@@ -43,6 +43,23 @@ VERSION "2020-06-27"  =
        */
       Inhalt : MANDATORY LocalisationCH_V1.MultilingualMText;
     END Glossar;
+
+    CLASS GrundbuchKreis =
+      Kanton : MANDATORY CHAdminCodes_V1.CHCantonCode;
+      Gemeinde : MANDATORY CHAdminCodes_V1.CHMunicipalityCode;
+      /** NBIdent gem. AV-Daten
+       */
+      NBIdent : MANDATORY TEXT*12;
+      /** Name des GB-Kreises
+       */
+      Name : MANDATORY TEXT*60;
+      /** SubKreis gem. GB-Daten (eGRISDM/GBDBS)
+       */
+      SubKreis : TEXT*15;
+      /** Los gem. GB-Daten (eGRISDM/GBDBS)
+       */
+      Los : TEXT*15;
+    END GrundbuchKreis;
 
     /** Anzeigetexte für die Aufzählung GrundstueckArt
      */
@@ -84,8 +101,7 @@ VERSION "2020-06-27"  =
 
     /** Anzeigetexte für die Aufzählung RechtsStatus
      */
-    CLASS RechtsStatusTxt
-    EXTENDS CatalogueObjects_V1.Catalogues.Item =
+    CLASS RechtsStatusTxt =
       Code : MANDATORY OeREBKRM_V2_0.RechtsStatus;
       Titel : MANDATORY LocalisationCH_V1.MultilingualText;
       UNIQUE Code;
@@ -95,7 +111,7 @@ VERSION "2020-06-27"  =
 
   /** Zum Zweck der Nachvollziehbarkeit müssen innerhalb der ÖREB-Katasterorganisation des Kantons Metadaten gem. diesem Teilmodell geführt werden.
    */
-  TOPIC MetadatenKO
+  TOPIC MetadatenKVS
   EXTENDS OeREBKRM_V2_0.Amt =
 
     /** Angaben zur Datenlieferung an die Katasterorganisation des Kantons.
@@ -106,7 +122,7 @@ VERSION "2020-06-27"  =
       Datum : MANDATORY FORMAT INTERLIS.XMLDate "2010-1-1" .. "2050-12-31";
       /** BasketId oder Dateiname oder vollständiger WFS-Request.
        */
-      DatensatzIdentifikation : MANDATORY URI;
+      DatensatzIdentifikation : MANDATORY TEXT;
     END DatenAufnahme;
 
     ASSOCIATION ZustaendigeStelleDatenAufnahme =
@@ -114,15 +130,14 @@ VERSION "2020-06-27"  =
       DatenAufnahme -<> {0..*} DatenAufnahme;
     END ZustaendigeStelleDatenAufnahme;
 
-  END MetadatenKO;
+  END MetadatenKVS;
 
   TOPIC Thema =
     DEPENDS ON OeREBKRMvs_V2_0.Vorschriften;
 
     /** Anzeigetexte für die Aufzählung Thema
      */
-    CLASS Thema
-    EXTENDS CatalogueObjects_V1.Catalogues.Item =
+    CLASS Thema =
       Code : MANDATORY OeREBKRM_V2_0.Thema;
       SubCode : OeREBKRM_V2_0.Thema;
       Titel : MANDATORY LocalisationCH_V1.MultilingualText;
@@ -143,4 +158,4 @@ VERSION "2020-06-27"  =
 
   END Thema;
 
-END OeREBKRMko_V2_0.
+END OeREBKRMkvs_V2_0.
