@@ -1,0 +1,11 @@
+2020-07-02 ceis
+***************
+- start 2.0
+
+2017-08-14 ceis
+***************
+- element Map: choice with geometry (elements min_NS03, max_NS03, min_NS95, max_NS95) optional because geometry is optional part of response
+- RestrictionOnLandownership/PartInPercent: changed from integer to decimal  (0.0..100.0) as shown in "Satzanweisungen und Vermassung") 
+- GetExtractByIdResponse/datasource[1] changed to [0..*]
+- GetEGRIDResponse[1..*] changed to [0..*]
+- fixed spelling of Document/Abbreviation
