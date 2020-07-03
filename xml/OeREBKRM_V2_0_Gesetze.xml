@@ -1,25 +1,28 @@
-<?xml version="1.0" encoding="UTF-8"?>
+﻿<?xml version="1.0" encoding="UTF-8"?>
 <TRANSFER xmlns="http://www.interlis.ch/INTERLIS2.3"
 xmlns:ili2c="http://www.interlis.ch/ili2c"
 xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
   <HEADERSECTION SENDER="swisstopo, Federal Directorate of Cadastral Surveying" VERSION="2.3">
     <MODELS>
-      <MODEL NAME="OeREBKRMvs_V2_0" VERSION="2020-06-27" URI="http://models.geo.admin.ch/V_D/OeREB/"/>
+      <MODEL NAME="OeREBKRMvs_V2_0" VERSION="2020-07-02" URI="http://models.geo.admin.ch/V_D/OeREB/"/>
     </MODELS>
     <!-- Stand der XML-Datei, Etat du fichier XML, Stato del XML-File -->
-    <COMMENT>"2018-05-01"</COMMENT>
+    <COMMENT>"2020-07-02"</COMMENT>
   </HEADERSECTION>
   <DATASECTION>
-    <OeREBKRMvs_V2_0.Vorschriften BID="b1">
+    <OeREBKRMvs_V2_0.Vorschriften BID="ch.admin.v_d.oerebkrmvs_vorschriften">
       <!-- gesetzliche Grundlagen gemäss GeoIV Anhang 1 http://www.admin.ch/ch/d/sr/510_620/app1.html und Empfehlung "ÖREB-Kataster – Rechtsvorschriften und Hinweise auf die rechtlichen Grundlagen" -->
       <!-- bases légales selon l'annexe 1 de l'OGéo  http://www.admin.ch/ch/f/sr/510_620/app1.html et Recommandations «Cadastre RDPPF – Dispositions juridiques et renvois vers les bases légales» -->
       <!-- base legali segondo l'allegato 1 dell'OGI http://www.admin.ch/ch/i/sr/510_620/app1.html e Raccomandazioni «Catasto RDPP – Prescrizioni legali e indicazioni concernenti le basi legali» -->
 
       <!-- ID 73 Nutzungsplanung (kantonal/kommunal) SR 700 Art. 14, 26 -->
+      <!-- ID 76 Planungszonen SR 700 Art. 27 -->
       <!-- ID 73 Plans d’affectation (cantonaux/communaux) RS 700 art. 14, 26 -->
+      <!-- ID 76 Zones réservées RS 700 art. 27 -->
       <!-- ID 73 Piani di utilizzazione (cantonali/comunali) RS 700 art. 14, 26 -->
+      <!-- ID 76 Zone di pianificazione RS 700 art. 27 -->
       <OeREBKRMvs_V2_0.Vorschriften.Dokument TID="ch.admin.bk.sr.700">
-      	<Typ>Gesetz</Typ>
+        <Typ>GesetzlicheGrundlage</Typ>
         <TextImWeb>
           <OeREBKRM_V2_0.MultilingualUri>
             <LocalisedText>
@@ -83,6 +86,14 @@ xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
                 <Language>de</Language>
                 <Text>SR 700</Text>
               </LocalisationCH_V1.LocalisedText>
+              <LocalisationCH_V1.LocalisedText>
+                <Language>fr</Language>
+                <Text>RS 700</Text>
+              </LocalisationCH_V1.LocalisedText>
+              <LocalisationCH_V1.LocalisedText>
+                <Language>it</Language>
+                <Text>RS 700</Text>
+              </LocalisationCH_V1.LocalisedText>
             </LocalisedText>
           </LocalisationCH_V1.MultilingualText>
         </OffizielleNr>
@@ -95,7 +106,7 @@ xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
       <!-- ID 87 Zone riservate per le strade nazionali RS 725.11 art. 14 -->
       <!-- ID 88 Allineamenti per le strade nazionali RS 725.11 art. 22-25, 29 RS 725.111 art. 13, 13a -->
       <OeREBKRMvs_V2_0.Vorschriften.Dokument TID="ch.admin.bk.sr.725.11">
-      	<Typ>Gesetz</Typ>
+        <Typ>GesetzlicheGrundlage</Typ>
         <TextImWeb>
           <OeREBKRM_V2_0.MultilingualUri>
             <LocalisedText>
@@ -159,6 +170,14 @@ xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
                 <Language>de</Language>
                 <Text>SR 725.11</Text>
               </LocalisationCH_V1.LocalisedText>
+              <LocalisationCH_V1.LocalisedText>
+                <Language>fr</Language>
+                <Text>RS 725.11</Text>
+              </LocalisationCH_V1.LocalisedText>
+              <LocalisationCH_V1.LocalisedText>
+                <Language>it</Language>
+                <Text>RS 725.11</Text>
+              </LocalisationCH_V1.LocalisedText>
             </LocalisedText>
           </LocalisationCH_V1.MultilingualText>
         </OffizielleNr>
@@ -166,7 +185,7 @@ xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
       </OeREBKRMvs_V2_0.Vorschriften.Dokument>
 
       <OeREBKRMvs_V2_0.Vorschriften.Dokument TID="ch.admin.bk.sr.725.111">
-      	<Typ>Gesetz</Typ>
+        <Typ>GesetzlicheGrundlage</Typ>
         <TextImWeb>
           <OeREBKRM_V2_0.MultilingualUri>
             <LocalisedText>
@@ -230,6 +249,14 @@ xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
                 <Language>de</Language>
                 <Text>SR 725.111</Text>
               </LocalisationCH_V1.LocalisedText>
+              <LocalisationCH_V1.LocalisedText>
+                <Language>fr</Language>
+                <Text>RS 725.111</Text>
+              </LocalisationCH_V1.LocalisedText>
+              <LocalisationCH_V1.LocalisedText>
+                <Language>it</Language>
+                <Text>RS 725.111</Text>
+              </LocalisationCH_V1.LocalisedText>
             </LocalisedText>
           </LocalisationCH_V1.MultilingualText>
         </OffizielleNr>
@@ -242,7 +269,7 @@ xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
       <!-- ID 96 Zone riservate per gli impianti ferroviari RS 742.101 art. 18n-18p -->
       <!-- ID 97 Allineamenti per gli impianti ferroviari RS 742.101 art. 18q-18t -->
       <OeREBKRMvs_V2_0.Vorschriften.Dokument TID="ch.admin.bk.sr.742.101">
-      	<Typ>Gesetz</Typ>
+        <Typ>GesetzlicheGrundlage</Typ>
         <TextImWeb>
           <OeREBKRM_V2_0.MultilingualUri>
             <LocalisedText>
@@ -306,6 +333,14 @@ xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
                 <Language>de</Language>
                 <Text>SR 742.101</Text>
               </LocalisationCH_V1.LocalisedText>
+              <LocalisationCH_V1.LocalisedText>
+                <Language>fr</Language>
+                <Text>RS 742.101</Text>
+              </LocalisationCH_V1.LocalisedText>
+              <LocalisationCH_V1.LocalisedText>
+                <Language>it</Language>
+                <Text>RS 742.101</Text>
+              </LocalisationCH_V1.LocalisedText>
             </LocalisedText>
           </LocalisationCH_V1.MultilingualText>
         </OffizielleNr>
@@ -321,7 +356,7 @@ xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
       <!-- ID 104 Allineamenti per gli impianti aeroportuali RS 748 art. 37q–37s -->
       <!-- ID 108 Piano delle zone di sicurezza RS 748 art. 42 RS 748.131.1 art. 72 -->
       <OeREBKRMvs_V2_0.Vorschriften.Dokument TID="ch.admin.bk.sr.748.0">
-      	<Typ>Gesetz</Typ>
+        <Typ>GesetzlicheGrundlage</Typ>
         <TextImWeb>
           <OeREBKRM_V2_0.MultilingualUri>
             <LocalisedText>
@@ -377,6 +412,14 @@ xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
                 <Language>de</Language>
                 <Text>SR 748.0</Text>
               </LocalisationCH_V1.LocalisedText>
+              <LocalisationCH_V1.LocalisedText>
+                <Language>fr</Language>
+                <Text>RS 748.0</Text>
+              </LocalisationCH_V1.LocalisedText>
+              <LocalisationCH_V1.LocalisedText>
+                <Language>it</Language>
+                <Text>RS 748.0</Text>
+              </LocalisationCH_V1.LocalisedText>
             </LocalisedText>
           </LocalisationCH_V1.MultilingualText>
         </OffizielleNr>
@@ -384,7 +427,7 @@ xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
       </OeREBKRMvs_V2_0.Vorschriften.Dokument>
 
       <OeREBKRMvs_V2_0.Vorschriften.Dokument TID="ch.admin.bk.sr.748.131.1">
-      	<Typ>Gesetz</Typ>
+        <Typ>GesetzlicheGrundlage</Typ>
         <TextImWeb>
           <OeREBKRM_V2_0.MultilingualUri>
             <LocalisedText>
@@ -448,6 +491,14 @@ xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
                 <Language>de</Language>
                 <Text>SR 748.131.1</Text>
               </LocalisationCH_V1.LocalisedText>
+              <LocalisationCH_V1.LocalisedText>
+                <Language>fr</Language>
+                <Text>RS 748.131.1</Text>
+              </LocalisationCH_V1.LocalisedText>
+              <LocalisationCH_V1.LocalisedText>
+                <Language>it</Language>
+                <Text>RS 748.131.1</Text>
+              </LocalisationCH_V1.LocalisedText>
             </LocalisedText>
           </LocalisationCH_V1.MultilingualText>
         </OffizielleNr>
@@ -466,7 +517,7 @@ xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
       <!-- ID 118 Catasto dei siti inquinati nel settore degli aeroporti civili RS 814.01 art. 32c, 32dbis RS 814.680 art. 5 -->
       <!-- ID 119 Catasto dei siti inquinati nel settore dei trasporti pubblici RS 814.01 art. 32c, 32dbis RS 814.680 art. 5 -->
       <OeREBKRMvs_V2_0.Vorschriften.Dokument TID="ch.admin.bk.sr.814.01">
-      	<Typ>Gesetz</Typ>
+        <Typ>GesetzlicheGrundlage</Typ>
         <TextImWeb>
           <OeREBKRM_V2_0.MultilingualUri>
             <LocalisedText>
@@ -538,6 +589,14 @@ xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
                 <Language>de</Language>
                 <Text>SR 814.01</Text>
               </LocalisationCH_V1.LocalisedText>
+              <LocalisationCH_V1.LocalisedText>
+                <Language>fr</Language>
+                <Text>RS 814.01</Text>
+              </LocalisationCH_V1.LocalisedText>
+              <LocalisationCH_V1.LocalisedText>
+                <Language>it</Language>
+                <Text>RS 814.01</Text>
+              </LocalisationCH_V1.LocalisedText>
             </LocalisedText>
           </LocalisationCH_V1.MultilingualText>
         </OffizielleNr>
@@ -545,7 +604,7 @@ xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
       </OeREBKRMvs_V2_0.Vorschriften.Dokument>
 
       <OeREBKRMvs_V2_0.Vorschriften.Dokument TID="ch.admin.bk.sr.814.680">
-      	<Typ>Gesetz</Typ>
+        <Typ>GesetzlicheGrundlage</Typ>
         <TextImWeb>
           <OeREBKRM_V2_0.MultilingualUri>
             <LocalisedText>
@@ -617,6 +676,14 @@ xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
                 <Language>de</Language>
                 <Text>SR 814.680</Text>
               </LocalisationCH_V1.LocalisedText>
+              <LocalisationCH_V1.LocalisedText>
+                <Language>fr</Language>
+                <Text>RS 814.680</Text>
+              </LocalisationCH_V1.LocalisedText>
+              <LocalisationCH_V1.LocalisedText>
+                <Language>it</Language>
+                <Text>RS 814.680</Text>
+              </LocalisationCH_V1.LocalisedText>
             </LocalisedText>
           </LocalisationCH_V1.MultilingualText>
         </OffizielleNr>
@@ -624,12 +691,15 @@ xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
       </OeREBKRMvs_V2_0.Vorschriften.Dokument>
       <!-- ID 131 Grundwasserschutzzonen SR 814.20 Art. 20 SR 814.201 Art. 29-32, Anhang 4 -->
       <!-- ID 132 Grundwasserschutzareale SR 814.20 Art. 21 SR 814.201 Art. 29-32, Anhang 4 -->
+      <!-- ID 190 Gewässerraum SR 814.20 Art. 36a SR 814.201 Art. 41a und 41b -->
       <!-- ID 131 Zones de protection des eaux souterraines RS 814.20 art. 20 RS 814.201 art. 29-32, annexe 4 -->
       <!-- ID 132 Périmètres de protection des eaux souterraines RS 814.20 art. 21 RS 814.201 art. 29-32 annexe 4 -->
+      <!-- ID 190 Espace réservé aux eaux RS 814.20 art. 36a RS 814.201 art. 41a et 41b -->
       <!-- ID 131 Zone di protezione delle acque sotterranee RS 814.20 art. 20 RS 814.201 art. 29-32, allegato 4 -->
       <!-- ID 132 Aree di protezione delle acque sotterranee RS 814.20 art. 21 RS 814.201 art. 29-32, allegato 4 -->
+      <!-- ID 190 Spazio riservato alle acque RS 814.20 art. 36a RS 814.201 art. 41a e 41b -->
       <OeREBKRMvs_V2_0.Vorschriften.Dokument TID="ch.admin.bk.sr.814.20">
-      	<Typ>Gesetz</Typ>
+        <Typ>GesetzlicheGrundlage</Typ>
         <TextImWeb>
           <OeREBKRM_V2_0.MultilingualUri>
             <LocalisedText>
@@ -701,6 +771,14 @@ xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
                 <Language>de</Language>
                 <Text>SR 814.20</Text>
               </LocalisationCH_V1.LocalisedText>
+              <LocalisationCH_V1.LocalisedText>
+                <Language>fr</Language>
+                <Text>RS 814.20</Text>
+              </LocalisationCH_V1.LocalisedText>
+              <LocalisationCH_V1.LocalisedText>
+                <Language>it</Language>
+                <Text>RS 814.20</Text>
+              </LocalisationCH_V1.LocalisedText>
             </LocalisedText>
           </LocalisationCH_V1.MultilingualText>
         </OffizielleNr>
@@ -708,7 +786,7 @@ xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
       </OeREBKRMvs_V2_0.Vorschriften.Dokument>
 
       <OeREBKRMvs_V2_0.Vorschriften.Dokument TID="ch.admin.bk.sr.814.201">
-      	<Typ>Gesetz</Typ>
+        <Typ>GesetzlicheGrundlage</Typ>
         <TextImWeb>
           <OeREBKRM_V2_0.MultilingualUri>
             <LocalisedText>
@@ -780,6 +858,14 @@ xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
                 <Language>de</Language>
                 <Text>SR 814.201</Text>
               </LocalisationCH_V1.LocalisedText>
+              <LocalisationCH_V1.LocalisedText>
+                <Language>fr</Language>
+                <Text>RS 814.201</Text>
+              </LocalisationCH_V1.LocalisedText>
+              <LocalisationCH_V1.LocalisedText>
+                <Language>it</Language>
+                <Text>RS 814.201</Text>
+              </LocalisationCH_V1.LocalisedText>
             </LocalisedText>
           </LocalisationCH_V1.MultilingualText>
         </OffizielleNr>
@@ -789,7 +875,7 @@ xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
       <!-- ID145 Degré de sensibilité au bruit (dans les zones d’affectation) RS 814.41 art. 43 -->
       <!-- ID145 Gradi di sensibilità al rumore (in zone d’utilizzazione) RS 814.41 art. 43 -->
       <OeREBKRMvs_V2_0.Vorschriften.Dokument TID="ch.admin.bk.sr.814.41">
-      	<Typ>Gesetz</Typ>
+        <Typ>GesetzlicheGrundlage</Typ>
         <TextImWeb>
           <OeREBKRM_V2_0.MultilingualUri>
             <LocalisedText>
@@ -861,6 +947,14 @@ xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
                 <Language>de</Language>
                 <Text>SR 814.41</Text>
               </LocalisationCH_V1.LocalisedText>
+              <LocalisationCH_V1.LocalisedText>
+                <Language>fr</Language>
+                <Text>RS 814.41</Text>
+              </LocalisationCH_V1.LocalisedText>
+              <LocalisationCH_V1.LocalisedText>
+                <Language>it</Language>
+                <Text>RS 814.41</Text>
+              </LocalisationCH_V1.LocalisedText>
             </LocalisedText>
           </LocalisationCH_V1.MultilingualText>
         </OffizielleNr>
@@ -868,12 +962,15 @@ xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
       </OeREBKRMvs_V2_0.Vorschriften.Dokument>
       <!-- ID 157 Statische Waldgrenzen SR 921.0 Art. 10 Abs. 2, 13 SR 921.01 Art. 12a -->
       <!-- ID 159 Waldabstandslinien SR 921.0 Art. 17 -->
+      <!-- ID 160 Waldreservate SR 921.0 Art. 20 Abs. 4 SR 921.01 Art. 41 -->
       <!-- ID 157 Limites forestières statiques RS 921.0 art. 10, al. 2, et 13 RS 921.01, art. 12a -->
       <!-- ID 159 Distances par rapport à la forêt RS 921.0 art. 17 -->
+      <!-- ID 160 Réserves forestières RS 921.0 art. 20 al. 4 RS 921.01 art. 41 -->
       <!-- ID 157 Margini statici della foresta RS 921.0 art. 10 cpv. 2, 13 RS 921.01 art. 12a -->
       <!-- ID 159 Linee di distanza dalla foresta RS 921.0 art. 17 -->
+      <!-- ID 160 Riserve forestali RS 921.0 art. 20 al. 4 RS 921.01 art. 41 -->
       <OeREBKRMvs_V2_0.Vorschriften.Dokument TID="ch.admin.bk.sr.921.0">
-      	<Typ>Gesetz</Typ>
+        <Typ>GesetzlicheGrundlage</Typ>
         <TextImWeb>
           <OeREBKRM_V2_0.MultilingualUri>
             <LocalisedText>
@@ -945,6 +1042,14 @@ xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
                 <Language>de</Language>
                 <Text>SR 921.0</Text>
               </LocalisationCH_V1.LocalisedText>
+              <LocalisationCH_V1.LocalisedText>
+                <Language>fr</Language>
+                <Text>RS 921.0</Text>
+              </LocalisationCH_V1.LocalisedText>
+              <LocalisationCH_V1.LocalisedText>
+                <Language>it</Language>
+                <Text>RS 921.0</Text>
+              </LocalisationCH_V1.LocalisedText>
             </LocalisedText>
           </LocalisationCH_V1.MultilingualText>
         </OffizielleNr>
@@ -952,7 +1057,7 @@ xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
       </OeREBKRMvs_V2_0.Vorschriften.Dokument>
 
       <OeREBKRMvs_V2_0.Vorschriften.Dokument TID="ch.admin.bk.sr.921.01">
-      	<Typ>Gesetz</Typ>
+        <Typ>GesetzlicheGrundlage</Typ>
         <TextImWeb>
           <OeREBKRM_V2_0.MultilingualUri>
             <LocalisedText>
@@ -1015,6 +1120,98 @@ xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
               <LocalisationCH_V1.LocalisedText>
                 <Language>de</Language>
                 <Text>SR 921.01</Text>
+              </LocalisationCH_V1.LocalisedText>
+              <LocalisationCH_V1.LocalisedText>
+                <Language>fr</Language>
+                <Text>RS 921.01</Text>
+              </LocalisationCH_V1.LocalisedText>
+              <LocalisationCH_V1.LocalisedText>
+                <Language>it</Language>
+                <Text>RS 921.01</Text>
+              </LocalisationCH_V1.LocalisedText>
+            </LocalisedText>
+          </LocalisationCH_V1.MultilingualText>
+        </OffizielleNr>
+        <ZustaendigeStelle REF="ch.admin.bk"/>
+      </OeREBKRMvs_V2_0.Vorschriften.Dokument>
+      <!-- ID 217 Projektierungszonen Leitungen mit einer Nennspannung von 220 kV oder höher SR 734.0 Art. 18 -->
+      <!-- ID 218 Baulinien Starkstromanlagen SR 734.0 Art. 18b -->
+      <!-- ID 217 Zones réservées des lignes d’une tension nominale égale ou supérieure à 220 kV RS 734.0 art. 18 -->
+      <!-- ID 218 Alignements des installations électriques à courant fort RS 734.0 art. 18b -->
+      <!-- ID 217 Zone riservate per linee con una tensione nominale pari o superiore a 220 kV RS 734.0 art. 18 -->
+      <!-- ID 218 Allineamenti per impianti a corrente forte RS 734.0 art. 18b -->
+      <OeREBKRMvs_V2_0.Vorschriften.Dokument TID="ch.admin.bk.sr.734.0">
+        <Typ>GesetzlicheGrundlage</Typ>
+        <TextImWeb>
+          <OeREBKRM_V2_0.MultilingualUri>
+            <LocalisedText>
+              <OeREBKRM_V2_0.LocalisedUri>
+                <Language>de</Language>
+                <Text>https://www.admin.ch/ch/d/sr/c734_0.html</Text>
+              </OeREBKRM_V2_0.LocalisedUri>
+              <OeREBKRM_V2_0.LocalisedUri>
+                <Language>fr</Language>
+                <Text>https://www.admin.ch/ch/f/sr/c734_0.html</Text>
+              </OeREBKRM_V2_0.LocalisedUri>
+              <OeREBKRM_V2_0.LocalisedUri>
+                <Language>it</Language>
+                <Text>https://www.admin.ch/ch/i/sr/c734_0.html</Text>
+              </OeREBKRM_V2_0.LocalisedUri>
+            </LocalisedText>
+          </OeREBKRM_V2_0.MultilingualUri>
+        </TextImWeb>
+        <Rechtsstatus>inKraft</Rechtsstatus>
+        <publiziertAb>1902-06-24</publiziertAb>
+        <Titel>
+          <LocalisationCH_V1.MultilingualText>
+            <LocalisedText>
+              <LocalisationCH_V1.LocalisedText>
+                <Language>de</Language>
+                <Text>Bundesgesetz betreffend die elektrischen Schwach- und Starkstromanlagen</Text>
+              </LocalisationCH_V1.LocalisedText>
+              <LocalisationCH_V1.LocalisedText>
+                <Language>fr</Language>
+                <Text>Loi fédérale concernant les installations électriques à faible et à fort courant</Text>
+              </LocalisationCH_V1.LocalisedText>
+              <LocalisationCH_V1.LocalisedText>
+                <Language>it</Language>
+                <Text>Legge federale concernente gli impianti elettrici a corrente forte e a corrente debole</Text>
+              </LocalisationCH_V1.LocalisedText>
+            </LocalisedText>
+          </LocalisationCH_V1.MultilingualText>
+        </Titel>
+        <Abkuerzung>
+          <LocalisationCH_V1.MultilingualText>
+            <LocalisedText>
+              <LocalisationCH_V1.LocalisedText>
+                <Language>de</Language>
+                <Text>EleG</Text>
+              </LocalisationCH_V1.LocalisedText>
+              <LocalisationCH_V1.LocalisedText>
+                <Language>fr</Language>
+                <Text>LIE</Text>
+              </LocalisationCH_V1.LocalisedText>
+              <LocalisationCH_V1.LocalisedText>
+                <Language>it</Language>
+                <Text>LIE</Text>
+              </LocalisationCH_V1.LocalisedText>
+            </LocalisedText>
+          </LocalisationCH_V1.MultilingualText>
+        </Abkuerzung>
+        <OffizielleNr>
+          <LocalisationCH_V1.MultilingualText>
+            <LocalisedText>
+              <LocalisationCH_V1.LocalisedText>
+                <Language>de</Language>
+                <Text>SR 734.0</Text>
+              </LocalisationCH_V1.LocalisedText>
+              <LocalisationCH_V1.LocalisedText>
+                <Language>fr</Language>
+                <Text>RS 734.0</Text>
+              </LocalisationCH_V1.LocalisedText>
+              <LocalisationCH_V1.LocalisedText>
+                <Language>it</Language>
+                <Text>RS 734.0</Text>
               </LocalisationCH_V1.LocalisedText>
             </LocalisedText>
           </LocalisationCH_V1.MultilingualText>

@@ -3,7 +3,7 @@ INTERLIS 2.3;
 /** Basisdefinitionen für das OEREB-Katasterrahmenmodell
  */
 !!@ furtherInformation=https://www.cadastre.ch/oereb-public
-!!@ technicalContact=mailto:infovd@swisstopo.ch
+!!@ technicalContact=mailto:vermessung@swisstopo.ch
 MODEL OeREBKRM_V2_0 (de)
 AT "https://models.geo.admin.ch/V_D/OeREB/"
 VERSION "2020-07-02"  =
