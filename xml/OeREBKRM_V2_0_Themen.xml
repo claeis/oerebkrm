@@ -534,7 +534,7 @@ xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
         <Gesetz REF="ch.admin.bk.sr.814.201"/>
       </OeREBKRMkvs_V2_0.Thema.ThemaGesetz>
       <OeREBKRMkvs_V2_0.Thema.Thema TID="17">
-        <Code>ch.Laermemfindlichkeitsstufen</Code>
+        <Code>ch.Laermempfindlichkeitsstufen</Code>
         <Titel>
           <LocalisationCH_V1.MultilingualText>
             <LocalisedText>
