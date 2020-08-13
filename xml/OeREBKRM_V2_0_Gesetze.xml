@@ -1,19 +1,19 @@
-﻿<?xml version="1.0" encoding="UTF-8"?>
+<?xml version="1.0" encoding="UTF-8"?>
 <TRANSFER xmlns="http://www.interlis.ch/INTERLIS2.3"
 xmlns:ili2c="http://www.interlis.ch/ili2c"
 xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
-  <HEADERSECTION SENDER="swisstopo, Federal Directorate of Cadastral Surveying" VERSION="2.3">
+  <HEADERSECTION SENDER="swisstopo, Geodesy and Federal Directorate of Cadastral Surveying" VERSION="2.3">
     <MODELS>
       <MODEL NAME="OeREBKRMvs_V2_0" VERSION="2020-07-02" URI="http://models.geo.admin.ch/V_D/OeREB/"/>
     </MODELS>
     <!-- Stand der XML-Datei, Etat du fichier XML, Stato del XML-File -->
-    <COMMENT>"2020-07-02"</COMMENT>
+    <COMMENT>"2020-07-23"</COMMENT>
   </HEADERSECTION>
   <DATASECTION>
     <OeREBKRMvs_V2_0.Vorschriften BID="ch.admin.v_d.oerebkrmvs_vorschriften">
-      <!-- gesetzliche Grundlagen gemäss GeoIV Anhang 1 http://www.admin.ch/ch/d/sr/510_620/app1.html und Empfehlung "ÖREB-Kataster – Rechtsvorschriften und Hinweise auf die rechtlichen Grundlagen" -->
-      <!-- bases légales selon l'annexe 1 de l'OGéo  http://www.admin.ch/ch/f/sr/510_620/app1.html et Recommandations «Cadastre RDPPF – Dispositions juridiques et renvois vers les bases légales» -->
-      <!-- base legali segondo l'allegato 1 dell'OGI http://www.admin.ch/ch/i/sr/510_620/app1.html e Raccomandazioni «Catasto RDPP – Prescrizioni legali e indicazioni concernenti le basi legali» -->
+      <!-- gesetzliche Grundlagen gemäss GeoIV Anhang 1 http://www.admin.ch/ch/d/sr/510_620/app1.html und Weisung "ÖREB-Kataster – Rechtsvorschriften und Hinweise auf die rechtlichen Grundlagen" -->
+      <!-- bases légales selon l'annexe 1 de l'OGéo  http://www.admin.ch/ch/f/sr/510_620/app1.html et Instruction «Cadastre RDPPF – Dispositions juridiques et renvois vers les bases légales» -->
+      <!-- base legali segondo l'allegato 1 dell'OGI http://www.admin.ch/ch/i/sr/510_620/app1.html e Istruzione «Catasto RDPP – Prescrizioni legali e indicazioni concernenti le basi legali» -->
 
       <!-- ID 73 Nutzungsplanung (kantonal/kommunal) SR 700 Art. 14, 26 -->
       <!-- ID 76 Planungszonen SR 700 Art. 27 -->
@@ -58,6 +58,14 @@ xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
                 <Language>it</Language>
                 <Text>Legge federale sulla pianificazione del territorio</Text>
               </LocalisationCH_V1.LocalisedText>
+              <LocalisationCH_V1.LocalisedText>
+                <Language>rm</Language>
+                <Text>Lescha federala davart la planisaziun dal territori</Text>
+              </LocalisationCH_V1.LocalisedText>
+              <LocalisationCH_V1.LocalisedText>
+                <Language>en</Language>
+                <Text>Federal Act on Spatial Planning</Text>
+              </LocalisationCH_V1.LocalisedText>
             </LocalisedText>
           </LocalisationCH_V1.MultilingualText>
         </Titel>
@@ -76,6 +84,14 @@ xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
                 <Language>it</Language>
                 <Text>LPT</Text>
               </LocalisationCH_V1.LocalisedText>
+              <LocalisationCH_V1.LocalisedText>
+                <Language>rm</Language>
+                <Text>LPT</Text>
+              </LocalisationCH_V1.LocalisedText>
+              <LocalisationCH_V1.LocalisedText>
+                <Language>en</Language>
+                <Text>SPA</Text>
+              </LocalisationCH_V1.LocalisedText>
             </LocalisedText>
           </LocalisationCH_V1.MultilingualText>
         </Abkuerzung>
@@ -93,6 +109,14 @@ xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
               <LocalisationCH_V1.LocalisedText>
                 <Language>it</Language>
                 <Text>RS 700</Text>
+              </LocalisationCH_V1.LocalisedText>
+              <LocalisationCH_V1.LocalisedText>
+                <Language>rm</Language>
+                <Text>CS 700</Text>
+              </LocalisationCH_V1.LocalisedText>
+              <LocalisationCH_V1.LocalisedText>
+                <Language>en</Language>
+                <Text>SR 700</Text>
               </LocalisationCH_V1.LocalisedText>
             </LocalisedText>
           </LocalisationCH_V1.MultilingualText>
@@ -142,6 +166,14 @@ xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
                 <Language>it</Language>
                 <Text>Legge federale sulle strade nazionali</Text>
               </LocalisationCH_V1.LocalisedText>
+              <LocalisationCH_V1.LocalisedText>
+                <Language>rm</Language>
+                <Text>Lescha federala davart las vias naziunalas</Text>
+              </LocalisationCH_V1.LocalisedText>
+              <LocalisationCH_V1.LocalisedText>
+                <Language>en</Language>
+                <Text>Federal Act on the National Highways</Text>
+              </LocalisationCH_V1.LocalisedText>
             </LocalisedText>
           </LocalisationCH_V1.MultilingualText>
         </Titel>
@@ -160,6 +192,14 @@ xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
                 <Language>it</Language>
                 <Text>LSN</Text>
               </LocalisationCH_V1.LocalisedText>
+              <LocalisationCH_V1.LocalisedText>
+                <Language>rm</Language>
+                <Text>LVN</Text>
+              </LocalisationCH_V1.LocalisedText>
+              <LocalisationCH_V1.LocalisedText>
+                <Language>en</Language>
+                <Text>NHwA</Text>
+              </LocalisationCH_V1.LocalisedText>
             </LocalisedText>
           </LocalisationCH_V1.MultilingualText>
         </Abkuerzung>
@@ -177,6 +217,14 @@ xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
               <LocalisationCH_V1.LocalisedText>
                 <Language>it</Language>
                 <Text>RS 725.11</Text>
+              </LocalisationCH_V1.LocalisedText>
+              <LocalisationCH_V1.LocalisedText>
+                <Language>rm</Language>
+                <Text>CS 725.11</Text>
+              </LocalisationCH_V1.LocalisedText>
+              <LocalisationCH_V1.LocalisedText>
+                <Language>en</Language>
+                <Text>SR 725.11</Text>
               </LocalisationCH_V1.LocalisedText>
             </LocalisedText>
           </LocalisationCH_V1.MultilingualText>
@@ -221,6 +269,14 @@ xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
                 <Language>it</Language>
                 <Text>Ordinanza sulle strade nazionali</Text>
               </LocalisationCH_V1.LocalisedText>
+              <LocalisationCH_V1.LocalisedText>
+                <Language>rm</Language>
+                <Text>Ordinaziun davart las vias naziunalas</Text>
+              </LocalisationCH_V1.LocalisedText>
+              <LocalisationCH_V1.LocalisedText>
+                <Language>en</Language>
+                <Text>National Highways Ordinance</Text>
+              </LocalisationCH_V1.LocalisedText>
             </LocalisedText>
           </LocalisationCH_V1.MultilingualText>
         </Titel>
@@ -239,6 +295,14 @@ xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
                 <Language>it</Language>
                 <Text>OSN</Text>
               </LocalisationCH_V1.LocalisedText>
+              <LocalisationCH_V1.LocalisedText>
+                <Language>rm</Language>
+                <Text>OVN</Text>
+              </LocalisationCH_V1.LocalisedText>
+              <LocalisationCH_V1.LocalisedText>
+                <Language>en</Language>
+                <Text>NHwO</Text>
+              </LocalisationCH_V1.LocalisedText>
             </LocalisedText>
           </LocalisationCH_V1.MultilingualText>
         </Abkuerzung>
@@ -256,6 +320,14 @@ xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
               <LocalisationCH_V1.LocalisedText>
                 <Language>it</Language>
                 <Text>RS 725.111</Text>
+              </LocalisationCH_V1.LocalisedText>
+              <LocalisationCH_V1.LocalisedText>
+                <Language>rm</Language>
+                <Text>CS 725.111</Text>
+              </LocalisationCH_V1.LocalisedText>
+              <LocalisationCH_V1.LocalisedText>
+                <Language>en</Language>
+                <Text>SR 725.111</Text>
               </LocalisationCH_V1.LocalisedText>
             </LocalisedText>
           </LocalisationCH_V1.MultilingualText>
@@ -305,6 +377,14 @@ xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
                 <Language>it</Language>
                 <Text>Legge federale sulle ferrovie</Text>
               </LocalisationCH_V1.LocalisedText>
+              <LocalisationCH_V1.LocalisedText>
+                <Language>rm</Language>
+                <Text>Lescha federala davart las viafiers</Text>
+              </LocalisationCH_V1.LocalisedText>
+              <LocalisationCH_V1.LocalisedText>
+                <Language>en</Language>
+                <Text>Railways Act</Text>
+              </LocalisationCH_V1.LocalisedText>
             </LocalisedText>
           </LocalisationCH_V1.MultilingualText>
         </Titel>
@@ -323,6 +403,14 @@ xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
                 <Language>it</Language>
                 <Text>Lferr</Text>
               </LocalisationCH_V1.LocalisedText>
+              <LocalisationCH_V1.LocalisedText>
+                <Language>rm</Language>
+                <Text>LVaifier</Text>
+              </LocalisationCH_V1.LocalisedText>
+              <LocalisationCH_V1.LocalisedText>
+                <Language>en</Language>
+                <Text>RailA</Text>
+              </LocalisationCH_V1.LocalisedText>
             </LocalisedText>
           </LocalisationCH_V1.MultilingualText>
         </Abkuerzung>
@@ -340,6 +428,14 @@ xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
               <LocalisationCH_V1.LocalisedText>
                 <Language>it</Language>
                 <Text>RS 742.101</Text>
+              </LocalisationCH_V1.LocalisedText>
+              <LocalisationCH_V1.LocalisedText>
+                <Language>rm</Language>
+                <Text>CS 742.101</Text>
+              </LocalisationCH_V1.LocalisedText>
+              <LocalisationCH_V1.LocalisedText>
+                <Language>en</Language>
+                <Text>SR 742.101</Text>
               </LocalisationCH_V1.LocalisedText>
             </LocalisedText>
           </LocalisationCH_V1.MultilingualText>
@@ -384,6 +480,22 @@ xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
                 <Language>de</Language>
                 <Text>Bundesgesetz über die Luftfahrt</Text>
               </LocalisationCH_V1.LocalisedText>
+              <LocalisationCH_V1.LocalisedText>
+                <Language>fr</Language>
+                <Text>Loi fédérale sur l'aviation</Text>
+              </LocalisationCH_V1.LocalisedText>
+              <LocalisationCH_V1.LocalisedText>
+                <Language>it</Language>
+                <Text>Legge federale sulla navigazione aerea</Text>
+              </LocalisationCH_V1.LocalisedText>
+              <LocalisationCH_V1.LocalisedText>
+                <Language>rm</Language>
+                <Text>Lescha federala davart l'aviatica</Text>
+              </LocalisationCH_V1.LocalisedText>
+              <LocalisationCH_V1.LocalisedText>
+                <Language>en</Language>
+                <Text>Federal Act on Civil Aviation</Text>
+              </LocalisationCH_V1.LocalisedText>
             </LocalisedText>
           </LocalisationCH_V1.MultilingualText>
         </Titel>
@@ -402,6 +514,14 @@ xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
                 <Language>it</Language>
                 <Text>LNA</Text>
               </LocalisationCH_V1.LocalisedText>
+              <LocalisationCH_V1.LocalisedText>
+                <Language>rm</Language>
+                <Text>LA</Text>
+              </LocalisationCH_V1.LocalisedText>
+              <LocalisationCH_V1.LocalisedText>
+                <Language>en</Language>
+                <Text>CAA</Text>
+              </LocalisationCH_V1.LocalisedText>
             </LocalisedText>
           </LocalisationCH_V1.MultilingualText>
         </Abkuerzung>
@@ -418,6 +538,14 @@ xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
               </LocalisationCH_V1.LocalisedText>
               <LocalisationCH_V1.LocalisedText>
                 <Language>it</Language>
+                <Text>RS 748.0</Text>
+              </LocalisationCH_V1.LocalisedText>
+              <LocalisationCH_V1.LocalisedText>
+                <Language>rm</Language>
+                <Text>CS 748.0</Text>
+              </LocalisationCH_V1.LocalisedText>
+              <LocalisationCH_V1.LocalisedText>
+                <Language>en</Language>
                 <Text>RS 748.0</Text>
               </LocalisationCH_V1.LocalisedText>
             </LocalisedText>
@@ -463,6 +591,14 @@ xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
                 <Language>it</Language>
                 <Text>Ordinanza sull'infrastruttura aeronautica</Text>
               </LocalisationCH_V1.LocalisedText>
+              <LocalisationCH_V1.LocalisedText>
+                <Language>rm</Language>
+                <Text>Ordinaziun davart l'infrastructura da l'aviatica</Text>
+              </LocalisationCH_V1.LocalisedText>
+              <LocalisationCH_V1.LocalisedText>
+                <Language>en</Language>
+                <Text>Ordinance on Aviation Infrastructure</Text>
+              </LocalisationCH_V1.LocalisedText>
             </LocalisedText>
           </LocalisationCH_V1.MultilingualText>
         </Titel>
@@ -481,6 +617,14 @@ xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
                 <Language>it</Language>
                 <Text>OSIA</Text>
               </LocalisationCH_V1.LocalisedText>
+              <LocalisationCH_V1.LocalisedText>
+                <Language>rm</Language>
+                <Text>OIAv</Text>
+              </LocalisationCH_V1.LocalisedText>
+              <LocalisationCH_V1.LocalisedText>
+                <Language>en</Language>
+                <Text>AvIO</Text>
+              </LocalisationCH_V1.LocalisedText>
             </LocalisedText>
           </LocalisationCH_V1.MultilingualText>
         </Abkuerzung>
@@ -498,6 +642,14 @@ xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
               <LocalisationCH_V1.LocalisedText>
                 <Language>it</Language>
                 <Text>RS 748.131.1</Text>
+              </LocalisationCH_V1.LocalisedText>
+              <LocalisationCH_V1.LocalisedText>
+                <Language>rm</Language>
+                <Text>CS 748.131.1</Text>
+              </LocalisationCH_V1.LocalisedText>
+              <LocalisationCH_V1.LocalisedText>
+                <Language>en</Language>
+                <Text>SR 748.131.1</Text>
               </LocalisationCH_V1.LocalisedText>
             </LocalisedText>
           </LocalisationCH_V1.MultilingualText>
@@ -554,6 +706,10 @@ xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
                 <Text>Legge federale sulla protezione dell'ambiente</Text>
               </LocalisationCH_V1.LocalisedText>
               <LocalisationCH_V1.LocalisedText>
+                <Language>rm</Language>
+                <Text>Lescha davart la protecziun da l'ambient</Text>
+              </LocalisationCH_V1.LocalisedText>
+              <LocalisationCH_V1.LocalisedText>
                 <Language>en</Language>
                 <Text>Federal Act on the Protection of the Environment</Text>
               </LocalisationCH_V1.LocalisedText>
@@ -573,6 +729,10 @@ xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
               </LocalisationCH_V1.LocalisedText>
               <LocalisationCH_V1.LocalisedText>
                 <Language>it</Language>
+                <Text>LPAmb</Text>
+              </LocalisationCH_V1.LocalisedText>
+              <LocalisationCH_V1.LocalisedText>
+                <Language>rm</Language>
                 <Text>LPAmb</Text>
               </LocalisationCH_V1.LocalisedText>
               <LocalisationCH_V1.LocalisedText>
@@ -596,6 +756,14 @@ xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
               <LocalisationCH_V1.LocalisedText>
                 <Language>it</Language>
                 <Text>RS 814.01</Text>
+              </LocalisationCH_V1.LocalisedText>
+              <LocalisationCH_V1.LocalisedText>
+                <Language>rm</Language>
+                <Text>CS 814.01</Text>
+              </LocalisationCH_V1.LocalisedText>
+              <LocalisationCH_V1.LocalisedText>
+                <Language>en</Language>
+                <Text>SR 814.01</Text>
               </LocalisationCH_V1.LocalisedText>
             </LocalisedText>
           </LocalisationCH_V1.MultilingualText>
@@ -641,8 +809,12 @@ xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
                 <Text>Ordinanza sul risanamento dei siti inquinati</Text>
               </LocalisationCH_V1.LocalisedText>
               <LocalisationCH_V1.LocalisedText>
+                <Language>rm</Language>
+                <Text>Ordinaziun davart las deponias veglias</Text>
+              </LocalisationCH_V1.LocalisedText>
+              <LocalisationCH_V1.LocalisedText>
                 <Language>en</Language>
-                <Text>Ordinance on the Remediation of Polluted Sites</Text>
+                <Text>Ordinance on the Remediation of Contaminated Sites</Text>
               </LocalisationCH_V1.LocalisedText>
             </LocalisedText>
           </LocalisationCH_V1.MultilingualText>
@@ -661,6 +833,10 @@ xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
               <LocalisationCH_V1.LocalisedText>
                 <Language>it</Language>
                 <Text>OSiti</Text>
+              </LocalisationCH_V1.LocalisedText>
+              <LocalisationCH_V1.LocalisedText>
+                <Language>rm</Language>
+                <Text>OSDV</Text>
               </LocalisationCH_V1.LocalisedText>
               <LocalisationCH_V1.LocalisedText>
                 <Language>en</Language>
@@ -682,6 +858,14 @@ xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
               </LocalisationCH_V1.LocalisedText>
               <LocalisationCH_V1.LocalisedText>
                 <Language>it</Language>
+                <Text>RS 814.680</Text>
+              </LocalisationCH_V1.LocalisedText>
+              <LocalisationCH_V1.LocalisedText>
+                <Language>rm</Language>
+                <Text>CS 814.680</Text>
+              </LocalisationCH_V1.LocalisedText>
+              <LocalisationCH_V1.LocalisedText>
+                <Language>en</Language>
                 <Text>RS 814.680</Text>
               </LocalisationCH_V1.LocalisedText>
             </LocalisedText>
@@ -726,6 +910,14 @@ xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
               <LocalisationCH_V1.LocalisedText>
                 <Language>de</Language>
                 <Text>Bundesgesetz über den Schutz der Gewässer</Text>
+              </LocalisationCH_V1.LocalisedText>
+              <LocalisationCH_V1.LocalisedText>
+                <Language>fr</Language>
+                <Text>Loi fédérale sur la protection des eaux</Text>
+              </LocalisationCH_V1.LocalisedText>
+              <LocalisationCH_V1.LocalisedText>
+                <Language>it</Language>
+                <Text>Legge federale sulla protezione delle acque</Text>
               </LocalisationCH_V1.LocalisedText>
               <LocalisationCH_V1.LocalisedText>
                 <Language>rm</Language>
@@ -779,6 +971,14 @@ xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
                 <Language>it</Language>
                 <Text>RS 814.20</Text>
               </LocalisationCH_V1.LocalisedText>
+              <LocalisationCH_V1.LocalisedText>
+                <Language>rm</Language>
+                <Text>CS 814.20</Text>
+              </LocalisationCH_V1.LocalisedText>
+              <LocalisationCH_V1.LocalisedText>
+                <Language>en</Language>
+                <Text>SR 814.20</Text>
+              </LocalisationCH_V1.LocalisedText>
             </LocalisedText>
           </LocalisationCH_V1.MultilingualText>
         </OffizielleNr>
@@ -823,6 +1023,10 @@ xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
                 <Text>Ordinanza sulla protezione delle acque</Text>
               </LocalisationCH_V1.LocalisedText>
               <LocalisationCH_V1.LocalisedText>
+                <Language>rm</Language>
+                <Text>Ordinaziun davart la protecziun da las auas</Text>
+              </LocalisationCH_V1.LocalisedText>
+              <LocalisationCH_V1.LocalisedText>
                 <Language>en</Language>
                 <Text>Waters Protection Ordinance</Text>
               </LocalisationCH_V1.LocalisedText>
@@ -845,6 +1049,10 @@ xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
                 <Text>OPAc</Text>
               </LocalisationCH_V1.LocalisedText>
               <LocalisationCH_V1.LocalisedText>
+                <Language>rm</Language>
+                <Text>OPAuas</Text>
+              </LocalisationCH_V1.LocalisedText>
+              <LocalisationCH_V1.LocalisedText>
                 <Language>en</Language>
                 <Text>WPO</Text>
               </LocalisationCH_V1.LocalisedText>
@@ -865,6 +1073,14 @@ xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
               <LocalisationCH_V1.LocalisedText>
                 <Language>it</Language>
                 <Text>RS 814.201</Text>
+              </LocalisationCH_V1.LocalisedText>
+              <LocalisationCH_V1.LocalisedText>
+                <Language>rm</Language>
+                <Text>CS 814.201</Text>
+              </LocalisationCH_V1.LocalisedText>
+              <LocalisationCH_V1.LocalisedText>
+                <Language>en</Language>
+                <Text>SR 814.201</Text>
               </LocalisationCH_V1.LocalisedText>
             </LocalisedText>
           </LocalisationCH_V1.MultilingualText>
@@ -912,6 +1128,10 @@ xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
                 <Text>Ordinanza contro l'inquinamento fonico</Text>
               </LocalisationCH_V1.LocalisedText>
               <LocalisationCH_V1.LocalisedText>
+                <Language>rm</Language>
+                <Text>Ordinaziun davart la protecziun cunter canera</Text>
+              </LocalisationCH_V1.LocalisedText>
+              <LocalisationCH_V1.LocalisedText>
                 <Language>en</Language>
                 <Text>Noise Abatement Ordinance</Text>
               </LocalisationCH_V1.LocalisedText>
@@ -934,6 +1154,10 @@ xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
                 <Text>OIF</Text>
               </LocalisationCH_V1.LocalisedText>
               <LocalisationCH_V1.LocalisedText>
+                <Language>rm</Language>
+                <Text>OPC</Text>
+              </LocalisationCH_V1.LocalisedText>
+              <LocalisationCH_V1.LocalisedText>
                 <Language>en</Language>
                 <Text>NAO</Text>
               </LocalisationCH_V1.LocalisedText>
@@ -954,6 +1178,14 @@ xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
               <LocalisationCH_V1.LocalisedText>
                 <Language>it</Language>
                 <Text>RS 814.41</Text>
+              </LocalisationCH_V1.LocalisedText>
+              <LocalisationCH_V1.LocalisedText>
+                <Language>rm</Language>
+                <Text>CS 814.41</Text>
+              </LocalisationCH_V1.LocalisedText>
+              <LocalisationCH_V1.LocalisedText>
+                <Language>en</Language>
+                <Text>SR 814.41</Text>
               </LocalisationCH_V1.LocalisedText>
             </LocalisedText>
           </LocalisationCH_V1.MultilingualText>
@@ -1007,6 +1239,10 @@ xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
                 <Text>Legge federale sulle foreste</Text>
               </LocalisationCH_V1.LocalisedText>
               <LocalisationCH_V1.LocalisedText>
+                <Language>rm</Language>
+                <Text>Lescha federala davart il guaud</Text>
+              </LocalisationCH_V1.LocalisedText>
+              <LocalisationCH_V1.LocalisedText>
                 <Language>en</Language>
                 <Text>Federal Act on Forest</Text>
               </LocalisationCH_V1.LocalisedText>
@@ -1029,6 +1265,10 @@ xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
                 <Text>LFo</Text>
               </LocalisationCH_V1.LocalisedText>
               <LocalisationCH_V1.LocalisedText>
+                <Language>rm</Language>
+                <Text>LG</Text>
+              </LocalisationCH_V1.LocalisedText>
+              <LocalisationCH_V1.LocalisedText>
                 <Language>en</Language>
                 <Text>ForA</Text>
               </LocalisationCH_V1.LocalisedText>
@@ -1048,6 +1288,14 @@ xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
               </LocalisationCH_V1.LocalisedText>
               <LocalisationCH_V1.LocalisedText>
                 <Language>it</Language>
+                <Text>RS 921.0</Text>
+              </LocalisationCH_V1.LocalisedText>
+              <LocalisationCH_V1.LocalisedText>
+                <Language>rm</Language>
+                <Text>CS 921.0</Text>
+              </LocalisationCH_V1.LocalisedText>
+              <LocalisationCH_V1.LocalisedText>
+                <Language>en</Language>
                 <Text>RS 921.0</Text>
               </LocalisationCH_V1.LocalisedText>
             </LocalisedText>
@@ -1086,6 +1334,18 @@ xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
                 <Text>Verordnung über den Wald</Text>
               </LocalisationCH_V1.LocalisedText>
               <LocalisationCH_V1.LocalisedText>
+                <Language>fr</Language>
+                <Text>Ordonnance sur les forêts</Text>
+              </LocalisationCH_V1.LocalisedText>
+              <LocalisationCH_V1.LocalisedText>
+                <Language>it</Language>
+                <Text>Ordinanza sulle foreste</Text>
+              </LocalisationCH_V1.LocalisedText>
+              <LocalisationCH_V1.LocalisedText>
+                <Language>rm</Language>
+                <Text>Ordinaziun davart il guaud</Text>
+              </LocalisationCH_V1.LocalisedText>
+              <LocalisationCH_V1.LocalisedText>
                 <Language>en</Language>
                 <Text>Ordinance on Forest</Text>
               </LocalisationCH_V1.LocalisedText>
@@ -1108,6 +1368,10 @@ xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
                 <Text>OFo</Text>
               </LocalisationCH_V1.LocalisedText>
               <LocalisationCH_V1.LocalisedText>
+                <Language>rm</Language>
+                <Text>OG</Text>
+              </LocalisationCH_V1.LocalisedText>
+              <LocalisationCH_V1.LocalisedText>
                 <Language>en</Language>
                 <Text>ForO</Text>
               </LocalisationCH_V1.LocalisedText>
@@ -1128,6 +1392,14 @@ xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
               <LocalisationCH_V1.LocalisedText>
                 <Language>it</Language>
                 <Text>RS 921.01</Text>
+              </LocalisationCH_V1.LocalisedText>
+              <LocalisationCH_V1.LocalisedText>
+                <Language>rm</Language>
+                <Text>CS 921.01</Text>
+              </LocalisationCH_V1.LocalisedText>
+              <LocalisationCH_V1.LocalisedText>
+                <Language>en</Language>
+                <Text>SR 921.01</Text>
               </LocalisationCH_V1.LocalisedText>
             </LocalisedText>
           </LocalisationCH_V1.MultilingualText>
@@ -1177,6 +1449,14 @@ xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
                 <Language>it</Language>
                 <Text>Legge federale concernente gli impianti elettrici a corrente forte e a corrente debole</Text>
               </LocalisationCH_V1.LocalisedText>
+              <LocalisationCH_V1.LocalisedText>
+                <Language>rm</Language>
+                <Text>Lescha federala davart ils implants electrics da current lev e da current ferm</Text>
+              </LocalisationCH_V1.LocalisedText>
+              <LocalisationCH_V1.LocalisedText>
+                <Language>en</Language>
+                <Text>Federal Act on Weak and Heavy Current Electrical Installations</Text>
+              </LocalisationCH_V1.LocalisedText>
             </LocalisedText>
           </LocalisationCH_V1.MultilingualText>
         </Titel>
@@ -1195,6 +1475,14 @@ xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
                 <Language>it</Language>
                 <Text>LIE</Text>
               </LocalisationCH_V1.LocalisedText>
+              <LocalisationCH_V1.LocalisedText>
+                <Language>rm</Language>
+                <Text>LIE</Text>
+              </LocalisationCH_V1.LocalisedText>
+              <LocalisationCH_V1.LocalisedText>
+                <Language>en</Language>
+                <Text>ElecA</Text>
+              </LocalisationCH_V1.LocalisedText>
             </LocalisedText>
           </LocalisationCH_V1.MultilingualText>
         </Abkuerzung>
@@ -1212,6 +1500,14 @@ xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
               <LocalisationCH_V1.LocalisedText>
                 <Language>it</Language>
                 <Text>RS 734.0</Text>
+              </LocalisationCH_V1.LocalisedText>
+              <LocalisationCH_V1.LocalisedText>
+                <Language>rm</Language>
+                <Text>CS 734.0</Text>
+              </LocalisationCH_V1.LocalisedText>
+              <LocalisationCH_V1.LocalisedText>
+                <Language>en</Language>
+                <Text>SR 734.0</Text>
               </LocalisationCH_V1.LocalisedText>
             </LocalisedText>
           </LocalisationCH_V1.MultilingualText>
@@ -1251,7 +1547,23 @@ xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
             <LocalisedText>
               <OeREBKRM_V2_0.LocalisedUri>
                 <Language>de</Language>
-                <Text>http://www.bk.admin.ch</Text>
+                <Text>https://www.bk.admin.ch</Text>
+              </OeREBKRM_V2_0.LocalisedUri>
+              <OeREBKRM_V2_0.LocalisedUri>
+                <Language>fr</Language>
+                <Text>https://www.bk.admin.ch</Text>
+              </OeREBKRM_V2_0.LocalisedUri>
+              <OeREBKRM_V2_0.LocalisedUri>
+                <Language>it</Language>
+                <Text>https://www.bk.admin.ch</Text>
+              </OeREBKRM_V2_0.LocalisedUri>
+              <OeREBKRM_V2_0.LocalisedUri>
+                <Language>rm</Language>
+                <Text>https://www.bk.admin.ch</Text>
+              </OeREBKRM_V2_0.LocalisedUri>
+              <OeREBKRM_V2_0.LocalisedUri>
+                <Language>en</Language>
+                <Text>https://www.bk.admin.ch</Text>
               </OeREBKRM_V2_0.LocalisedUri>
             </LocalisedText>
           </OeREBKRM_V2_0.MultilingualUri>
