@@ -4,15 +4,15 @@ INTERLIS 2.3;
  */
 !!@ furtherInformation=https://www.cadastre.ch/oereb-public
 !!@ technicalContact=mailto:vermessung@swisstopo.ch
-MODEL OeREBKRMvs_V2_0 (de)
+MODEL OeREBKRMdok_V2_0 (de)
 AT "https://models.geo.admin.ch/V_D/OeREB/"
-VERSION "2020-07-02"  =
+VERSION "2020-08-13"  =
   IMPORTS OeREBKRM_V2_0,CHAdminCodes_V1,LocalisationCH_V1;
 
   /** Dieses Teilmodell definiert die Struktur für die Erlasse im Allgemeinen.
    * OID als URIs damit der Verweis auf Grundlagenerlasse (z.B. Kantonale Gesetze auf Bundesgesetze) in einem anderen Behälter (da durch eine andere Stelle erfasst/nachgeführt) verweisen können.
    */
-  TOPIC Vorschriften
+  TOPIC Dokumente
   EXTENDS OeREBKRM_V2_0.Amt =
     OID AS OeREBKRM_V2_0.OEREBOID;
 
@@ -29,21 +29,24 @@ VERSION "2020-07-02"  =
       /** Offizielle Nummer des Gesetzes; z.B. "SR 700"
        */
       OffizielleNr : LocalisationCH_V1.MultilingualText;
-      /** Kantonskürzel falls Vorschrift des Kantons oder der Gemeinde. Falls die Angabe fehlt, ist es eine Vorschrift des Bundes. z.B. "BE"
+      /** Kantonskürzel falls Dokument des Kantons. Falls die Angabe fehlt, ist es keine Vorschrift des Kantons.
        */
       Kanton : CHAdminCodes_V1.CHCantonCode;
-      /** Falls die Angabe fehlt, ist es ein Erlass des Kantons oder des Bundes. z.B. "942"
+      /** Bezeichnung der Region. Falls die Angabe fehlt, ist es kein Erlass einer Region.
+       */
+      Region : TEXT*80;
+      /** Bezeichhnung der Gemeinde. Falls die Angabe fehlt, ist es kein Dokument der Gemeinde.
        */
       Gemeinde : CHAdminCodes_V1.CHMunicipalityCode;
-      /** Das Dokument als PDF-Datei
-       */
-      Dokument : OeREBKRM_V2_0.MultilingualBlob;
       /** Falls das Dokument nur eine bestimmte Gemeinde betrifft (z.B. Sicherheitszonenplan)
        */
       NurInGemeinde : CHAdminCodes_V1.CHMunicipalityCode;
       /** Verweis auf das Element im Web; z.B. "http://www.admin.ch/ch/d/sr/700/a18.html"
        */
       TextImWeb : OeREBKRM_V2_0.MultilingualUri;
+      /** Das Dokument als PDF-Datei
+       */
+      Dokument : OeREBKRM_V2_0.MultilingualBlob;
       /** Status, ob dieses Element in Kraft ist
        */
       Rechtsstatus : MANDATORY OeREBKRM_V2_0.RechtsStatus;
@@ -60,6 +63,6 @@ VERSION "2020-07-02"  =
       Dokument -<> {0..*} Dokument;
     END ZustaendigeStelleDokument;
 
-  END Vorschriften;
+  END Dokumente;
 
-END OeREBKRMvs_V2_0.
+END OeREBKRMdok_V2_0.

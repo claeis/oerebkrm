@@ -1981,7 +1981,30 @@ xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
           </LocalisationCH_V1.MultilingualMText>
         </Inhalt>
       </OeREBKRMkvs_V2_0.Konfiguration.Glossar>
-      <OeREBKRMkvs_V2_0.Konfiguration.Haftungsausschuss TID="43773">
+      <OeREBKRMkvs_V2_0.Konfiguration.Haftungshinweis TID="43773.1">
+        <Titel>
+          <LocalisationCH_V1.MultilingualText>
+            <LocalisedText>
+              <LocalisationCH_V1.LocalisedText>
+                <Language>de</Language>
+                <Text>Eigentumsbeschränkungen im Grundbuch</Text>
+              </LocalisationCH_V1.LocalisedText>
+            </LocalisedText>
+          </LocalisationCH_V1.MultilingualText>
+        </Titel>
+        <Inhalt>
+          <LocalisationCH_V1.MultilingualMText>
+            <LocalisedText>
+              <LocalisationCH_V1.LocalisedMText>
+                <Language>de</Language>
+                <Text>Zusätzlich zu den Angaben in diesem Auszug können Eigentumsbeschränkungen auch im Grundbuch angemerkt sein.</Text>
+              </LocalisationCH_V1.LocalisedMText>
+            </LocalisedText>
+          </LocalisationCH_V1.MultilingualMText>
+        </Inhalt>
+        <AuszugIndex>10</AuszugIndex>
+      </OeREBKRMkvs_V2_0.Konfiguration.Haftungshinweis>
+      <OeREBKRMkvs_V2_0.Konfiguration.Haftungshinweis TID="43773.2">
         <Titel>
           <LocalisationCH_V1.MultilingualText>
             <LocalisedText>
@@ -2026,7 +2049,8 @@ xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
             </LocalisedText>
           </LocalisationCH_V1.MultilingualMText>
         </Inhalt>
-      </OeREBKRMkvs_V2_0.Konfiguration.Haftungsausschuss>
+        <AuszugIndex>20</AuszugIndex>
+      </OeREBKRMkvs_V2_0.Konfiguration.Haftungshinweis>
       <OeREBKRMkvs_V2_0.Konfiguration.Information TID="43774">
         <Titel>
           <LocalisationCH_V1.MultilingualText>

@@ -6,7 +6,7 @@ INTERLIS 2.3;
 !!@ technicalContact=mailto:vermessung@swisstopo.ch
 MODEL OeREBKRMazg_V2_0 (de)
 AT "https://models.geo.admin.ch/V_D/OeREB/"
-VERSION "2020-07-02"  =
+VERSION "2020-08-13"  =
   IMPORTS OeREBKRM_V2_0,CHAdminCodes_V1,LocalisationCH_V1,GeometryCHLV03_V1,GeometryCHLV95_V1;
 
   /** Dieses Teilmodell definiert die Struktur der Daten, wie sie von einem Nutzer des ÖREB-Katasters von einer OEREB-Katasterorganistion des Kantons bezogen werden können.
@@ -64,14 +64,14 @@ VERSION "2020-07-02"  =
 
     /** Spezifischer Haftungsausschluss Text.
      */
-    STRUCTURE Haftungsausschluss =
-      /** Titel zum Haftungsausschluss
+    STRUCTURE Haftungshinweis =
+      /** Titel zum Haftungshinweis
        */
       Titel : MANDATORY LocalisationCH_V1.MultilingualText;
-      /** Text zum Haftungsausschluss
+      /** Text zum Haftungshinweis
        */
       Inhalt : MANDATORY LocalisationCH_V1.MultilingualMText;
-    END Haftungsausschluss;
+    END Haftungshinweis;
 
     /** Ein Eintrag in der Planlegende.
      */
@@ -108,10 +108,13 @@ VERSION "2020-07-02"  =
       /** Abkürzung des Gesetzes; z.B. "RPG"
        */
       OffizielleNr : LocalisationCH_V1.MultilingualText;
-      /** Kantonskürzel falls Vorschrift des Kantons oder der Gemeinde. Falls die Angabe fehlt, ist es eine Vorschrift des Bundes. z.B. "BE"
+      /** Kantonskürzel falls Vorschrift des Kantons oder der Gemeinde. Falls die Angabe fehlt, ist es keine Vorschrift des Kantons. z.B. "BE"
        */
       Kanton : CHAdminCodes_V1.CHCantonCode;
-      /** BFSNr falls eine Vorschrift der Gemeinde. Falls die Angabe fehlt, ist es eine Vorschrift des Kantons oder des Bundes. z.B. "942"
+      /** Bezeichnung der Region. Falls die Angabe fehlt, ist es kein Erlass einer Region.
+       */
+      Region : TEXT*80;
+      /** BFSNr falls eine Vorschrift der Gemeinde. Falls die Angabe fehlt, ist es keine Vorschrift der Gemeinde. z.B. "942"
        */
       Gemeinde : CHAdminCodes_V1.CHMunicipalityCode;
       /** Verweis auf das Dokument im Web; z.B. "http://www.admin.ch/ch/d/sr/700"
@@ -175,7 +178,7 @@ VERSION "2020-07-02"  =
       /** Einordnung der Eigentumsbeschränkung in ein ÖREB-Katasterthema
        */
       Thema : MANDATORY OeREBKRM_V2_0.Thema;
-      /** z.B. Planungszonen innerhalb Nutzungsplanung
+      /** z.B. "Überlagernde Festlegungen" innerhalb Nutzungsplanung
        */
       SubThema : OeREBKRM_V2_0.Thema;
       /** Themenspezifische, maschinen-lesbare Art gem. Originalmodell der Eigentumsbeschränkung
@@ -190,11 +193,11 @@ VERSION "2020-07-02"  =
       /** Flächenmass dieser Eigentumsbeschränkung
        */
       FlaecheAnteil : Flaechenmass;
-      LaengeAnteil : Laengenmass;
-      PunkteAufGrundstueck : 0 .. 10000000;
       /** Flächenanteil (in %) der Überdeckung des Grundstücks (nur bei Flächen; zur Beurteilung der Relevanz)
        */
       AnteilInProzent : 0.0 .. 100.0;
+      LaengeAnteil : Laengenmass;
+      PunkteAufGrundstueck : 0 .. 10000000;
       /** Grafischer Teil des Legendeneintrages für die Darstellung dieser Eigentumsbeschränkung im PNG-Format mit 300dpi oder im SVG-Format
        */
       SymbolPunkt : BLACKBOX BINARY;
@@ -207,9 +210,8 @@ VERSION "2020-07-02"  =
        */
       Karte : MANDATORY Karte;
       /** Rechtsvorschrift der Eigentumsbeschränkung
-       * (kein Verweis auf die Rechtsvorschriften ist nur bei einem reduzierten Auszug zulässig gem. OeREBKV Art. 11)
        */
-      Vorschrift : BAG {0..*} OF Dokument;
+      Vorschrift : BAG {1..*} OF Dokument;
       /** Die für diese Geobasisdaten zuständige Stelle (Fachamt).
        */
       ZustaendigeStelle : MANDATORY Amt;
@@ -264,7 +266,6 @@ VERSION "2020-07-02"  =
        */
       GrundbuchPlan : MANDATORY Karte;
       GrundbuchPlanTitelseite : MANDATORY Karte;
-      Hinweis : BAG {0..*} OF Dokument;
       MANDATORY CONSTRAINT DEFINED(EGRID) OR (DEFINED(Nummer) AND DEFINED(NBIdent));
     END Liegenschaft_SDR;
 
@@ -307,14 +308,12 @@ VERSION "2020-07-02"  =
       /** Allgemeine Information gemäss. Textvorgabe in Weisung "Statischer Auszug"
        */
       AllgemeineInformation : LIST {0..*} OF LocalisationCH_V1.MultilingualMText;
-      Beglaubigung : LocalisationCH_V1.MultilingualMText;
-      BeglaubigungImWeb : OeREBKRM_V2_0.MultilingualUri;
-      Haftungsausschluss : BAG {0..*} OF Haftungsausschluss;
+      Haftungshinweis : LIST {0..*} OF Haftungshinweis;
       Glossar : BAG {0..*} OF Glossar;
       /** Grundstück für das dieser Auszug erstellt wurde.
        */
       Grundstueck : MANDATORY Liegenschaft_SDR;
-      KatasterFuehrendeStelle : MANDATORY Amt;
+      KatasterVerantwortlicheStelle : MANDATORY Amt;
       MANDATORY CONSTRAINT INTERLIS.elementCount(BetroffenesThema)>0 OR INTERLIS.elementCount(NichtbetroffenesThema)>0 OR INTERLIS.elementCount(ThemaOhneDaten)>0;
     END Auszug;
 

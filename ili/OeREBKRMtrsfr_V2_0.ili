@@ -6,13 +6,13 @@ INTERLIS 2.3;
 !!@ technicalContact=mailto:vermessung@swisstopo.ch
 MODEL OeREBKRMtrsfr_V2_0 (de)
 AT "https://models.geo.admin.ch/V_D/OeREB/"
-VERSION "2020-07-02"  =
-  IMPORTS OeREBKRM_V2_0,OeREBKRMvs_V2_0,CHAdminCodes_V1,LocalisationCH_V1,GeometryCHLV03_V1,GeometryCHLV95_V1;
+VERSION "2020-08-13"  =
+  IMPORTS OeREBKRM_V2_0,OeREBKRMdok_V2_0,CHAdminCodes_V1,LocalisationCH_V1,GeometryCHLV03_V1,GeometryCHLV95_V1;
 
   /** Dieses Teilmodell definiert die Struktur der Daten, wie sie von der zuständigen Stelle für die Geobasisdaten an die Abgabestelle des ÖREB-Kataster-Auszugs geliefert werden müssen. Dieses Datenmodell definiert somit, welche Daten ein minimales Datenmodell enthalten muss, um als ÖREB-Kataster fähiges Datenmodell zu gelten.
    */
   TOPIC Transferstruktur
-  EXTENDS OeREBKRMvs_V2_0.Vorschriften =
+  EXTENDS OeREBKRMdok_V2_0.Dokumente =
 
     /** Angaben zum Darstellungsdienst.
      */
@@ -25,12 +25,6 @@ VERSION "2020-07-02"  =
     /** Wurzelelement für Informationen über eine Beschränkung des Grundeigentums, die rechtskräftig, z.B. auf Grund einer Genehmigung oder eines richterlichen Entscheids, zustande gekommen ist.
      */
     CLASS Eigentumsbeschraenkung =
-      /** Einordnung der Eigentumsbeschränkung in ein ÖREBK-Thema
-       */
-      Thema : MANDATORY OeREBKRM_V2_0.Thema;
-      /** z.B. Planungszonen innerhalb Nutzungsplanung
-       */
-      SubThema : OeREBKRM_V2_0.Thema;
       /** Status, ob diese Eigentumsbeschränkung in Kraft ist
        */
       Rechtsstatus : MANDATORY OeREBKRM_V2_0.RechtsStatus;
@@ -69,20 +63,6 @@ VERSION "2020-07-02"  =
       MANDATORY CONSTRAINT DEFINED(Punkt_LV95) OR DEFINED(Linie_LV95) OR DEFINED(Flaeche_LV95);
     END Geometrie;
 
-    /** Definition für Hinweise, die unabhängig von einer konkreten Eigentumsbeschränkung gelten (z.B. der Hinweis auf eine Systematische Rechtssammlung). Der Hinweis kann aber beschränkt werden auf eine bestimmtes ÖREB-Thema und/oder Kanton und/oder Gemeinde.
-     */
-    CLASS HinweisDefinition =
-      /** Thema falls der Hinweis für ein bestimmtes ÖREB-Thema gilt. Falls die Angabe fehlt, ist es ein Hinweis der für alle ÖREB-Themen gilt.
-       */
-      Thema : OeREBKRM_V2_0.ThemaRef;
-      /** Kantonskürzel falls der Hinweis für ein Kantons-oder Gemeindegebiet gilt. Falls die Angabe fehlt, ist es ein Hinweis der für alle Kantone gilt. z.B. "BE".
-       */
-      Kanton : CHAdminCodes_V1.CHCantonCode;
-      /** BFSNr falls der Hinweis für ein Gemeindegebiet gilt. Falls die Angabe fehlt, ist es ein Hinweis der für den Kanton oder die Schweiz gilt. z.B. "942".
-       */
-      Gemeinde : CHAdminCodes_V1.CHMunicipalityCode;
-    END HinweisDefinition;
-
     /** Ein Eintrag in der Planlegende.
      */
     CLASS LegendeEintrag =
@@ -103,7 +83,7 @@ VERSION "2020-07-02"  =
       /** Zu welchem ÖREB-Thema der Legendeneintrag gehört
        */
       Thema : MANDATORY OeREBKRM_V2_0.Thema;
-      /** z.B. Planungszonen innerhalb Nutzungsplanung
+      /** z.B. "Überlagernde Festlegungen" innerhalb Nutzungsplanung
        */
       SubThema : OeREBKRM_V2_0.Thema;
       MANDATORY CONSTRAINT DEFINED(SymbolPunkt) OR DEFINED(SymbolLinie) OR DEFINED(SymbolFlaeche);
@@ -112,7 +92,7 @@ VERSION "2020-07-02"  =
     ASSOCIATION DarstellungsDienstEigentumsbeschraenkung =
       /** Darstellungsdienst, auf dem diese Eigentumsbeschränkung sichtbar, aber nicht hervorgehoben, ist.
        */
-      DarstellungsDienst -- {0..1} DarstellungsDienst;
+      DarstellungsDienst -- {1} DarstellungsDienst;
       Eigentumsbeschraenkung -<> {1..*} Eigentumsbeschraenkung;
     END DarstellungsDienstEigentumsbeschraenkung;
 
@@ -124,30 +104,15 @@ VERSION "2020-07-02"  =
     ASSOCIATION GeometrieEigentumsbeschraenkung =
       /** Geometrie der Eigentumsbeschränkung, die Rechtswirkung hat (als Basis für den Verschnitt mit den Liegenschaften)
        */
-      Geometrie -- {0..*} Geometrie;
+      Geometrie -- {1..*} Geometrie;
       Eigentumsbeschraenkung -<#> {1} Eigentumsbeschraenkung;
     END GeometrieEigentumsbeschraenkung;
-
-    ASSOCIATION GrundlageVerfeinerung =
-      Grundlage (EXTERNAL) -- {0..*} Eigentumsbeschraenkung;
-      Verfeinerung -- {0..*} Eigentumsbeschraenkung;
-    END GrundlageVerfeinerung;
-
-    ASSOCIATION HinweisDefinitionDokument =
-      HinweisDefinition -- {0..*} HinweisDefinition;
-      Dokument -- {1..*} OeREBKRMvs_V2_0.Vorschriften.Dokument;
-    END HinweisDefinitionDokument;
-
-    ASSOCIATION HinweisDefinitionZustaendigeStelle =
-      HinweisDefinition -<> {0..*} HinweisDefinition;
-      ZustaendigeStelle (EXTERNAL) -- {1} OeREBKRM_V2_0.Amt.Amt;
-    END HinweisDefinitionZustaendigeStelle;
 
     ASSOCIATION HinweisVorschrift =
       Eigentumsbeschraenkung -- {0..*} Eigentumsbeschraenkung;
       /** Rechtsvorschrift/Hinweis zur Eigentumsbeschränkung
        */
-      Vorschrift -- {1..*} OeREBKRMvs_V2_0.Vorschriften.Dokument;
+      Vorschrift -- {1..*} OeREBKRMdok_V2_0.Dokumente.Dokument;
     END HinweisVorschrift;
 
     ASSOCIATION LegendeDarstellungsdienst =
