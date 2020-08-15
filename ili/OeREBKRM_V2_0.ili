@@ -7,7 +7,7 @@ INTERLIS 2.3;
 MODEL OeREBKRM_V2_0 (de)
 AT "https://models.geo.admin.ch/V_D/OeREB/"
 VERSION "2020-08-13"  =
-  IMPORTS LocalisationCH_V1,InternationalCodes_V1;
+  IMPORTS LocalisationCH_V1,InternationalCodes_V1,CHAdminCodes_V1;
 
   DOMAIN
 
@@ -128,5 +128,62 @@ VERSION "2020-08-13"  =
     END Amt;
 
   END Amt;
+
+  /** Dieses Teilmodell definiert die Struktur für die Erlasse im Allgemeinen.
+   * OID als URIs damit der Verweis auf Grundlagenerlasse (z.B. Kantonale Gesetze auf Bundesgesetze) in einem anderen Behälter (da durch eine andere Stelle erfasst/nachgeführt) verweisen können.
+   */
+  TOPIC Dokumente
+  EXTENDS OeREBKRM_V2_0.Amt =
+    OID AS OEREBOID;
+
+    /** Dokumente im allgemeinen (Gesetze, Verordnungen, Rechtsvorschriften).
+     * "Kanton", "Region" und "Gemeinde" bleiben leer für Dokumente des Bundes. Sonst ist eines der drei definiert, um das entsprechende Staatsorgan zu bezeichnen.
+     */
+    CLASS Dokument =
+      Typ : MANDATORY OeREBKRM_V2_0.DokumentTyp;
+      /** Titel des Dokuments der im Auszug dargestellt werden soll
+       */
+      Titel : MANDATORY LocalisationCH_V1.MultilingualText;
+      /** Abkürzung des Gesetzes; z.B. "RPG"
+       */
+      Abkuerzung : LocalisationCH_V1.MultilingualText;
+      /** Offizielle Nummer des Gesetzes; z.B. "SR 700"
+       */
+      OffizielleNr : LocalisationCH_V1.MultilingualText;
+      /** Kantonskürzel falls Dokument des Kantons. Falls die Angabe fehlt, ist es kein Dokument des Kantons.
+       */
+      Kanton : CHAdminCodes_V1.CHCantonCode;
+      /** Bezeichnung der Region. Falls die Angabe fehlt, ist es kein Erlass einer Region.
+       */
+      Region : TEXT*80;
+      /** Bezeichhnung der Gemeinde. Falls die Angabe fehlt, ist es kein Dokument der Gemeinde.
+       */
+      Gemeinde : CHAdminCodes_V1.CHMunicipalityCode;
+      /** Falls das Dokument nur eine bestimmte Gemeinde betrifft (z.B. Sicherheitszonenplan)
+       */
+      NurInGemeinde : CHAdminCodes_V1.CHMunicipalityCode;
+      /** Verweis auf das Element im Web; z.B. "http://www.admin.ch/ch/d/sr/700/a18.html"
+       */
+      TextImWeb : OeREBKRM_V2_0.MultilingualUri;
+      /** Das Dokument als PDF-Datei
+       */
+      Dokument : OeREBKRM_V2_0.MultilingualBlob;
+      /** Status, ob dieses Element in Kraft ist
+       */
+      Rechtsstatus : MANDATORY OeREBKRM_V2_0.RechtsStatus;
+      /** Datum, ab dem dieses Dokument in Auszügen erscheint
+       */
+      publiziertAb : MANDATORY OeREBKRM_V2_0.Datum;
+      /** Datum, an/ab dem dieses Dokument nicht mehr in Auszügen erscheint
+       */
+      publiziertBis : OeREBKRM_V2_0.Datum;
+    END Dokument;
+
+    ASSOCIATION ZustaendigeStelleDokument =
+      ZustaendigeStelle (EXTERNAL) -- {1} OeREBKRM_V2_0.Amt.Amt;
+      Dokument -<> {0..*} Dokument;
+    END ZustaendigeStelleDokument;
+
+  END Dokumente;
 
 END OeREBKRM_V2_0.

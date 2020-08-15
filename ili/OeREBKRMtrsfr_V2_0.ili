@@ -7,12 +7,12 @@ INTERLIS 2.3;
 MODEL OeREBKRMtrsfr_V2_0 (de)
 AT "https://models.geo.admin.ch/V_D/OeREB/"
 VERSION "2020-08-13"  =
-  IMPORTS OeREBKRM_V2_0,OeREBKRMdok_V2_0,CHAdminCodes_V1,LocalisationCH_V1,GeometryCHLV03_V1,GeometryCHLV95_V1;
+  IMPORTS OeREBKRM_V2_0,CHAdminCodes_V1,LocalisationCH_V1,GeometryCHLV95_V1;
 
   /** Dieses Teilmodell definiert die Struktur der Daten, wie sie von der zuständigen Stelle für die Geobasisdaten an die Abgabestelle des ÖREB-Kataster-Auszugs geliefert werden müssen. Dieses Datenmodell definiert somit, welche Daten ein minimales Datenmodell enthalten muss, um als ÖREB-Kataster fähiges Datenmodell zu gelten.
    */
   TOPIC Transferstruktur
-  EXTENDS OeREBKRMdok_V2_0.Dokumente =
+  EXTENDS OeREBKRM_V2_0.Dokumente =
 
     /** Angaben zum Darstellungsdienst.
      */
@@ -112,7 +112,7 @@ VERSION "2020-08-13"  =
       Eigentumsbeschraenkung -- {0..*} Eigentumsbeschraenkung;
       /** Rechtsvorschrift/Hinweis zur Eigentumsbeschränkung
        */
-      Vorschrift -- {1..*} OeREBKRMdok_V2_0.Dokumente.Dokument;
+      Vorschrift -- {1..*} OeREBKRM_V2_0.Dokumente.Dokument;
     END HinweisVorschrift;
 
     ASSOCIATION LegendeDarstellungsdienst =

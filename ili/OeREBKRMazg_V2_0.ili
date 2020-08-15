@@ -7,7 +7,7 @@ INTERLIS 2.3;
 MODEL OeREBKRMazg_V2_0 (de)
 AT "https://models.geo.admin.ch/V_D/OeREB/"
 VERSION "2020-08-13"  =
-  IMPORTS OeREBKRM_V2_0,CHAdminCodes_V1,LocalisationCH_V1,GeometryCHLV03_V1,GeometryCHLV95_V1;
+  IMPORTS OeREBKRM_V2_0,CHAdminCodes_V1,LocalisationCH_V1,GeometryCHLV95_V1;
 
   /** Dieses Teilmodell definiert die Struktur der Daten, wie sie von einem Nutzer des ÖREB-Katasters von einer OEREB-Katasterorganistion des Kantons bezogen werden können.
    */
@@ -97,7 +97,8 @@ VERSION "2020-08-13"  =
       MANDATORY CONSTRAINT DEFINED(SymbolPunkt) OR DEFINED(SymbolLinie) OR DEFINED(SymbolFlaeche);
     END LegendeEintrag;
 
-    /** Dokumente im allgemeinen (Gesetze, Verordnungen, Rechtsvorschriften)
+    /** Dokumente im allgemeinen (Gesetze, Verordnungen, Rechtsvorschriften).
+     * "Kanton", "Region" und "Gemeinde" bleiben leer für Dokumente des Bundes. Sonst ist eines der drei definiert, um das entsprechende Staatsorgan zu bezeichnen.
      */
     STRUCTURE Dokument =
       Typ : MANDATORY OeREBKRM_V2_0.DokumentTyp;
