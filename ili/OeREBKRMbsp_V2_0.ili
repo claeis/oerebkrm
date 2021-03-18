@@ -1,10 +1,10 @@
 INTERLIS 2.3;
 
-/** Beispiel eines Themenmodells, dass unabhängig vom OeREBKRM-Rahmenmodell formuliert ist.
+/** Beispiel eines Themenmodells, das unabhängig vom Rahmenmodell des ÖREB-Katasters formuliert ist
  */
 !!@ furtherInformation=https://www.cadastre.ch/oereb-public
 !!@ technicalContact=mailto:infovd@swisstopo.ch
-MODEL OeREBKRMbsp3_V2_0 (de)
+MODEL OeREBKRMbsp_V2_0 (de)
 AT "https://models.geo.admin.ch/V_D/OeREB/"
 VERSION "2020-08-13"  =
   IMPORTS CHAdminCodes_V1,GeometryCHLV95_V1;
@@ -22,4 +22,4 @@ VERSION "2020-08-13"  =
 
   END Sondernutzung;
 
-END OeREBKRMbsp3_V2_0.
+END OeREBKRMbsp_V2_0.

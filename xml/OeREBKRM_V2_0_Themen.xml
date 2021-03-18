@@ -13,7 +13,7 @@ xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
   </HEADERSECTION>
   <DATASECTION>
     <OeREBKRMkvs_V2_0.Thema BID="ch.admin.v_d.oerebkrmkvs_thema">
-      <OeREBKRMkvs_V2_0.Thema.Thema TID="3">
+      <OeREBKRMkvs_V2_0.Thema.Thema TID="ch.Nutzungsplanung">
         <Code>ch.Nutzungsplanung</Code>
         <Titel>
           <LocalisationCH_V1.MultilingualText>
@@ -36,18 +36,18 @@ xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
               </LocalisationCH_V1.LocalisedText>
               <LocalisationCH_V1.LocalisedText>
                 <Language>en</Language>
-                <Text>Land-use planning (cantonal / municipal)</Text>
+                <Text>Land-use planning (cantonal/municipal)</Text>
               </LocalisationCH_V1.LocalisedText>
             </LocalisedText>
           </LocalisationCH_V1.MultilingualText>
         </Titel>
-        <AuszugIndex>010</AuszugIndex>
+        <AuszugIndex>020</AuszugIndex>
       </OeREBKRMkvs_V2_0.Thema.Thema>
       <OeREBKRMkvs_V2_0.Thema.ThemaGesetz>
-        <Thema REF="3"/>
+        <Thema REF="ch.Nutzungsplanung"/>
         <Gesetz REF="ch.admin.bk.sr.700"/>
       </OeREBKRMkvs_V2_0.Thema.ThemaGesetz>
-      <OeREBKRMkvs_V2_0.Thema.Thema TID="4">
+      <OeREBKRMkvs_V2_0.Thema.Thema TID="ch.ProjektierungszonenNationalstrassen">
         <Code>ch.ProjektierungszonenNationalstrassen</Code>
         <Titel>
           <LocalisationCH_V1.MultilingualText>
@@ -78,14 +78,14 @@ xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
         <AuszugIndex>110</AuszugIndex>
       </OeREBKRMkvs_V2_0.Thema.Thema>
       <OeREBKRMkvs_V2_0.Thema.ThemaGesetz>
-        <Thema REF="4"/>
+        <Thema REF="ch.ProjektierungszonenNationalstrassen"/>
         <Gesetz REF="ch.admin.bk.sr.725.11"/>
       </OeREBKRMkvs_V2_0.Thema.ThemaGesetz>
       <OeREBKRMkvs_V2_0.Thema.ThemaGesetz>
-        <Thema REF="4"/>
+        <Thema REF="ch.ProjektierungszonenNationalstrassen"/>
         <Gesetz REF="ch.admin.bk.sr.725.111"/>
       </OeREBKRMkvs_V2_0.Thema.ThemaGesetz>
-      <OeREBKRMkvs_V2_0.Thema.Thema TID="5">
+      <OeREBKRMkvs_V2_0.Thema.Thema TID="ch.BaulinienNationalstrassen">
         <Code>ch.BaulinienNationalstrassen</Code>
         <Titel>
           <LocalisationCH_V1.MultilingualText>
@@ -116,14 +116,14 @@ xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
         <AuszugIndex>120</AuszugIndex>
       </OeREBKRMkvs_V2_0.Thema.Thema>
       <OeREBKRMkvs_V2_0.Thema.ThemaGesetz>
-        <Thema REF="5"/>
+        <Thema REF="ch.BaulinienNationalstrassen"/>
         <Gesetz REF="ch.admin.bk.sr.725.11"/>
       </OeREBKRMkvs_V2_0.Thema.ThemaGesetz>
       <OeREBKRMkvs_V2_0.Thema.ThemaGesetz>
-        <Thema REF="5"/>
+        <Thema REF="ch.BaulinienNationalstrassen"/>
         <Gesetz REF="ch.admin.bk.sr.725.111"/>
       </OeREBKRMkvs_V2_0.Thema.ThemaGesetz>
-      <OeREBKRMkvs_V2_0.Thema.Thema TID="6">
+      <OeREBKRMkvs_V2_0.Thema.Thema TID="ch.ProjektierungszonenEisenbahnanlagen">
         <Code>ch.ProjektierungszonenEisenbahnanlagen</Code>
         <Titel>
           <LocalisationCH_V1.MultilingualText>
@@ -154,10 +154,10 @@ xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
         <AuszugIndex>210</AuszugIndex>
       </OeREBKRMkvs_V2_0.Thema.Thema>
       <OeREBKRMkvs_V2_0.Thema.ThemaGesetz>
-        <Thema REF="6"/>
+        <Thema REF="ch.ProjektierungszonenEisenbahnanlagen"/>
         <Gesetz REF="ch.admin.bk.sr.742.101"/>
       </OeREBKRMkvs_V2_0.Thema.ThemaGesetz>
-      <OeREBKRMkvs_V2_0.Thema.Thema TID="7">
+      <OeREBKRMkvs_V2_0.Thema.Thema TID="ch.BaulinienEisenbahnanlagen">
         <Code>ch.BaulinienEisenbahnanlagen</Code>
         <Titel>
           <LocalisationCH_V1.MultilingualText>
@@ -188,10 +188,10 @@ xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
         <AuszugIndex>220</AuszugIndex>
       </OeREBKRMkvs_V2_0.Thema.Thema>
       <OeREBKRMkvs_V2_0.Thema.ThemaGesetz>
-        <Thema REF="7"/>
+        <Thema REF="ch.BaulinienEisenbahnanlagen"/>
         <Gesetz REF="ch.admin.bk.sr.742.101"/>
       </OeREBKRMkvs_V2_0.Thema.ThemaGesetz>
-      <OeREBKRMkvs_V2_0.Thema.Thema TID="8">
+      <OeREBKRMkvs_V2_0.Thema.Thema TID="ch.ProjektierungszonenFlughafenanlagen">
         <Code>ch.ProjektierungszonenFlughafenanlagen</Code>
         <Titel>
           <LocalisationCH_V1.MultilingualText>
@@ -222,14 +222,14 @@ xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
         <AuszugIndex>310</AuszugIndex>
       </OeREBKRMkvs_V2_0.Thema.Thema>
       <OeREBKRMkvs_V2_0.Thema.ThemaGesetz>
-        <Thema REF="8"/>
+        <Thema REF="ch.ProjektierungszonenFlughafenanlagen"/>
         <Gesetz REF="ch.admin.bk.sr.748.0"/>
       </OeREBKRMkvs_V2_0.Thema.ThemaGesetz>
       <OeREBKRMkvs_V2_0.Thema.ThemaGesetz>
-        <Thema REF="8"/>
+        <Thema REF="ch.ProjektierungszonenFlughafenanlagen"/>
         <Gesetz REF="ch.admin.bk.sr.748.131.1"/>
       </OeREBKRMkvs_V2_0.Thema.ThemaGesetz>
-      <OeREBKRMkvs_V2_0.Thema.Thema TID="9">
+      <OeREBKRMkvs_V2_0.Thema.Thema TID="ch.BaulinienFlughafenanlagen">
         <Code>ch.BaulinienFlughafenanlagen</Code>
         <Titel>
           <LocalisationCH_V1.MultilingualText>
@@ -260,15 +260,15 @@ xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
         <AuszugIndex>320</AuszugIndex>
       </OeREBKRMkvs_V2_0.Thema.Thema>
       <OeREBKRMkvs_V2_0.Thema.ThemaGesetz>
-        <Thema REF="9"/>
+        <Thema REF="ch.BaulinienFlughafenanlagen"/>
         <Gesetz REF="ch.admin.bk.sr.748.0"/>
       </OeREBKRMkvs_V2_0.Thema.ThemaGesetz>
       <OeREBKRMkvs_V2_0.Thema.ThemaGesetz>
-        <Thema REF="9"/>
+        <Thema REF="ch.BaulinienFlughafenanlagen"/>
         <Gesetz REF="ch.admin.bk.sr.748.131.1"/>
       </OeREBKRMkvs_V2_0.Thema.ThemaGesetz>
-      <OeREBKRMkvs_V2_0.Thema.Thema TID="10">
-        <Code>ch.SicherheitszonenplanFlughafen</Code>
+      <OeREBKRMkvs_V2_0.Thema.Thema TID="ch.Sicherheitszonenplan">
+        <Code>ch.Sicherheitszonenplan</Code>
         <Titel>
           <LocalisationCH_V1.MultilingualText>
             <LocalisedText>
@@ -298,14 +298,14 @@ xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
         <AuszugIndex>330</AuszugIndex>
       </OeREBKRMkvs_V2_0.Thema.Thema>
       <OeREBKRMkvs_V2_0.Thema.ThemaGesetz>
-        <Thema REF="10"/>
+        <Thema REF="ch.Sicherheitszonenplan"/>
         <Gesetz REF="ch.admin.bk.sr.748.0"/>
       </OeREBKRMkvs_V2_0.Thema.ThemaGesetz>
       <OeREBKRMkvs_V2_0.Thema.ThemaGesetz>
-        <Thema REF="10"/>
+        <Thema REF="ch.Sicherheitszonenplan"/>
         <Gesetz REF="ch.admin.bk.sr.748.131.1"/>
       </OeREBKRMkvs_V2_0.Thema.ThemaGesetz>
-      <OeREBKRMkvs_V2_0.Thema.Thema TID="11">
+      <OeREBKRMkvs_V2_0.Thema.Thema TID="ch.BelasteteStandorte">
         <Code>ch.BelasteteStandorte</Code>
         <Titel>
           <LocalisationCH_V1.MultilingualText>
@@ -336,14 +336,14 @@ xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
         <AuszugIndex>410</AuszugIndex>
       </OeREBKRMkvs_V2_0.Thema.Thema>
       <OeREBKRMkvs_V2_0.Thema.ThemaGesetz>
-        <Thema REF="11"/>
+        <Thema REF="ch.BelasteteStandorte"/>
         <Gesetz REF="ch.admin.bk.sr.814.01"/>
       </OeREBKRMkvs_V2_0.Thema.ThemaGesetz>
       <OeREBKRMkvs_V2_0.Thema.ThemaGesetz>
-        <Thema REF="11"/>
+        <Thema REF="ch.BelasteteStandorte"/>
         <Gesetz REF="ch.admin.bk.sr.814.680"/>
       </OeREBKRMkvs_V2_0.Thema.ThemaGesetz>
-      <OeREBKRMkvs_V2_0.Thema.Thema TID="12">
+      <OeREBKRMkvs_V2_0.Thema.Thema TID="ch.BelasteteStandorteMilitaer">
         <Code>ch.BelasteteStandorteMilitaer</Code>
         <Titel>
           <LocalisationCH_V1.MultilingualText>
@@ -374,14 +374,14 @@ xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
         <AuszugIndex>420</AuszugIndex>
       </OeREBKRMkvs_V2_0.Thema.Thema>
       <OeREBKRMkvs_V2_0.Thema.ThemaGesetz>
-        <Thema REF="12"/>
+        <Thema REF="ch.BelasteteStandorteMilitaer"/>
         <Gesetz REF="ch.admin.bk.sr.814.01"/>
       </OeREBKRMkvs_V2_0.Thema.ThemaGesetz>
       <OeREBKRMkvs_V2_0.Thema.ThemaGesetz>
-        <Thema REF="12"/>
+        <Thema REF="ch.BelasteteStandorteMilitaer"/>
         <Gesetz REF="ch.admin.bk.sr.814.680"/>
       </OeREBKRMkvs_V2_0.Thema.ThemaGesetz>
-      <OeREBKRMkvs_V2_0.Thema.Thema TID="13">
+      <OeREBKRMkvs_V2_0.Thema.Thema TID="ch.BelasteteStandorteZivileFlugplaetze">
         <Code>ch.BelasteteStandorteZivileFlugplaetze</Code>
         <Titel>
           <LocalisationCH_V1.MultilingualText>
@@ -412,14 +412,14 @@ xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
         <AuszugIndex>430</AuszugIndex>
       </OeREBKRMkvs_V2_0.Thema.Thema>
       <OeREBKRMkvs_V2_0.Thema.ThemaGesetz>
-        <Thema REF="13"/>
+        <Thema REF="ch.BelasteteStandorteZivileFlugplaetze"/>
         <Gesetz REF="ch.admin.bk.sr.814.01"/>
       </OeREBKRMkvs_V2_0.Thema.ThemaGesetz>
       <OeREBKRMkvs_V2_0.Thema.ThemaGesetz>
-        <Thema REF="13"/>
+        <Thema REF="ch.BelasteteStandorteZivileFlugplaetze"/>
         <Gesetz REF="ch.admin.bk.sr.814.680"/>
       </OeREBKRMkvs_V2_0.Thema.ThemaGesetz>
-      <OeREBKRMkvs_V2_0.Thema.Thema TID="14">
+      <OeREBKRMkvs_V2_0.Thema.Thema TID="ch.BelasteteStandorteOeffentlicherVerkehr">
         <Code>ch.BelasteteStandorteOeffentlicherVerkehr</Code>
         <Titel>
           <LocalisationCH_V1.MultilingualText>
@@ -450,14 +450,14 @@ xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
         <AuszugIndex>440</AuszugIndex>
       </OeREBKRMkvs_V2_0.Thema.Thema>
       <OeREBKRMkvs_V2_0.Thema.ThemaGesetz>
-        <Thema REF="14"/>
+        <Thema REF="ch.BelasteteStandorteOeffentlicherVerkehr"/>
         <Gesetz REF="ch.admin.bk.sr.814.01"/>
       </OeREBKRMkvs_V2_0.Thema.ThemaGesetz>
       <OeREBKRMkvs_V2_0.Thema.ThemaGesetz>
-        <Thema REF="14"/>
+        <Thema REF="ch.BelasteteStandorteOeffentlicherVerkehr"/>
         <Gesetz REF="ch.admin.bk.sr.814.680"/>
       </OeREBKRMkvs_V2_0.Thema.ThemaGesetz>
-      <OeREBKRMkvs_V2_0.Thema.Thema TID="15">
+      <OeREBKRMkvs_V2_0.Thema.Thema TID="ch.Grundwasserschutzzonen">
         <Code>ch.Grundwasserschutzzonen</Code>
         <Titel>
           <LocalisationCH_V1.MultilingualText>
@@ -488,14 +488,14 @@ xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
         <AuszugIndex>510</AuszugIndex>
       </OeREBKRMkvs_V2_0.Thema.Thema>
       <OeREBKRMkvs_V2_0.Thema.ThemaGesetz>
-        <Thema REF="15"/>
+        <Thema REF="ch.Grundwasserschutzzonen"/>
         <Gesetz REF="ch.admin.bk.sr.814.20"/>
       </OeREBKRMkvs_V2_0.Thema.ThemaGesetz>
       <OeREBKRMkvs_V2_0.Thema.ThemaGesetz>
-        <Thema REF="15"/>
+        <Thema REF="ch.Grundwasserschutzzonen"/>
         <Gesetz REF="ch.admin.bk.sr.814.201"/>
       </OeREBKRMkvs_V2_0.Thema.ThemaGesetz>
-      <OeREBKRMkvs_V2_0.Thema.Thema TID="16">
+      <OeREBKRMkvs_V2_0.Thema.Thema TID="ch.Grundwasserschutzareale">
         <Code>ch.Grundwasserschutzareale</Code>
         <Titel>
           <LocalisationCH_V1.MultilingualText>
@@ -526,14 +526,14 @@ xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
         <AuszugIndex>520</AuszugIndex>
       </OeREBKRMkvs_V2_0.Thema.Thema>
       <OeREBKRMkvs_V2_0.Thema.ThemaGesetz>
-        <Thema REF="16"/>
+        <Thema REF="ch.Grundwasserschutzareale"/>
         <Gesetz REF="ch.admin.bk.sr.814.20"/>
       </OeREBKRMkvs_V2_0.Thema.ThemaGesetz>
       <OeREBKRMkvs_V2_0.Thema.ThemaGesetz>
-        <Thema REF="16"/>
+        <Thema REF="ch.Grundwasserschutzareale"/>
         <Gesetz REF="ch.admin.bk.sr.814.201"/>
       </OeREBKRMkvs_V2_0.Thema.ThemaGesetz>
-      <OeREBKRMkvs_V2_0.Thema.Thema TID="17">
+      <OeREBKRMkvs_V2_0.Thema.Thema TID="ch.Laermempfindlichkeitsstufen">
         <Code>ch.Laermempfindlichkeitsstufen</Code>
         <Titel>
           <LocalisationCH_V1.MultilingualText>
@@ -564,11 +564,11 @@ xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
         <AuszugIndex>610</AuszugIndex>
       </OeREBKRMkvs_V2_0.Thema.Thema>
       <OeREBKRMkvs_V2_0.Thema.ThemaGesetz>
-        <Thema REF="17"/>
+        <Thema REF="ch.Laermempfindlichkeitsstufen"/>
         <Gesetz REF="ch.admin.bk.sr.814.41"/>
       </OeREBKRMkvs_V2_0.Thema.ThemaGesetz>
-      <OeREBKRMkvs_V2_0.Thema.Thema TID="18">
-        <Code>ch.Waldgrenzen</Code>
+      <OeREBKRMkvs_V2_0.Thema.Thema TID="ch.StatischeWaldgrenzen">
+        <Code>ch.StatischeWaldgrenzen</Code>
         <Titel>
           <LocalisationCH_V1.MultilingualText>
             <LocalisedText>
@@ -598,14 +598,14 @@ xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
         <AuszugIndex>710</AuszugIndex>
       </OeREBKRMkvs_V2_0.Thema.Thema>
       <OeREBKRMkvs_V2_0.Thema.ThemaGesetz>
-        <Thema REF="18"/>
+        <Thema REF="ch.StatischeWaldgrenzen"/>
         <Gesetz REF="ch.admin.bk.sr.921.0"/>
       </OeREBKRMkvs_V2_0.Thema.ThemaGesetz>
       <OeREBKRMkvs_V2_0.Thema.ThemaGesetz>
-        <Thema REF="18"/>
+        <Thema REF="ch.StatischeWaldgrenzen"/>
         <Gesetz REF="ch.admin.bk.sr.921.01"/>
       </OeREBKRMkvs_V2_0.Thema.ThemaGesetz>
-      <OeREBKRMkvs_V2_0.Thema.Thema TID="19">
+      <OeREBKRMkvs_V2_0.Thema.Thema TID="ch.Waldabstandslinien">
         <Code>ch.Waldabstandslinien</Code>
         <Titel>
           <LocalisationCH_V1.MultilingualText>
@@ -636,14 +636,14 @@ xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
         <AuszugIndex>720</AuszugIndex>
       </OeREBKRMkvs_V2_0.Thema.Thema>
       <OeREBKRMkvs_V2_0.Thema.ThemaGesetz>
-        <Thema REF="19"/>
+        <Thema REF="ch.Waldabstandslinien"/>
         <Gesetz REF="ch.admin.bk.sr.921.0"/>
       </OeREBKRMkvs_V2_0.Thema.ThemaGesetz>
       <OeREBKRMkvs_V2_0.Thema.ThemaGesetz>
-        <Thema REF="19"/>
+        <Thema REF="ch.Waldabstandslinien"/>
         <Gesetz REF="ch.admin.bk.sr.921.01"/>
       </OeREBKRMkvs_V2_0.Thema.ThemaGesetz>
-      <OeREBKRMkvs_V2_0.Thema.Thema TID="20">
+      <OeREBKRMkvs_V2_0.Thema.Thema TID="ch.Planungszonen">
         <Code>ch.Planungszonen</Code>
         <Titel>
           <LocalisationCH_V1.MultilingualText>
@@ -671,13 +671,13 @@ xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
             </LocalisedText>
           </LocalisationCH_V1.MultilingualText>
         </Titel>
-        <AuszugIndex>020</AuszugIndex>
+        <AuszugIndex>010</AuszugIndex>
       </OeREBKRMkvs_V2_0.Thema.Thema>
       <OeREBKRMkvs_V2_0.Thema.ThemaGesetz>
-        <Thema REF="20"/>
+        <Thema REF="ch.Planungszonen"/>
         <Gesetz REF="ch.admin.bk.sr.700"/>
       </OeREBKRMkvs_V2_0.Thema.ThemaGesetz>
-      <OeREBKRMkvs_V2_0.Thema.Thema TID="21">
+      <OeREBKRMkvs_V2_0.Thema.Thema TID="ch.Waldreservate">
         <Code>ch.Waldreservate</Code>
         <Titel>
           <LocalisationCH_V1.MultilingualText>
@@ -708,14 +708,14 @@ xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
         <AuszugIndex>730</AuszugIndex>
       </OeREBKRMkvs_V2_0.Thema.Thema>
       <OeREBKRMkvs_V2_0.Thema.ThemaGesetz>
-        <Thema REF="21"/>
+        <Thema REF="ch.Waldreservate"/>
         <Gesetz REF="ch.admin.bk.sr.921.0"/>
       </OeREBKRMkvs_V2_0.Thema.ThemaGesetz>
       <OeREBKRMkvs_V2_0.Thema.ThemaGesetz>
-        <Thema REF="21"/>
+        <Thema REF="ch.Waldreservate"/>
         <Gesetz REF="ch.admin.bk.sr.921.01"/>
       </OeREBKRMkvs_V2_0.Thema.ThemaGesetz>
-      <OeREBKRMkvs_V2_0.Thema.Thema TID="22">
+      <OeREBKRMkvs_V2_0.Thema.Thema TID="ch.Gewaesserraum">
         <Code>ch.Gewaesserraum</Code>
         <Titel>
           <LocalisationCH_V1.MultilingualText>
@@ -746,14 +746,14 @@ xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
         <AuszugIndex>530</AuszugIndex>
       </OeREBKRMkvs_V2_0.Thema.Thema>
       <OeREBKRMkvs_V2_0.Thema.ThemaGesetz>
-        <Thema REF="22"/>
+        <Thema REF="ch.Gewaesserraum"/>
         <Gesetz REF="ch.admin.bk.sr.814.20"/>
       </OeREBKRMkvs_V2_0.Thema.ThemaGesetz>
       <OeREBKRMkvs_V2_0.Thema.ThemaGesetz>
-        <Thema REF="22"/>
+        <Thema REF="ch.Gewaesserraum"/>
         <Gesetz REF="ch.admin.bk.sr.814.201"/>
       </OeREBKRMkvs_V2_0.Thema.ThemaGesetz>
-      <OeREBKRMkvs_V2_0.Thema.Thema TID="23">
+      <OeREBKRMkvs_V2_0.Thema.Thema TID="ch.ProjektierungszonenStarkstrom">
         <Code>ch.ProjektierungszonenStarkstrom</Code>
         <Titel>
           <LocalisationCH_V1.MultilingualText>
@@ -772,7 +772,7 @@ xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
               </LocalisationCH_V1.LocalisedText>
               <LocalisationCH_V1.LocalisedText>
                 <Language>rm</Language>
-                <Text>xxxx</Text>
+                <Text>Zonas da projectaziun per conducts cun ina tensiun nominala da 220 kV u dapli</Text>
               </LocalisationCH_V1.LocalisedText>
               <LocalisationCH_V1.LocalisedText>
                 <Language>en</Language>
@@ -784,10 +784,10 @@ xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
         <AuszugIndex>810</AuszugIndex>
       </OeREBKRMkvs_V2_0.Thema.Thema>
       <OeREBKRMkvs_V2_0.Thema.ThemaGesetz>
-        <Thema REF="23"/>
+        <Thema REF="ch.ProjektierungszonenStarkstrom"/>
         <Gesetz REF="ch.admin.bk.sr.734.0"/>
       </OeREBKRMkvs_V2_0.Thema.ThemaGesetz>
-      <OeREBKRMkvs_V2_0.Thema.Thema TID="24">
+      <OeREBKRMkvs_V2_0.Thema.Thema TID="ch.BaulinienStarkstrom">
         <Code>ch.BaulinienStarkstrom</Code>
         <Titel>
           <LocalisationCH_V1.MultilingualText>
@@ -806,7 +806,7 @@ xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
               </LocalisationCH_V1.LocalisedText>
               <LocalisationCH_V1.LocalisedText>
                 <Language>rm</Language>
-                <Text>xxxx</Text>
+                <Text>Lingias da construcziun d'implants da current ferm</Text>
               </LocalisationCH_V1.LocalisedText>
               <LocalisationCH_V1.LocalisedText>
                 <Language>en</Language>
@@ -818,7 +818,7 @@ xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
         <AuszugIndex>820</AuszugIndex>
       </OeREBKRMkvs_V2_0.Thema.Thema>
       <OeREBKRMkvs_V2_0.Thema.ThemaGesetz>
-        <Thema REF="24"/>
+        <Thema REF="ch.BaulinienStarkstrom"/>
         <Gesetz REF="ch.admin.bk.sr.734.0"/>
       </OeREBKRMkvs_V2_0.Thema.ThemaGesetz>
     </OeREBKRMkvs_V2_0.Thema>

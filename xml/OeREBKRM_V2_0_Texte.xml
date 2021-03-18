@@ -61,7 +61,7 @@ xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
               </LocalisationCH_V1.LocalisedText>
               <LocalisationCH_V1.LocalisedText>
                 <Language>rm</Language>
-                <Text>Midada xxxx</Text>
+                <Text>Midada cun effect anticipà</Text>
               </LocalisationCH_V1.LocalisedText>
               <LocalisationCH_V1.LocalisedText>
                 <Language>en</Language>
@@ -90,7 +90,7 @@ xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
               </LocalisationCH_V1.LocalisedText>
               <LocalisationCH_V1.LocalisedText>
                 <Language>rm</Language>
-                <Text>Midada xxxx</Text>
+                <Text>Midada senza effect anticipà</Text>
               </LocalisationCH_V1.LocalisedText>
               <LocalisationCH_V1.LocalisedText>
                 <Language>en</Language>
@@ -187,7 +187,7 @@ xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
           </LocalisationCH_V1.MultilingualText>
         </Titel>
       </OeREBKRMkvs_V2_0.Konfiguration.DokumentTypTxt>
-      <OeREBKRMkvs_V2_0.Konfiguration.GrundstueckArtTxt TID="21">
+      <OeREBKRMkvs_V2_0.Konfiguration.GrundstuecksArtTxt TID="21">
         <Code>Liegenschaft</Code>
         <Titel>
           <LocalisationCH_V1.MultilingualText>
@@ -215,8 +215,8 @@ xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
             </LocalisedText>
           </LocalisationCH_V1.MultilingualText>
         </Titel>
-      </OeREBKRMkvs_V2_0.Konfiguration.GrundstueckArtTxt>
-      <OeREBKRMkvs_V2_0.Konfiguration.GrundstueckArtTxt TID="22">
+      </OeREBKRMkvs_V2_0.Konfiguration.GrundstuecksArtTxt>
+      <OeREBKRMkvs_V2_0.Konfiguration.GrundstuecksArtTxt TID="22">
         <Code>SelbstRecht.Baurecht</Code>
         <Titel>
           <LocalisationCH_V1.MultilingualText>
@@ -244,8 +244,8 @@ xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
             </LocalisedText>
           </LocalisationCH_V1.MultilingualText>
         </Titel>
-      </OeREBKRMkvs_V2_0.Konfiguration.GrundstueckArtTxt>
-      <OeREBKRMkvs_V2_0.Konfiguration.GrundstueckArtTxt TID="23">
+      </OeREBKRMkvs_V2_0.Konfiguration.GrundstuecksArtTxt>
+      <OeREBKRMkvs_V2_0.Konfiguration.GrundstuecksArtTxt TID="23">
         <Code>SelbstRecht.Quellenrecht</Code>
         <Titel>
           <LocalisationCH_V1.MultilingualText>
@@ -273,8 +273,8 @@ xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
             </LocalisedText>
           </LocalisationCH_V1.MultilingualText>
         </Titel>
-      </OeREBKRMkvs_V2_0.Konfiguration.GrundstueckArtTxt>
-      <OeREBKRMkvs_V2_0.Konfiguration.GrundstueckArtTxt TID="24">
+      </OeREBKRMkvs_V2_0.Konfiguration.GrundstuecksArtTxt>
+      <OeREBKRMkvs_V2_0.Konfiguration.GrundstuecksArtTxt TID="24">
         <Code>SelbstRecht.Konzessionsrecht</Code>
         <Titel>
           <LocalisationCH_V1.MultilingualText>
@@ -302,8 +302,8 @@ xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
             </LocalisedText>
           </LocalisationCH_V1.MultilingualText>
         </Titel>
-      </OeREBKRMkvs_V2_0.Konfiguration.GrundstueckArtTxt>
-      <OeREBKRMkvs_V2_0.Konfiguration.GrundstueckArtTxt TID="25">
+      </OeREBKRMkvs_V2_0.Konfiguration.GrundstuecksArtTxt>
+      <OeREBKRMkvs_V2_0.Konfiguration.GrundstuecksArtTxt TID="25">
         <Code>SelbstRecht.weitere</Code>
         <Titel>
           <LocalisationCH_V1.MultilingualText>
@@ -322,7 +322,7 @@ xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
               </LocalisationCH_V1.LocalisedText>
               <LocalisationCH_V1.LocalisedText>
                 <Language>rm</Language>
-                <Text>xxx zu übersetzen, spätestens bis Ende 2020</Text>
+                <Text>ulteriur DIP</Text>
               </LocalisationCH_V1.LocalisedText>
               <LocalisationCH_V1.LocalisedText>
                 <Language>en</Language>
@@ -331,8 +331,8 @@ xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
             </LocalisedText>
           </LocalisationCH_V1.MultilingualText>
         </Titel>
-      </OeREBKRMkvs_V2_0.Konfiguration.GrundstueckArtTxt>
-      <OeREBKRMkvs_V2_0.Konfiguration.GrundstueckArtTxt TID="26">
+      </OeREBKRMkvs_V2_0.Konfiguration.GrundstuecksArtTxt>
+      <OeREBKRMkvs_V2_0.Konfiguration.GrundstuecksArtTxt TID="26">
         <Code>Bergwerk</Code>
         <Titel>
           <LocalisationCH_V1.MultilingualText>
@@ -360,7 +360,7 @@ xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
             </LocalisedText>
           </LocalisationCH_V1.MultilingualText>
         </Titel>
-      </OeREBKRMkvs_V2_0.Konfiguration.GrundstueckArtTxt>
+      </OeREBKRMkvs_V2_0.Konfiguration.GrundstuecksArtTxt>
       <OeREBKRMkvs_V2_0.Konfiguration.Glossar TID="100">
         <Titel>
           <LocalisationCH_V1.MultilingualText>
@@ -513,7 +513,7 @@ xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
               </LocalisationCH_V1.LocalisedMText>
               <LocalisationCH_V1.LocalisedMText>
                 <Language>rm</Language>
-                <Text>xxx zu übersetzen, spätestens bis Ende 2020</Text>
+                <Text>La finamira da tut las restricziuns da la proprietad è quella da mantegnair ils interess d'autras persunas, a quests interess ston sa suttametter ils interess da la proprietaria u dal proprietari en tscherts reguards. Quai èn ubain las proprietarias ed ils proprietaris da bains immobigliars cunfinants, las vischinas ed ils vischins u er ulteriurs circuls da persunas privatas ubain la finala la generalitad sezza, il stadi. Las restricziuns a favur da las vischinas e dals vischins u d'ulteriuras persunas privatas èn adina da natira da dretg privat, quellas a favur da la generalitad da natira da dretg public.</Text>
               </LocalisationCH_V1.LocalisedMText>
               <LocalisationCH_V1.LocalisedMText>
                 <Language>en</Language>
@@ -595,7 +595,7 @@ xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
               </LocalisationCH_V1.LocalisedText>
               <LocalisationCH_V1.LocalisedText>
                 <Language>rm</Language>
-                <Text>xxx zu übersetzen, spätestens bis Ende 2020</Text>
+                <Text>UST nr.</Text>
               </LocalisationCH_V1.LocalisedText>
               <LocalisationCH_V1.LocalisedText>
                 <Language>en</Language>
@@ -621,7 +621,7 @@ xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
               </LocalisationCH_V1.LocalisedMText>
               <LocalisationCH_V1.LocalisedMText>
                 <Language>rm</Language>
-                <Text>xxx zu übersetzen, spätestens bis Ende 2020</Text>
+                <Text>Numer da la vischnanca sin la glista uffiziala da las vischnancas; ina cifra surdada per l'emprima giada da l'Uffizi federal da statistica en il rom da la glista uffiziala da las vischnancas da la Svizra l'onn 1986. Quest numer serva a designar cleramain las unitads territorialas en l'intschess da la Svizra.</Text>
               </LocalisationCH_V1.LocalisedMText>
               <LocalisationCH_V1.LocalisedMText>
                 <Language>en</Language>
@@ -675,7 +675,7 @@ xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
               </LocalisationCH_V1.LocalisedMText>
               <LocalisationCH_V1.LocalisedMText>
                 <Language>rm</Language>
-                <Text>xxx zu übersetzen, spätestens bis Ende 2020</Text>
+                <Text>Tranter las lingias da construcziun na dastgan vegnir fatgas naginas midadas architectonicas u prendidas ulteriuras mesiras che cuntrafan a l'intent d'implants da viafier existents u futurs.</Text>
               </LocalisationCH_V1.LocalisedMText>
               <LocalisationCH_V1.LocalisedMText>
                 <Language>en</Language>
@@ -729,7 +729,7 @@ xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
               </LocalisationCH_V1.LocalisedMText>
               <LocalisationCH_V1.LocalisedMText>
                 <Language>rm</Language>
-                <Text>xxx zu übersetzen, spätestens bis Ende 2020</Text>
+                <Text>Tranter las lingias da construcziun na dastgan vegnir fatgas naginas midadas architectonicas u prendidas ulteriuras mesiras che cuntrafan a l'intent d'eroports existents u futurs.</Text>
               </LocalisationCH_V1.LocalisedMText>
               <LocalisationCH_V1.LocalisedMText>
                 <Language>en</Language>
@@ -783,7 +783,7 @@ xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
               </LocalisationCH_V1.LocalisedMText>
               <LocalisationCH_V1.LocalisedMText>
                 <Language>rm</Language>
-                <Text>xxx zu übersetzen, spätestens bis Ende 2020</Text>
+                <Text>Sch'il traject projectà da la via è definitivamain enconuschent, vegnan las lingias da construcziun determinadas da tuttas duas varts da la via. Questas lingias da construcziun permettan da resguardar las premissas da la segirezza dal traffic e da l'igiena d'abitar sco er las necessitads d'ina eventuala renovaziun futura da la via. Senza permissiun na dastgan vegnir construids nagins edifizis novs u midads edifizis existents tranter las lingias da construcziun, er sch'els sa chattan mo per part entaifer las lingias da construcziun.</Text>
               </LocalisationCH_V1.LocalisedMText>
               <LocalisationCH_V1.LocalisedMText>
                 <Language>en</Language>
@@ -811,7 +811,7 @@ xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
               </LocalisationCH_V1.LocalisedText>
               <LocalisationCH_V1.LocalisedText>
                 <Language>rm</Language>
-                <Text>xxx zu übersetzen, spätestens bis Ende 2020</Text>
+                <Text>Lingias da construcziun d'implants da current ferm</Text>
               </LocalisationCH_V1.LocalisedText>
               <LocalisationCH_V1.LocalisedText>
                 <Language>en</Language>
@@ -837,7 +837,7 @@ xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
               </LocalisationCH_V1.LocalisedMText>
               <LocalisationCH_V1.LocalisedMText>
                 <Language>rm</Language>
-                <Text>xxx zu übersetzen, spätestens bis Ende 2020</Text>
+                <Text>Tranter las lingias da construcziun na dastgan vegnir fatgas naginas midadas architectonicas u prendidas ulteriuras mesiras che cuntrafan a l'intent d'implants da current ferm existents u futurs.</Text>
               </LocalisationCH_V1.LocalisedMText>
               <LocalisationCH_V1.LocalisedMText>
                 <Language>en</Language>
@@ -879,19 +879,19 @@ xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
             <LocalisedText>
               <LocalisationCH_V1.LocalisedMText>
                 <Language>de</Language>
-                <Text>Gesetz, Verordnung, Reglement etc., das generell-abstrakt ist (generell für die Person, die nicht bekannt ist, abstrakt, weil der Perimeter ohne Karte definiert ist) und auf Bundesebene, auf kantonaler oder kommunaler Ebene erlassen worden ist und die bloss eine allgemeine Rechtsgrundlage der Eigentumsbeschränkung darstellen. Die gesetzliche Grundlage ist nicht Teil des ÖREB-Katasters. Der ÖREB-Kataster enthält aber Hinweise auf die entsprechende gesetzliche Grundlage.</Text>
+                <Text>Gesetz, Verordnung etc., das generell-abstrakt ist (generell für die Person, die nicht bekannt ist, abstrakt, weil der Perimeter ohne Karte definiert ist) und auf Bundesebene, auf kantonaler oder kommunaler Ebene erlassen worden ist und die bloss eine allgemeine Rechtsgrundlage der Eigentumsbeschränkung darstellen. Die gesetzliche Grundlage ist nicht Teil des ÖREB-Katasters. Der ÖREB-Kataster enthält aber Hinweise auf die entsprechende gesetzliche Grundlage.</Text>
               </LocalisationCH_V1.LocalisedMText>
               <LocalisationCH_V1.LocalisedMText>
                 <Language>fr</Language>
-                <Text>Il s’agit de lois, d’ordonnances, de règlements, etc. à caractère général et abstrait (général car les personnes concernées ne sont pas connues et abstrait parce que le périmètre est défini sans plan) édictés au niveau fédéral, cantonal ou communal et qui ne constituent que des bases juridiques générales de la restriction de propriété. Les bases légales ne font pas partie du cadastre RDPPF qui contient toutefois des renvois vers les bases légales appropriées.</Text>
+                <Text>Il s’agit de lois, d’ordonnances etc. à caractère général et abstrait (général car les personnes concernées ne sont pas connues et abstrait parce que le périmètre est défini sans plan) édictés au niveau fédéral, cantonal ou communal et qui ne constituent que des bases juridiques générales de la restriction de propriété. Les bases légales ne font pas partie du cadastre RDPPF qui contient toutefois des renvois vers les bases légales appropriées.</Text>
               </LocalisationCH_V1.LocalisedMText>
               <LocalisationCH_V1.LocalisedMText>
                 <Language>it</Language>
-                <Text>Legge, ordinanza, regolamento ecc., che sono generali-astratti (generalmente astratti per la persona sconosciuta, perché il perimetro è definito senza carta) e che sono stati emanati a livello federale, cantonale o comunale e costituiscono semplicemente una base giuridica generale per la restrizione della proprietà. La base giuridica non fa parte del Catasto RDPP. Tuttavia, il Catasto RDPP contiene riferimenti alla base giuridica corrispondente.</Text>
+                <Text>Legge, ordinanza ecc., che sono generali-astratti (generalmente astratti per la persona sconosciuta, perché il perimetro è definito senza carta) e che sono stati emanati a livello federale, cantonale o comunale e costituiscono semplicemente una base giuridica generale per la restrizione della proprietà. La base giuridica non fa parte del Catasto RDPP. Tuttavia, il Catasto RDPP contiene riferimenti alla base giuridica corrispondente.</Text>
               </LocalisationCH_V1.LocalisedMText>
               <LocalisationCH_V1.LocalisedMText>
                 <Language>rm</Language>
-                <Text>xxx zu übersetzen, spätestens bis Ende 2020</Text>
+                <Text>Lescha, ordinaziun e.u.v, tut quai ch'è general ed abstract (general per la persuna che n'è betg enconuschenta, abstract, perquai ch'il perimeter è definì senza charta) ed è vegnì relaschà sin plaun federal, chantunal u communal e che represchenta mo ina basa legala generala da la restricziun da la proprietad. La basa legala n'è betg ina part integrala dal cataster RPDP. Il cataster RPDP cuntegna però renviaments a la basa legala correspundenta.</Text>
               </LocalisationCH_V1.LocalisedMText>
               <LocalisationCH_V1.LocalisedMText>
                 <Language>en</Language>
@@ -945,7 +945,7 @@ xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
               </LocalisationCH_V1.LocalisedMText>
               <LocalisationCH_V1.LocalisedMText>
                 <Language>rm</Language>
-                <Text>xxx zu übersetzen, spätestens bis Ende 2020</Text>
+                <Text>Auas currentas pon mo daventar pli natiralas, sch'i vegn mess a disposiziun spazi avunda per la protecziun da las auas. Il spazi d'auas duai da princip restar liber da stabiliments novs; stabiliments existents han però ina garanzia d'existenza.</Text>
               </LocalisationCH_V1.LocalisedMText>
               <LocalisationCH_V1.LocalisedMText>
                 <Language>en</Language>
@@ -999,7 +999,7 @@ xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
               </LocalisationCH_V1.LocalisedMText>
               <LocalisationCH_V1.LocalisedMText>
                 <Language>rm</Language>
-                <Text>xxx zu übersetzen, spätestens bis Ende 2020</Text>
+                <Text>Areal determinà dal chantun ch'è d'impurtanza per utilisar e per concentrar en l'avegnir resursas d'aua sutterrana ed en il qual i na dastgan vegnir construids nagins edifizis e stabiliments ed exequidas naginas lavurs che pudessan disturbar en l'avegnir ils stabiliments per utilisar e per concentrar aua sutterrana.</Text>
               </LocalisationCH_V1.LocalisedMText>
               <LocalisationCH_V1.LocalisedMText>
                 <Language>en</Language>
@@ -1053,7 +1053,7 @@ xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
               </LocalisationCH_V1.LocalisedMText>
               <LocalisationCH_V1.LocalisedMText>
                 <Language>rm</Language>
-                <Text>xxx zu übersetzen, spätestens bis Ende 2020</Text>
+                <Text>Zona da protecziun da l'aua sutterrana, en la quala i duai vegnir garantì ch'i stattan a disposiziun temp e plazza avunda per prender las mesiras ch'èn necessarias en cas da privels directamain smanatschants sco accidents cun substanzas che pericliteschan l'aua.</Text>
               </LocalisationCH_V1.LocalisedMText>
               <LocalisationCH_V1.LocalisedMText>
                 <Language>en</Language>
@@ -1107,7 +1107,7 @@ xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
               </LocalisationCH_V1.LocalisedMText>
               <LocalisationCH_V1.LocalisedMText>
                 <Language>rm</Language>
-                <Text>xxx zu übersetzen, spätestens bis Ende 2020</Text>
+                <Text>Il cataster cuntegna deponias ed auters lieus contaminads cun ruments, ils qualsvegnan sanads, sch'els chaschunan influenzas nuschaivlas u mulestusas u sch'igl exista in privel concret che talas influenzas sa sviluppian. L'autoritad eruescha ils lieus contaminads cun evaluar las indicaziuns avant maun sco chartas, registers ed annunzias. En il register inscriva ella quels lieus, tar ils quals la contaminaziun è cumprovada u fitg probabla.</Text>
               </LocalisationCH_V1.LocalisedMText>
               <LocalisationCH_V1.LocalisedMText>
                 <Language>en</Language>
@@ -1161,7 +1161,7 @@ xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
               </LocalisationCH_V1.LocalisedMText>
               <LocalisationCH_V1.LocalisedMText>
                 <Language>rm</Language>
-                <Text>xxx zu übersetzen, spätestens bis Ende 2020</Text>
+                <Text>Il post chantunal ch'è responsabel per il cataster survegn las datas ch'ils posts spezialisads cumpetents ston inscriver en il cataster RDPP. El administrescha questas datas e las metta a disposiziun a la populaziun sur il geoportal RDPP dal chantun.</Text>
               </LocalisationCH_V1.LocalisedMText>
               <LocalisationCH_V1.LocalisedMText>
                 <Language>en</Language>
@@ -1189,7 +1189,7 @@ xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
               </LocalisationCH_V1.LocalisedText>
               <LocalisationCH_V1.LocalisedText>
                 <Language>rm</Language>
-                <Text>xxx zu übersetzen, spätestens bis Ende 2020</Text>
+                <Text>CLC</Text>
               </LocalisationCH_V1.LocalisedText>
               <LocalisationCH_V1.LocalisedText>
                 <Language>en</Language>
@@ -1269,7 +1269,7 @@ xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
               </LocalisationCH_V1.LocalisedMText>
               <LocalisationCH_V1.LocalisedMText>
                 <Language>rm</Language>
-                <Text>xxx zu übersetzen, spätestens bis Ende 2020</Text>
+                <Text>Grads da sensibilitad vegnan fixads per definir mintgamai tschertas zonas: quellas che basegnan ina protecziun pli gronda cunter la canera, quellas, en las qualas n'èn admess nagins manaschis disturbants, e quellas, en las qualas èn admess manaschis che chaschunan disturbis moderads e ferms.</Text>
               </LocalisationCH_V1.LocalisedMText>
               <LocalisationCH_V1.LocalisedMText>
                 <Language>en</Language>
@@ -1377,7 +1377,7 @@ xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
               </LocalisationCH_V1.LocalisedMText>
               <LocalisationCH_V1.LocalisedMText>
                 <Language>rm</Language>
-                <Text>xxx zu übersetzen, spätestens bis Ende 2020</Text>
+                <Text>Per garantir la libra disponibladad dals bains immobigliars ch'èn necessaris per construir futurs edifizis e stabiliments da viafier, pon vegnir determinadas zonas da projectaziun per territoris designads exactamain. En questas zonas na dastgan vegnir fatgas naginas midadas architectonicas che cuntrafan a l'intent da las viafiers.</Text>
               </LocalisationCH_V1.LocalisedMText>
               <LocalisationCH_V1.LocalisedMText>
                 <Language>en</Language>
@@ -1431,7 +1431,7 @@ xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
               </LocalisationCH_V1.LocalisedMText>
               <LocalisationCH_V1.LocalisedMText>
                 <Language>rm</Language>
-                <Text>xxx zu übersetzen, spätestens bis Ende 2020</Text>
+                <Text>Per garantir la libra disponibladad dals bains immobigliars ch'èn necessaris per construir eroports, pon vegnir determinadas zonas da projectaziun per territoris designads exactamain. En questas zonas na dastgan vegnir fatgas naginas midadas architectonicas che cuntrafan a l'intent dals eroports.</Text>
               </LocalisationCH_V1.LocalisedMText>
               <LocalisationCH_V1.LocalisedMText>
                 <Language>en</Language>
@@ -1459,7 +1459,7 @@ xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
               </LocalisationCH_V1.LocalisedText>
               <LocalisationCH_V1.LocalisedText>
                 <Language>rm</Language>
-                <Text>xxx zu übersetzen, spätestens bis Ende 2020</Text>
+                <Text>Zonas da projectaziun per conducts cun ina tensiun nominala da 220 kV u dapli</Text>
               </LocalisationCH_V1.LocalisedText>
               <LocalisationCH_V1.LocalisedText>
                 <Language>en</Language>
@@ -1485,7 +1485,7 @@ xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
               </LocalisationCH_V1.LocalisedMText>
               <LocalisationCH_V1.LocalisedMText>
                 <Language>rm</Language>
-                <Text>xxx zu übersetzen, spätestens bis Ende 2020</Text>
+                <Text>Per garantir la libra disponibladad dals bains immobigliars ch'èn necessaris per construir conducts cun ina tensiun nominala da 220 kilovolts u dapli, pon vegnir determinadas zonas da projectaziun per territoris designads exactamain. En questas zonas na dastgan vegnir fatgas naginas midadas architectonicas che cuntrafan a l'intent dals conducts.</Text>
               </LocalisationCH_V1.LocalisedMText>
               <LocalisationCH_V1.LocalisedMText>
                 <Language>en</Language>
@@ -1539,7 +1539,7 @@ xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
               </LocalisationCH_V1.LocalisedMText>
               <LocalisationCH_V1.LocalisedMText>
                 <Language>rm</Language>
-                <Text>xxx zu übersetzen, spätestens bis Ende 2020</Text>
+                <Text>Per garantir la libra disponibladad dal terren ch'è necessari per construir las vias naziunalas, pon vegnir determinadas zonas da projectaziun per territoris designads exactamain. En questas zonas na dastgan vegnir fatgas naginas midadas architectonicas che cuntrafan a l'intent da las vias naziunalas.</Text>
               </LocalisationCH_V1.LocalisedMText>
               <LocalisationCH_V1.LocalisedMText>
                 <Language>en</Language>
@@ -1593,7 +1593,7 @@ xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
               </LocalisationCH_V1.LocalisedMText>
               <LocalisationCH_V1.LocalisedMText>
                 <Language>rm</Language>
-                <Text>xxx zu übersetzen, spätestens bis Ende 2020</Text>
+                <Text>Determinaziun da l'utilisaziun da singulas surfatschas da terren per tscherts intents (p.ex. agricultura, abitadi, guaud).</Text>
               </LocalisationCH_V1.LocalisedMText>
               <LocalisationCH_V1.LocalisedMText>
                 <Language>en</Language>
@@ -1701,7 +1701,7 @@ xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
               </LocalisationCH_V1.LocalisedMText>
               <LocalisationCH_V1.LocalisedMText>
                 <Language>rm</Language>
-                <Text>xxx zu übersetzen, spätestens bis Ende 2020</Text>
+                <Text>Plan da zonas, en il qual èn represchentadas las zonas da segirezza che mussan las restricziuns da la proprietad tenor surfatscha e tenor autezza.</Text>
               </LocalisationCH_V1.LocalisedMText>
               <LocalisationCH_V1.LocalisedMText>
                 <Language>en</Language>
@@ -1755,7 +1755,7 @@ xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
               </LocalisationCH_V1.LocalisedMText>
               <LocalisationCH_V1.LocalisedMText>
                 <Language>rm</Language>
-                <Text>xxx zu übersetzen, spätestens bis Ende 2020</Text>
+                <Text>Cunfins statics dal guaud ston vegnir fixads sin basa da determinaziuns dal guaud cun vigur legala. Novs plantadis ordaifer quests cunfins da guaud na valan betg sco guaud.</Text>
               </LocalisationCH_V1.LocalisedMText>
               <LocalisationCH_V1.LocalisedMText>
                 <Language>en</Language>
@@ -1797,19 +1797,19 @@ xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
             <LocalisedText>
               <LocalisationCH_V1.LocalisedMText>
                 <Language>de</Language>
-                <Text>Bauten und Anlagen in Waldesnähe sind nur zulässig, wenn sie die Erhaltung, Pflege und Nutzung des Waldes nicht beeinträchtigen. </Text>
+                <Text>Bauten und Anlagen in Waldesnähe sind nur zulässig, wenn sie die Erhaltung, Pflege und Nutzung des Waldes nicht beeinträchtigen.</Text>
               </LocalisationCH_V1.LocalisedMText>
               <LocalisationCH_V1.LocalisedMText>
                 <Language>fr</Language>
-                <Text>Les constructions et les installations proches de la forêt ne sont permises que si elles ne portent atteinte ni à sa conservation, ni à son entretien, ni à son exploitation. </Text>
+                <Text>Les constructions et les installations proches de la forêt ne sont permises que si elles ne portent atteinte ni à sa conservation, ni à son entretien, ni à son exploitation.</Text>
               </LocalisationCH_V1.LocalisedMText>
               <LocalisationCH_V1.LocalisedMText>
                 <Language>it</Language>
-                <Text>Gli edifici e gli impianti in prossimità della foresta sono consentiti solo se non compromettono la conservazione, la cura e lo sfruttamento della foresta. </Text>
+                <Text>Gli edifici e gli impianti in prossimità della foresta sono consentiti solo se non compromettono la conservazione, la cura e lo sfruttamento della foresta.</Text>
               </LocalisationCH_V1.LocalisedMText>
               <LocalisationCH_V1.LocalisedMText>
                 <Language>rm</Language>
-                <Text>xxx zu übersetzen, spätestens bis Ende 2020</Text>
+                <Text>Edifizis e stabiliments en la vischinanza dal guaud èn mo admissibels, sch'els na sminueschan betg la cultivaziun, la tgira e l'utilisaziun dal guaud.</Text>
               </LocalisationCH_V1.LocalisedMText>
               <LocalisationCH_V1.LocalisedMText>
                 <Language>en</Language>
@@ -1837,7 +1837,7 @@ xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
               </LocalisationCH_V1.LocalisedText>
               <LocalisationCH_V1.LocalisedText>
                 <Language>rm</Language>
-                <Text>Reservat da guaud</Text>
+                <Text>Reservats da guaud</Text>
               </LocalisationCH_V1.LocalisedText>
               <LocalisationCH_V1.LocalisedText>
                 <Language>en</Language>
@@ -1863,7 +1863,7 @@ xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
               </LocalisationCH_V1.LocalisedMText>
               <LocalisationCH_V1.LocalisedMText>
                 <Language>rm</Language>
-                <Text>xxx zu übersetzen, spätestens bis Ende 2020</Text>
+                <Text>Surfatscha da guaud protegida che serva a mantegnair la diversitad da las spezias da la fauna e da la flora.</Text>
               </LocalisationCH_V1.LocalisedMText>
               <LocalisationCH_V1.LocalisedMText>
                 <Language>en</Language>
@@ -1917,7 +1917,7 @@ xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
               </LocalisationCH_V1.LocalisedMText>
               <LocalisationCH_V1.LocalisedMText>
                 <Language>rm</Language>
-                <Text>xxx zu übersetzen, spätestens bis Ende 2020</Text>
+                <Text>Post da la Confederaziun, dal chantun u da la vischnanca designà da la legislaziun ch'è cumpetent per registrar, per actualisar e per administrar las geodatas da basa.</Text>
               </LocalisationCH_V1.LocalisedMText>
               <LocalisationCH_V1.LocalisedMText>
                 <Language>en</Language>
@@ -1945,7 +1945,7 @@ xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
               </LocalisationCH_V1.LocalisedText>
               <LocalisationCH_V1.LocalisedText>
                 <Language>rm</Language>
-                <Text>xxx zu übersetzen, spätestens bis Ende 2020</Text>
+                <Text>Effect anticipà</Text>
               </LocalisationCH_V1.LocalisedText>
               <LocalisationCH_V1.LocalisedText>
                 <Language>en</Language>
@@ -1971,7 +1971,7 @@ xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
               </LocalisationCH_V1.LocalisedMText>
               <LocalisationCH_V1.LocalisedMText>
                 <Language>rm</Language>
-                <Text>xxx zu übersetzen, spätestens bis Ende 2020</Text>
+                <Text>L'exposiziun publica generescha in effect anticipà: a partir da quest termin dastgan projects da construcziun vegnir permess per regla mo, sch'els na stattan betg en cuntradicziun cun la planisaziun exponida publicamain.</Text>
               </LocalisationCH_V1.LocalisedMText>
               <LocalisationCH_V1.LocalisedMText>
                 <Language>en</Language>
@@ -1989,6 +1989,22 @@ xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
                 <Language>de</Language>
                 <Text>Eigentumsbeschränkungen im Grundbuch</Text>
               </LocalisationCH_V1.LocalisedText>
+              <LocalisationCH_V1.LocalisedText>
+                <Language>fr</Language>
+                <Text>Restrictions de propriété dans le registre foncier</Text>
+              </LocalisationCH_V1.LocalisedText>
+              <LocalisationCH_V1.LocalisedText>
+                <Language>it</Language>
+                <Text>Indicazioni concernente il registro fondiario</Text>
+              </LocalisationCH_V1.LocalisedText>
+              <LocalisationCH_V1.LocalisedText>
+                <Language>rm</Language>
+                <Text>Restricziuns da la proprietad en il register funsil</Text>
+              </LocalisationCH_V1.LocalisedText>
+              <LocalisationCH_V1.LocalisedText>
+                <Language>en</Language>
+                <Text>xxx zu übersetzen</Text>
+              </LocalisationCH_V1.LocalisedText>
             </LocalisedText>
           </LocalisationCH_V1.MultilingualText>
         </Titel>
@@ -1998,6 +2014,22 @@ xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
               <LocalisationCH_V1.LocalisedMText>
                 <Language>de</Language>
                 <Text>Zusätzlich zu den Angaben in diesem Auszug können Eigentumsbeschränkungen auch im Grundbuch angemerkt sein.</Text>
+              </LocalisationCH_V1.LocalisedMText>
+              <LocalisationCH_V1.LocalisedMText>
+                <Language>fr</Language>
+                <Text>Il est possible que des restrictions de propriété fassent l'objet d'une mention au registre foncier, en plus des indications figurant sur cet extrait.</Text>
+              </LocalisationCH_V1.LocalisedMText>
+              <LocalisationCH_V1.LocalisedMText>
+                <Language>it</Language>
+                <Text>Oltre alle informazioni contenute nel presente estratto, le restrizioni della proprietà possono essere annotate anche nel registro fondiario.</Text>
+              </LocalisationCH_V1.LocalisedMText>
+              <LocalisationCH_V1.LocalisedMText>
+                <Language>rm</Language>
+                <Text>Supplementarmain a las indicaziuns en quest extract pon restricziuns da la proprietad er esser remartgadas en il register funsil.</Text>
+              </LocalisationCH_V1.LocalisedMText>
+              <LocalisationCH_V1.LocalisedMText>
+                <Language>en</Language>
+                <Text>xxx zu übersetzen</Text>
               </LocalisationCH_V1.LocalisedMText>
             </LocalisedText>
           </LocalisationCH_V1.MultilingualMText>
@@ -2022,7 +2054,7 @@ xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
               </LocalisationCH_V1.LocalisedText>
               <LocalisationCH_V1.LocalisedText>
                 <Language>rm</Language>
-                <Text>xxx zu übersetzen, spätestens bis Ende 2020</Text>
+                <Text>Exclusiun da la responsabladad cataster dals lieus contaminads (CLC)</Text>
               </LocalisationCH_V1.LocalisedText>
             </LocalisedText>
           </LocalisationCH_V1.MultilingualText>
@@ -2044,7 +2076,7 @@ xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
               </LocalisationCH_V1.LocalisedMText>
               <LocalisationCH_V1.LocalisedMText>
                 <Language>rm</Language>
-                <Text>xxx zu übersetzen, spätestens bis Ende 2020</Text>
+                <Text>Il cataster dals lieus contaminads (CLC) è vegnì fatg tenor ils criteris fixads da l'Uffizi federal d'ambient UFAM e vegn actualisà permanentamain sin basa da novas enconuschientschas (p.ex. retschertgas). Las surfatschas inscrittas en il CLC pon divergiar da la dimensiun effectiva da la contaminaziun. Sch'in bain immobigliar n'è betg inditgà en il CLC, na datti nagina garanzia absoluta che l'areal saja liber da mintga contaminaziun che deriva da rument u da substanzas nuschaivlas. Lieus duvrads per il manaschi da la viafier, per il militar e per l'aviatica tutgan tar il champ da cumpetenza da la Confederaziun.</Text>
               </LocalisationCH_V1.LocalisedMText>
             </LocalisedText>
           </LocalisationCH_V1.MultilingualMText>
@@ -2069,7 +2101,7 @@ xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
               </LocalisationCH_V1.LocalisedText>
               <LocalisationCH_V1.LocalisedText>
                 <Language>rm</Language>
-                <Text>xxx zu übersetzen, spätestens bis Ende 2020</Text>
+                <Text>Infurmaziun generala</Text>
               </LocalisationCH_V1.LocalisedText>
             </LocalisedText>
           </LocalisationCH_V1.MultilingualText>
@@ -2091,54 +2123,7 @@ xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
               </LocalisationCH_V1.LocalisedMText>
               <LocalisationCH_V1.LocalisedMText>
                 <Language>rm</Language>
-                <Text>xxx zu übersetzen, spätestens bis Ende 2020</Text>
-              </LocalisationCH_V1.LocalisedMText>
-            </LocalisedText>
-          </LocalisationCH_V1.MultilingualMText>
-        </Inhalt>
-        <AuszugIndex>0</AuszugIndex>
-      </OeREBKRMkvs_V2_0.Konfiguration.Information>
-      <OeREBKRMkvs_V2_0.Konfiguration.Information TID="43775">
-        <Titel>
-          <LocalisationCH_V1.MultilingualText>
-            <LocalisedText>
-              <LocalisationCH_V1.LocalisedText>
-                <Language>de</Language>
-                <Text>Hinweis auf Grundbuch</Text>
-              </LocalisationCH_V1.LocalisedText>
-              <LocalisationCH_V1.LocalisedText>
-                <Language>fr</Language>
-                <Text>Renvois au registre foncier</Text>
-              </LocalisationCH_V1.LocalisedText>
-              <LocalisationCH_V1.LocalisedText>
-                <Language>it</Language>
-                <Text>Indicazioni concernente il registro fondiario</Text>
-              </LocalisationCH_V1.LocalisedText>
-              <LocalisationCH_V1.LocalisedText>
-                <Language>rm</Language>
-                <Text>xxx zu übersetzen, spätestens bis Ende 2020</Text>
-              </LocalisationCH_V1.LocalisedText>
-            </LocalisedText>
-          </LocalisationCH_V1.MultilingualText>
-        </Titel>
-        <Inhalt>
-          <LocalisationCH_V1.MultilingualMText>
-            <LocalisedText>
-              <LocalisationCH_V1.LocalisedMText>
-                <Language>de</Language>
-                <Text>Zusätzlich zu den Angaben in diesem Auszug können Eigentumsbeschränkungen auch im Grundbuch angemerkt sein.</Text>
-              </LocalisationCH_V1.LocalisedMText>
-              <LocalisationCH_V1.LocalisedMText>
-                <Language>fr</Language>
-                <Text>Il est possible que des restrictions de propriété fassent l'objet d'une mention au registre foncier, en plus des indications figurant sur cet extrait.</Text>
-              </LocalisationCH_V1.LocalisedMText>
-              <LocalisationCH_V1.LocalisedMText>
-                <Language>it</Language>
-                <Text>Oltre alle informazioni contenute nel presente estratto, le restrizioni della proprietà possono essere annotate anche nel registro fondiario.</Text>
-              </LocalisationCH_V1.LocalisedMText>
-              <LocalisationCH_V1.LocalisedMText>
-                <Language>rm</Language>
-                <Text>xxx zu übersetzen, spätestens bis Ende 2020</Text>
+                <Text>Il cuntegn dal cataster RDPP vegn premess sco enconuschent. Il chantun [xxxx] n'è betg responsabel per l'exactadad e per la fidadadad dals documents legislativs electronics. L'extract ha in caracter puramain infurmativ e na motivescha cunzunt nagins dretgs e naginas obligaziuns. Giuridicamain liants èn quels documents ch'èn vegnids deliberads u publitgads cun vigur legala. Ulteriuras infurmaziuns davart il cataster RDPP chattais Vus sut cadastre.ch</Text>
               </LocalisationCH_V1.LocalisedMText>
             </LocalisedText>
           </LocalisationCH_V1.MultilingualMText>
