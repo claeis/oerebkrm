@@ -11,11 +11,11 @@ VERSION "2021-03-19"  =
 
   DOMAIN
 
-    /** Themenspezifische, maschinen-lesbare Art der Eigentumsbeschränkung
+    /** Themenspezifische, maschinenlesbare Art der Eigentumsbeschränkung
      */
     ArtEigentumsbeschraenkung = TEXT*40;
 
-    /** Nummer eines Artikels in einer Rechtsvorschrift oder gesetzlichen Grundlage
+    /** Nummer eines Artikels in einer gesetzlichen Grundlage
      */
     ArtikelNummer = TEXT*20;
 
@@ -24,10 +24,33 @@ VERSION "2021-03-19"  =
     /** Werteliste zur Unterscheidung der Dokumente
      */
     DokumentTyp = (
+      /** Das Dokument ist eine Rechtsvorschrift
+       */
       Rechtsvorschrift,
+      /** Das Dokument ist eine gesetzliche Grundlage
+       */
       GesetzlicheGrundlage,
+      /** Das Dokument ist ein Hinweis
+       */
       Hinweis
     );
+
+    /** Werteliste zur Unterscheidung der Grundstücke (gemäss DM01 der AV)
+     */
+    GrundstuecksArt = (
+      Liegenschaft,
+      SelbstRecht(
+        Baurecht,
+        Quellenrecht,
+        Konzessionsrecht,
+        weitere
+      ),
+      Bergwerk
+    );
+
+    /** Wertebereich für Objektidentifikatoren: Der Wert soll mit einem gültigen Internet Domain-Name anfangen, z.B. «ch.admin.sr.720»
+     */
+    OEREBOID = OID TEXT*255;
 
     /** Werteliste zur Unterscheidung ob eine Eigentumsbeschränkung in Kraft ist oder nicht
      */
@@ -43,30 +66,16 @@ VERSION "2021-03-19"  =
       AenderungOhneVorwirkung
     );
 
-    /** Wertebereich für Objektidentifikatoren: Der Wert soll mit einem gültigen Internet Domain-Name anfangen, z.B. "ch.admin.sr.720"
-     */
-    OEREBOID = OID TEXT*255;
-
-    /** Werteliste zur Unterscheidung der Grundstücke (gemäss DM01 der AV)
-     */
-    GrundstuecksArt = (
-      Liegenschaft,
-      SelbstRecht(
-        Baurecht,
-        Quellenrecht,
-        Konzessionsrecht,
-        weitere
-      ),
-      Bergwerk
-    );
-
-    /** Code für ein Thema oder Sub-Thema.
+    /** Wertebereich für den Code eines Themas oder Sub-Themas. Aufgrund des Codes lässt sich nicht erkennen, ob es ein Thema oder Sub-Thema ist.
      * Der Code wird nach folgendem Muster gebildet:
+     * 
      * ch.{topic}
      * ch.{canton}.{topic}
      * fl.{topic}
      * ch.{bfsnr}.{topic}
-     * Wobei {canton} das offizielle zwei-stellige Kürzel des Kantons ist, {topic} der Themenname und {bfsnr} die Gemeindenummer gem. BFS.
+     * 
+     * Wobei {canton} das offizielle zweistellige Kürzel des Kantons ist (z.B. «SO»), {topic} der Themenname und {bfsnr} die Gemeindenummer gemäss offizieller Gemeindeliste des BFS.
+     * Gross/Kleinschreibung ist signifikant (darf nicht ignoriert werden)
      */
     Thema = TEXT*120;
 
@@ -109,7 +118,7 @@ VERSION "2021-03-19"  =
   TOPIC Amt =
     OID AS OEREBOID;
 
-    /** Eine Organisationseinheit  innerhalb der öffentlichen Verwaltung, z.B. eine für Geobasis-daten zuständige Stelle
+    /** Eine Organisationseinheit  innerhalb der öffentlichen Verwaltung, z.B. eine für Geobasisdaten zuständige Stelle
      */
     CLASS Amt =
       /** Name des Amtes, z.B. «Amt für Gemeinden und Raumordnung des Kantons Bern»
@@ -174,6 +183,8 @@ VERSION "2021-03-19"  =
       /** Das Dokument als PDF-Datei
        */
       Dokument : OeREBKRM_V2_0.MultilingualBlob;
+      /** Ordnungszahl für die Sortierung im Auszug
+       */
       AuszugIndex : MANDATORY -1000 .. 1000;
       /** Status, ob dieses Dokument in Kraft ist
        */
@@ -181,7 +192,7 @@ VERSION "2021-03-19"  =
       /** Datum, ab dem dieses Dokument in Auszügen erscheint
        */
       publiziertAb : MANDATORY OeREBKRM_V2_0.Datum;
-      /** Datum, an/ab dem dieses Dokument nicht mehr in Auszügen erscheint
+      /** Datum, an dem dieses Dokument letztmalig in Auszügen erscheint
        */
       publiziertBis : OeREBKRM_V2_0.Datum;
     END Dokument;

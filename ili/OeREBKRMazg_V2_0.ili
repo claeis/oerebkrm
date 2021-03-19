@@ -19,16 +19,37 @@ VERSION "2021-03-19"  =
 
       Laengenmass = 0 .. 999999999 [INTERLIS.m];
 
-    /** Spezifische Haftungshinweise
+    /** Eine Organisationseinheit innerhalb der öffentlichen Verwaltung, z.B. eine für Geobasisdaten zuständige Stelle
      */
-    STRUCTURE Haftungshinweis =
-      /** Titel zum Haftungshinweis
+    STRUCTURE Amt =
+      /** Name des Amtes, z.B. «Amt für Gemeinden und Raumordnung des Kantons Bern»
        */
-      Titel : MANDATORY LocalisationCH_V1.MultilingualText;
-      /** Text zum Haftungshinweis
+      Name : MANDATORY LocalisationCH_V1.MultilingualText;
+      /** Verweis auf die Website des Amtes z.B. «https://www.jgk.be.ch/jgk/de/index/direktion/organisation/agr.html»
        */
-      Inhalt : MANDATORY LocalisationCH_V1.MultilingualMText;
-    END Haftungshinweis;
+      AmtImWeb : OeREBKRM_V2_0.MultilingualUri;
+      /** UID der Organisationseinheit
+       */
+      UID : OeREBKRM_V2_0.UID;
+      /** Optionale zusätzliche Adresszeile
+       */
+      Zeile1 : TEXT*80;
+      /** Optionale zusätzliche Adresszeile
+       */
+      Zeile2 : TEXT*80;
+      /** Strasse
+       */
+      Strasse : TEXT*100;
+      /** Hausnummer
+       */
+      Hausnr : TEXT*7;
+      /** 4-stellige Postleitzahl
+       */
+      PLZ : TEXT*4;
+      /** Postalischer Ort
+       */
+      Ort : TEXT*60;
+    END Amt;
 
     /** Punkt-, linien-, oder flächenförmige Geometrie; neu zu definierende Eigentumsbeschränkungen sollten in der Regel flächenförmig sein
      */
@@ -62,6 +83,17 @@ VERSION "2021-03-19"  =
       Inhalt : MANDATORY LocalisationCH_V1.MultilingualMText;
     END Glossar;
 
+    /** Spezifische Haftungshinweise
+     */
+    STRUCTURE Haftungshinweis =
+      /** Titel zum Haftungshinweis
+       */
+      Titel : MANDATORY LocalisationCH_V1.MultilingualText;
+      /** Text zum Haftungshinweis
+       */
+      Inhalt : MANDATORY LocalisationCH_V1.MultilingualMText;
+    END Haftungshinweis;
+
     /** Ein Eintrag in der Planlegende
      */
     STRUCTURE LegendeEintrag =
@@ -91,38 +123,6 @@ VERSION "2021-03-19"  =
       SubThema : OeREBKRM_V2_0.Thema;
       MANDATORY CONSTRAINT DEFINED(SymbolPunkt) OR DEFINED(SymbolLinie) OR DEFINED(SymbolFlaeche);
     END LegendeEintrag;
-
-    /** Eine Organisationseinheit innerhalb der öffentlichen Verwaltung, z.B. eine für Geobasis-daten zuständige Stelle
-     */
-    STRUCTURE Amt =
-      /** Name des Amtes, z.B. «Amt für Gemeinden und Raumordnung des Kantons Bern»
-       */
-      Name : MANDATORY LocalisationCH_V1.MultilingualText;
-      /** Verweis auf die Website des Amtes z.B. «https://www.jgk.be.ch/jgk/de/index/direktion/organisation/agr.html»
-       */
-      AmtImWeb : OeREBKRM_V2_0.MultilingualUri;
-      /** UID der Organisationseinheit
-       */
-      UID : OeREBKRM_V2_0.UID;
-      /** Optionale zusätzliche Adresszeile
-       */
-      Zeile1 : TEXT*80;
-      /** Optionale zusätzliche Adresszeile
-       */
-      Zeile2 : TEXT*80;
-      /** Strasse
-       */
-      Strasse : TEXT*100;
-      /** Hausnummer
-       */
-      Hausnr : TEXT*7;
-      /** 4-stellige Postleitzahl
-       */
-      PLZ : TEXT*4;
-      /** Postalischer Ort
-       */
-      Ort : TEXT*60;
-    END Amt;
 
     /** Dokumente im Allgemeinen (Gesetze, Verordnungen, Rechtsvorschriften, weitere Hinweise)
      */
@@ -286,7 +286,7 @@ VERSION "2021-03-19"  =
       MANDATORY CONSTRAINT DEFINED(EGRID) OR (DEFINED(Nummer) AND DEFINED(NBIdent));
     END Liegenschaft_SDR;
 
-    /** Wurzelelement für einen Katasterauszug. Ein Katasterauszug enthält den Inhalt des ÖREB-Katasters in Bezug auf mindestens eine Liegenschaft oder ein SDR.
+    /** Wurzelelement für einen Katasterauszug. Ein Katasterauszug enthält den Inhalt des ÖREB-Katasters in Bezug auf genau  eine bestimmte Liegenschaft oder ein SDR.
      */
     CLASS Auszug =
       /** Datum an dem der Auszug erstellt wurde, z.B. «2019-08-12»

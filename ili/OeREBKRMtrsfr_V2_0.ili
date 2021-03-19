@@ -31,7 +31,7 @@ VERSION "2021-03-19"  =
       /** Datum, ab dem diese Eigentumsbeschränkung in Auszügen erscheint
        */
       publiziertAb : MANDATORY OeREBKRM_V2_0.Datum;
-      /** Datum, an/ab dem diese Eigentumsbeschränkung nicht mehr in Auszügen erscheint
+      /** Datum, an dem diese Eigentumsbeschränkung letztmalig in Auszügen erscheint
        */
       publiziertBis : OeREBKRM_V2_0.Datum;
     END Eigentumsbeschraenkung;
@@ -54,7 +54,7 @@ VERSION "2021-03-19"  =
       /** Datum, ab dem diese Geometrie in Auszügen erscheint
        */
       publiziertAb : MANDATORY OeREBKRM_V2_0.Datum;
-      /** Datum, an/ab dem diese Geometrie nicht mehr in Auszügen erscheint
+      /** Datum, an dem diese Geometrie letztmalig in Auszügen erscheint
        */
       publiziertBis : OeREBKRM_V2_0.Datum;
       /** Verweis auf maschinenlesbare Metadaten (XML) der zugrundeliegenden Geobasisdaten, z.B. «http://www.geocat.ch/geonetwork/srv/deu/gm03.xml?id=705»
