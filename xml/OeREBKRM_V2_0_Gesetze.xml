@@ -119,6 +119,7 @@ xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
             </LocalisedText>
           </OeREBKRM_V2_0.MultilingualUri>
         </TextImWeb>
+        <AuszugIndex>10</AuszugIndex>
         <Rechtsstatus>inKraft</Rechtsstatus>
         <publiziertAb>1979-06-22</publiziertAb>
         <ZustaendigeStelle REF="ch.admin.bk"/>
@@ -227,6 +228,7 @@ xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
             </LocalisedText>
           </OeREBKRM_V2_0.MultilingualUri>
         </TextImWeb>
+        <AuszugIndex>110</AuszugIndex>
         <Rechtsstatus>inKraft</Rechtsstatus>
         <publiziertAb>1960-03-08</publiziertAb>
         <ZustaendigeStelle REF="ch.admin.bk"/>
@@ -330,6 +332,7 @@ xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
             </LocalisedText>
           </OeREBKRM_V2_0.MultilingualUri>
         </TextImWeb>
+        <AuszugIndex>120</AuszugIndex>
         <Rechtsstatus>inKraft</Rechtsstatus>
         <publiziertAb>2007-11-07</publiziertAb>
         <ZustaendigeStelle REF="ch.admin.bk"/>
@@ -438,6 +441,7 @@ xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
             </LocalisedText>
           </OeREBKRM_V2_0.MultilingualUri>
         </TextImWeb>
+        <AuszugIndex>210</AuszugIndex>
         <Rechtsstatus>inKraft</Rechtsstatus>
         <publiziertAb>1957-12-20</publiziertAb>
         <ZustaendigeStelle REF="ch.admin.bk"/>
@@ -549,6 +553,7 @@ xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
             </LocalisedText>
           </OeREBKRM_V2_0.MultilingualUri>
         </TextImWeb>
+        <AuszugIndex>310</AuszugIndex>
         <Rechtsstatus>inKraft</Rechtsstatus>
         <publiziertAb>1948-12-21</publiziertAb>
         <ZustaendigeStelle REF="ch.admin.bk"/>
@@ -652,6 +657,7 @@ xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
             </LocalisedText>
           </OeREBKRM_V2_0.MultilingualUri>
         </TextImWeb>
+        <AuszugIndex>320</AuszugIndex>
         <Rechtsstatus>inKraft</Rechtsstatus>
         <publiziertAb>1994-11-23</publiziertAb>
         <ZustaendigeStelle REF="ch.admin.bk"/>
@@ -766,6 +772,7 @@ xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
             </LocalisedText>
           </OeREBKRM_V2_0.MultilingualUri>
         </TextImWeb>
+        <AuszugIndex>410</AuszugIndex>
         <Rechtsstatus>inKraft</Rechtsstatus>
         <publiziertAb>1983-10-07</publiziertAb>
         <ZustaendigeStelle REF="ch.admin.bk"/>
@@ -869,6 +876,7 @@ xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
             </LocalisedText>
           </OeREBKRM_V2_0.MultilingualUri>
         </TextImWeb>
+        <AuszugIndex>420</AuszugIndex>
         <Rechtsstatus>inKraft</Rechtsstatus>
         <publiziertAb>1998-08-26</publiziertAb>
         <ZustaendigeStelle REF="ch.admin.bk"/>
@@ -980,6 +988,7 @@ xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
             </LocalisedText>
           </OeREBKRM_V2_0.MultilingualUri>
         </TextImWeb>
+        <AuszugIndex>510</AuszugIndex>
         <Rechtsstatus>inKraft</Rechtsstatus>
         <publiziertAb>1991-01-24</publiziertAb>
         <ZustaendigeStelle REF="ch.admin.bk"/>
@@ -1083,6 +1092,7 @@ xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
             </LocalisedText>
           </OeREBKRM_V2_0.MultilingualUri>
         </TextImWeb>
+        <AuszugIndex>520</AuszugIndex>
         <Rechtsstatus>inKraft</Rechtsstatus>
         <publiziertAb>1998-10-28</publiziertAb>
         <ZustaendigeStelle REF="ch.admin.bk"/>
@@ -1188,6 +1198,7 @@ xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
             </LocalisedText>
           </OeREBKRM_V2_0.MultilingualUri>
         </TextImWeb>
+        <AuszugIndex>610</AuszugIndex>
         <Rechtsstatus>inKraft</Rechtsstatus>
         <publiziertAb>1986-12-15</publiziertAb>
         <ZustaendigeStelle REF="ch.admin.bk"/>
@@ -1299,6 +1310,7 @@ xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
             </LocalisedText>
           </OeREBKRM_V2_0.MultilingualUri>
         </TextImWeb>
+        <AuszugIndex>710</AuszugIndex>
         <Rechtsstatus>inKraft</Rechtsstatus>
         <publiziertAb>1991-10-04</publiziertAb>
         <ZustaendigeStelle REF="ch.admin.bk"/>
@@ -1402,6 +1414,7 @@ xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
             </LocalisedText>
           </OeREBKRM_V2_0.MultilingualUri>
         </TextImWeb>
+        <AuszugIndex>720</AuszugIndex>
         <Rechtsstatus>inKraft</Rechtsstatus>
         <publiziertAb>1992-11-30</publiziertAb>
         <ZustaendigeStelle REF="ch.admin.bk"/>
@@ -1510,6 +1523,7 @@ xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
             </LocalisedText>
           </OeREBKRM_V2_0.MultilingualUri>
         </TextImWeb>
+        <AuszugIndex>810</AuszugIndex>
         <Rechtsstatus>inKraft</Rechtsstatus>
         <publiziertAb>1902-06-24</publiziertAb>
         <ZustaendigeStelle REF="ch.admin.bk"/>

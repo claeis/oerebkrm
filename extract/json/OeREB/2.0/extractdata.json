@@ -329,10 +329,10 @@
 						"$ref": "#/definitions/LegendEntry"
 					}
 				},
-				"min_NS95": {
+				"min": {
 					"$ref": "#/definitions/PointPropertyType"
 				},
-				"max_NS95": {
+				"max": {
 					"$ref": "#/definitions/PointPropertyType"
 				},
 				"layerIndex": {
@@ -372,16 +372,6 @@
 				},
 				"OfficialNumber": {
 					"$ref": "#/definitions/MultilingualText"
-				},
-				"Canton": {
-					"$ref": "#/definitions/CantonCode"
-				},
-				"Region": {
-					"type": "string",
-					"maxLength": 80
-				},
-				"Municipality": {
-					"$ref": "#/definitions/MunicipalityCode"
 				},
 				"TextAtWeb": {
 					"$ref": "#/definitions/MultilingualUri"
@@ -448,9 +438,6 @@
 				},
 				"MetadataOfGeographicalBaseData": {
 					"$ref": "#/definitions/anyURI"
-				},
-				"ResponsibleOffice": {
-					"$ref": "#/definitions/Office"
 				}
 			}
 		},
@@ -547,9 +534,12 @@
 				"Canton": {
 					"$ref": "#/definitions/CantonCode"
 				},
-				"Municipality": {
+				"MunicipalityName": {
 					"type": "string",
 					"maxLength": 60
+				},
+				"MunicipalityCode": {
+					"$ref": "#/definitions/MunicipalityCode"
 				},
 				"SubunitOfLandRegister": {
 					"type": "string",
@@ -558,9 +548,6 @@
 				"SubunitOfLandRegisterDesignation": {
 					"type": "string",
 					"maxLength": 80
-				},
-				"FsoNr": {
-					"$ref": "#/definitions/MunicipalityCode"
 				},
 				"MetadataOfGeographicalBaseData": {
 					"$ref": "#/definitions/anyURI"
@@ -721,6 +708,9 @@
 				},
 				"PLRCadastreAuthority": {
 					"$ref": "#/definitions/Office"
+				},
+				"UpdateDateOS": {
+					"$ref": "#/definitions/dateTime"
 				}
 			}
 		}

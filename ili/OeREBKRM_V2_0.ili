@@ -6,7 +6,7 @@ INTERLIS 2.3;
 !!@ technicalContact=mailto:vermessung@swisstopo.ch
 MODEL OeREBKRM_V2_0 (de)
 AT "https://models.geo.admin.ch/V_D/OeREB/"
-VERSION "2020-08-13"  =
+VERSION "2021-03-19"  =
   IMPORTS LocalisationCH_V1,InternationalCodes_V1,CHAdminCodes_V1;
 
   DOMAIN
@@ -29,6 +29,24 @@ VERSION "2020-08-13"  =
       Hinweis
     );
 
+    /** Werteliste zur Unterscheidung ob eine Eigentumsbeschränkung in Kraft ist oder nicht
+     */
+    RechtsStatus = (
+      /** Die Eigentumsbeschränkung ist in Kraft
+       */
+      inKraft,
+      /** Die Eigentumsbeschränkung ist in einem Verfahren zur Änderung und entfaltet mit der öffentlichen Auflage eine rechtliche Vorwirkung (ÖREBKV Art. 8b)
+       */
+      AenderungMitVorwirkung,
+      /** Die Eigentumsbeschränkung ist in einem Verfahren zur Änderung, entfaltet aber mit der öffentlichen Auflage keine Vorwirkung (ÖREBKV Art. 8b)
+       */
+      AenderungOhneVorwirkung
+    );
+
+    /** Wertebereich für Objektidentifikatoren: Der Wert soll mit einem gültigen Internet Domain-Name anfangen, z.B. "ch.admin.sr.720"
+     */
+    OEREBOID = OID TEXT*255;
+
     /** Werteliste zur Unterscheidung der Grundstücke (gemäss DM01 der AV)
      */
     GrundstuecksArt = (
@@ -42,50 +60,22 @@ VERSION "2020-08-13"  =
       Bergwerk
     );
 
-    /** Wertebereich für Objektidentifikatoren: Der Wert soll mit einem gültigen Internet Domain-
-     * Name anfangen, z.B. "ch.admin.sr.720"
-     */
-    OEREBOID = OID TEXT;
-
-    /** Werteliste zur Unterscheidung ob eine Eigentumsbeschränkung in Kraft ist oder nicht
-     */
-    RechtsStatus = (
-      /** Die Eigentumsbeschränkung ist in Kraft
-       */
-      inKraft,
-      /** Die Eigentumsbeschränkung ist in einem Verfahren zur Änderung und entfaltet mit der
-       * öffentlichen Auflage eine rechtliche Vorwirkung (ÖREBKV Art. 8b)
-       */
-      AenderungMitVorwirkung,
-      /** Die Eigentumsbeschränkung ist in einem Verfahren zur Änderung, entfaltet aber mit der
-       * öffentlichen Auflage keine Vorwirkung (ÖREBKV Art. 8b)
-       */
-      AenderungOhneVorwirkung
-    );
-
-    /** Code für ein Thema oder Sub-Thema
+    /** Code für ein Thema oder Sub-Thema.
      * Der Code wird nach folgendem Muster gebildet:
      * ch.{topic}
      * ch.{canton}.{topic}
      * fl.{topic}
      * ch.{bfsnr}.{topic}
-     * Wobei {canton} das offizielle zwei-stellige Kürzel des Kantons ist, {topic} der Themenname
-     * und {bfsnr} die Gemeindenummer gemäss offizieller Gemeindeliste des BFS
+     * Wobei {canton} das offizielle zwei-stellige Kürzel des Kantons ist, {topic} der Themenname und {bfsnr} die Gemeindenummer gem. BFS.
      */
     Thema = TEXT*120;
 
-    /** Unternehmensindentifikation (gemäss. Bundesgesetz über die Unternehmens-
-     * Identifikationsnummer SR 431.03) ohne Formatierung z.B. CHE116068369
+    /** Unternehmensindentifikation (gemäss. Bundesgesetz über die Unternehmens-Identifikationsnummer SR 431.03) ohne Formatierung z.B. CHE116068369
      */
     UID = TEXT*12;
-
-    /** Verweis auf ein Dokument im Web (z.B. eine HTML Seite oder ein PDF-Dokument)
-     */
-    WebReferenz = URI;
   STRUCTURE ArtikelNummer_ = value : MANDATORY ArtikelNummer; END ArtikelNummer_;
   STRUCTURE Datum_ = value : MANDATORY Datum; END Datum_;
   STRUCTURE Thema_ = value : MANDATORY Thema; END Thema_;
-  STRUCTURE WebReferenz_ = value : MANDATORY WebReferenz; END WebReferenz_;
 
   STRUCTURE LocalisedBlob =
     Language : InternationalCodes_V1.LanguageCode_ISO639_1;
@@ -114,14 +104,12 @@ VERSION "2020-08-13"  =
     SubThema : Thema;
   END ThemaRef;
 
-  /** Dieses Teilmodell ist ein Basismodell für die Angaben zu einem Amt (z.B. einer zuständigen
-   * Stelle), das von den anderen Teilmodellen wiederverwendet wird
+  /** Dieses Teilmodell ist ein Basismodell für die Angaben zu einem Amt (z.B. einer zuständigen Stelle), das von den anderen Teilmodellen wiederverwendet wird
    */
   TOPIC Amt =
     OID AS OEREBOID;
 
-    /** Eine Organisationseinheit  innerhalb der öffentlichen Verwaltung, z.B. eine für Geobasis-
-     * daten zuständige Stelle
+    /** Eine Organisationseinheit  innerhalb der öffentlichen Verwaltung, z.B. eine für Geobasis-daten zuständige Stelle
      */
     CLASS Amt =
       /** Name des Amtes, z.B. «Amt für Gemeinden und Raumordnung des Kantons Bern»
@@ -156,9 +144,7 @@ VERSION "2020-08-13"  =
 
   END Amt;
 
-  /** Dieses Teilmodell definiert die Struktur für die Dokumente im Allgemeinen: OID als URIs damit
-   * der Verweis auf Grundlagenerlasse (z.B. Kantonale Gesetze auf Bundesgesetze) in einem anderen
-   * Behälter (da durch eine andere Stelle erfasst/nachgeführt) verweisen können
+  /** Dieses Teilmodell definiert die Struktur für die Dokumente im Allgemeinen: OID als URIs damit der Verweis auf Grundlagenerlasse (z.B. Kantonale Gesetze auf Bundesgesetze) in einem anderen Behälter (da durch eine andere Stelle erfasst/nachgeführt) verweisen können
    */
   TOPIC Dokumente
   EXTENDS OeREBKRM_V2_0.Amt =
@@ -179,16 +165,7 @@ VERSION "2020-08-13"  =
       /** Offizielle Nummer des Gesetzes; z.B. «SR 700»
        */
       OffizielleNr : LocalisationCH_V1.MultilingualText;
-      /** Kantonskürzel (z.B. «BE»), falls Vorschrift des Kantons
-       */
-      Kanton : CHAdminCodes_V1.CHCantonCode;
-      /** Name der regionalen Instanz, falls eine Vorschrift einer regionalen Instanz
-       */
-      Region : TEXT*80;
-      /** BFSNr (z.B. «942»), falls eine Vorschrift der Gemeinde
-       */
-      Gemeinde : CHAdminCodes_V1.CHMunicipalityCode;
-      /** Falls das Dokument nur eine bestimmte Gemeinde betrifft (z.B. Sicherheitszonenplan)
+      /** Nur notwendig, falls das Dokument nur eine bestimmte Gemeinde (z.B. Epalinges) betrifft (z.B. Sicherheitszonenplan), die Geometrie der Eigentumsbeschränkung aber mehrere Gemeinden betrifft (z.B. Flugplatz Lausanne)
        */
       NurInGemeinde : CHAdminCodes_V1.CHMunicipalityCode;
       /** Verweis auf das Element im Web; z.B. «https://www.admin.ch/ch/d/sr/700»
@@ -197,6 +174,7 @@ VERSION "2020-08-13"  =
       /** Das Dokument als PDF-Datei
        */
       Dokument : OeREBKRM_V2_0.MultilingualBlob;
+      AuszugIndex : MANDATORY -1000 .. 1000;
       /** Status, ob dieses Dokument in Kraft ist
        */
       Rechtsstatus : MANDATORY OeREBKRM_V2_0.RechtsStatus;
