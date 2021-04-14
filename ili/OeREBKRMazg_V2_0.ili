@@ -19,7 +19,7 @@ VERSION "2021-03-19"  =
 
       Laengenmass = 0 .. 999999999 [INTERLIS.m];
 
-    /** Eine Organisationseinheit innerhalb der öffentlichen Verwaltung, z.B. eine für Geobasisdaten zuständige Stelle
+    /** Organisationseinheit innerhalb der öffentlichen Verwaltung, z.B. eine für Geobasisdaten zuständige Stelle
      */
     STRUCTURE Amt =
       /** Name des Amtes, z.B. «Amt für Gemeinden und Raumordnung des Kantons Bern»
@@ -48,7 +48,7 @@ VERSION "2021-03-19"  =
       PLZ : TEXT*4;
       /** Postalischer Ort
        */
-      Ort : TEXT*60;
+      Ort : TEXT*40;
     END Amt;
 
     /** Punkt-, linien-, oder flächenförmige Geometrie; neu zu definierende Eigentumsbeschränkungen sollten in der Regel flächenförmig sein
@@ -94,7 +94,7 @@ VERSION "2021-03-19"  =
       Inhalt : MANDATORY LocalisationCH_V1.MultilingualMText;
     END Haftungshinweis;
 
-    /** Ein Eintrag in der Planlegende
+    /** Eintrag in der Planlegende
      */
     STRUCTURE LegendeEintrag =
       /** Falls die Eigentumsbeschränkung als Punktgeometrie definiert ist: Grafischer Teil des Legendeneintrages für die Darstellung im PNG-Format mit 300dpi oder im SVG-Format
@@ -154,10 +154,10 @@ VERSION "2021-03-19"  =
       ZustaendigeStelle : MANDATORY Amt;
     END Dokument;
 
-    /** Die Angaben zu einer Ebene der grafischen Darstellung im Katasterauszug: Eine Kartenebene im Katasterauszug kann mehrere Eigentumsbeschränkungen darstellen, oder im Falle des Grundbuchplans mehrere AV-Datenebenen
+    /** Angaben zu einer Ebene der grafischen Darstellung im Katasterauszug: Eine Kartenebene im Katasterauszug kann mehrere Eigentumsbeschränkungen darstellen, oder im Falle des Grundbuchplans mehrere AV-Datenebenen
      */
     STRUCTURE Karte =
-      /** in den Auszug eingebettes Bild (PNG-Format); bei einem beglaubigten Auszug muss das Kartenbild eingebettet werden
+      /** In den Auszug eingebettes Bild (PNG-Format); bei einem beglaubigten Auszug muss das Kartenbild eingebettet werden
        */
       Bild : OeREBKRM_V2_0.MultilingualBlob;
       /** WMS GetMap-Request (für Maschine-Maschine-Kommunikation) inkl. alle benötigten Parameter, z.B. «https://wms.geo.admin.ch/?SERVICE=WMS&REQUEST=GetMap&VERSION=1.3.0&STYLES=default&CRS=EPSG:2056&BBOX=2475000,1060000,2845000,1310000&WIDTH=740&HEIGHT=500&FORMAT=image/png&LAYERS=ch.bazl.kataster-belasteter-standorte-zivilflugplaetze.oereb»
@@ -182,7 +182,7 @@ VERSION "2021-03-19"  =
     /** Wurzelelement für Informationen über eine Beschränkung des Grundeigentums, die rechtskräftig, z.B. auf Grund einer Genehmigung oder eines richterlichen Entscheids, zustande gekommen ist
      */
     STRUCTURE Eigentumsbeschraenkung =
-      /** textliche Beschreibung der Beschränkung, z.B. «Wohnen W3»
+      /** Textliche Beschreibung der Beschränkung, z.B. «Wohnen W3»
        */
       LegendeText : MANDATORY LocalisationCH_V1.MultilingualText;
       /** Einordnung der Eigentumsbeschränkung in ein ÖREB-Thema
@@ -191,7 +191,7 @@ VERSION "2021-03-19"  =
       /** Z.B. für «Überlagernde Festlegungen» innerhalb Nutzungsplanung
        */
       SubThema : OeREBKRM_V2_0.Thema;
-      /** Themenspezifische, maschinen-lesbare Art gemäss Originalmodell der Eigentumsbeschränkung
+      /** Themenspezifische, maschinenlesbare Art gemäss Originalmodell der Eigentumsbeschränkung
        */
       ArtCode : MANDATORY OeREBKRM_V2_0.ArtEigentumsbeschraenkung;
       /** Identifikation der Codeliste bzw. des Wertebereichs für ArtCode
@@ -258,10 +258,10 @@ VERSION "2021-03-19"  =
       /** Name der Gemeinde gemäss amtlichem Gemeindeverzeichnis, in welcher dieses Grundstück liegt, z.B. «Thun»
        */
       GemeindeName : MANDATORY TEXT*60;
-      /** Gemeindenummer gemäss amtlichem Gemeindeverzeichnis, z.B. «942»
+      /** Nummer der Gemeinde gemäss amtlichem Gemeindeverzeichnis, z.B. «942»
        */
       GemeindeNummer : MANDATORY CHAdminCodes_V1.CHMunicipalityCode;
-      /** Name des Grundbuchkreises, der Sektion,der Fraktion oder einer weiteren Untereinheit, wenn die Kombination [Gemeinde] [Grundstücksnummer] nicht eindeutig ist (z.B. Innere Stadt etc.)
+      /** Name des Grundbuchkreises, der Sektion, der Fraktion oder einer weiteren Untereinheit, wenn die Kombination [Gemeinde] [Grundstücksnummer] nicht eindeutig ist (z.B. Innere Stadt etc.)
        */
       UntereinheitGrundbuch : TEXT*60;
       /** Im Kanton verwendete Bezeichnung, z.B. «Grundbuchkreis», «Sektion», «Fraktion» etc.
@@ -286,13 +286,13 @@ VERSION "2021-03-19"  =
       MANDATORY CONSTRAINT DEFINED(EGRID) OR (DEFINED(Nummer) AND DEFINED(NBIdent));
     END Liegenschaft_SDR;
 
-    /** Wurzelelement für einen Katasterauszug. Ein Katasterauszug enthält den Inhalt des ÖREB-Katasters in Bezug auf genau  eine bestimmte Liegenschaft oder ein SDR.
+    /** Wurzelelement für einen Katasterauszug. Ein Katasterauszug enthält den Inhalt des ÖREB-Katasters in Bezug auf genau eine bestimmte Liegenschaft oder ein SDR.
      */
     CLASS Auszug =
       /** Datum an dem der Auszug erstellt wurde, z.B. «2019-08-12»
        */
       ErstellungsDatum : MANDATORY FORMAT INTERLIS.XMLDateTime "2009-1-1T0:0:0.0" .. "2999-12-31T23:59:59.0";
-      /** Digitale Signatur von der Auszug abgebenden Stelle. Mit Signatur ist der Auszug beglaubigt, ohne ist er unbeglaubigt. Digitale Signatur gemäss eCH-0091
+      /** Digitale Signatur von der für den Kataster verantwortlichen Stelle. Mit Signatur ist der Auszug beglaubigt, ohne ist er nicht beglaubigt. Digitale Signatur gemäss eCH-0091
        */
       DigitaleSignatur : BLACKBOX XML;
       /** Liste der ÖREB-Themen, welche das Grundstück betreffen

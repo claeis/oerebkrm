@@ -66,7 +66,7 @@ VERSION "2021-03-19"  =
       AenderungOhneVorwirkung
     );
 
-    /** Wertebereich für den Code eines Themas oder Sub-Themas. Aufgrund des Codes lässt sich nicht erkennen, ob es ein Thema oder Sub-Thema ist.
+    /** Wertebereich für den Code eines Themas oder Subthemas. Aufgrund des Codes lässt sich nicht erkennen, ob es ein Thema oder Subthema ist.
      * Der Code wird nach folgendem Muster gebildet:
      * 
      * ch.{topic}
@@ -79,7 +79,7 @@ VERSION "2021-03-19"  =
      */
     Thema = TEXT*120;
 
-    /** Unternehmensindentifikation (gemäss. Bundesgesetz über die Unternehmens-Identifikationsnummer SR 431.03) ohne Formatierung z.B. CHE116068369
+    /** Unternehmensidentifikation (gemäss Bundesgesetz über die Unternehmens-Identifikationsnummer SR 431.03) ohne Formatierung z.B. CHE116068369
      */
     UID = TEXT*12;
   STRUCTURE ArtikelNummer_ = value : MANDATORY ArtikelNummer; END ArtikelNummer_;
@@ -147,7 +147,7 @@ VERSION "2021-03-19"  =
       PLZ : TEXT*4;
       /** Postalischer Ort
        */
-      Ort : TEXT*60;
+      Ort : TEXT*40;
       UNIQUE UID;
     END Amt;
 

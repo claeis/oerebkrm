@@ -68,13 +68,13 @@ VERSION "2021-03-19"  =
       /** NBIdent gemäss AV-Daten
        */
       NBIdent : MANDATORY TEXT*12;
-      /** Name des Grundbuchkreises oder  der Untereinheit (z.B. Innere Stadt)
+      /** Name des Grundbuchkreises oder der Untereinheit (z.B. Innere Stadt)
        */
       Name : MANDATORY TEXT*60;
-      /** SubKreis gem. GB-Daten (eGRISDM/GBDBS)
+      /** SubKreis gemäss GB-Daten (eGRISDM/GBDBS)
        */
       eGRIS_SubKreis : TEXT*15;
-      /** Los gem. GB-Daten (eGRISDM/GBDBS)
+      /** Los gemäss GB-Daten (eGRISDM/GBDBS)
        */
       eGRIS_Los : TEXT*15;
     END GrundbuchKreis;
@@ -169,7 +169,7 @@ VERSION "2021-03-19"  =
       /** Zeitpunkt der Aufnahme oder der letzten Änderung der Daten
        */
       Datum : MANDATORY FORMAT INTERLIS.XMLDate "2010-1-1" .. "2050-12-31";
-      /** BasketId oder Dateiname oder vollständiger WFS-Request.
+      /** BasketId oder Dateiname oder vollständiger WFS-Request
        */
       DatensatzIdentifikation : MANDATORY TEXT*8000;
     END DatenAufnahme;
@@ -184,10 +184,10 @@ VERSION "2021-03-19"  =
     /** Daten zu einem ÖREB-Thema oder Subthema
      */
     CLASS Thema =
-      /** Code des ÖREB-Themas; z.B. «ch.Nutzungsplanung»
+      /** Code des ÖREB-Themas, z.B. «ch.Nutzungsplanung»
        */
       Code : MANDATORY OeREBKRM_V2_0.Thema;
-      /** Falls es ein Subthema ist: Code des Subthemas; z.B. «ch.SO.Baulinien»
+      /** Falls es ein Subthema ist: Code des Subthemas, z.B. «ch.SO.Baulinien»
        */
       SubCode : OeREBKRM_V2_0.Thema;
       /** Anzeigetext des (Sub-)Themas

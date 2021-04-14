@@ -22,7 +22,7 @@ VERSION "2021-03-19"  =
       VerweisWMS : MANDATORY OeREBKRM_V2_0.MultilingualUri;
     END DarstellungsDienst;
 
-    /** Wurzelelement für Informationen über eine Beschränkung des Grundeigentums, die rechts-kräftig, z.B. auf Grund einer Genehmigung oder eines richterlichen Entscheids, zustande gekommen ist
+    /** Wurzelelement für Informationen über eine Beschränkung des Grundeigentums, die rechtskräftig, z.B. auf Grund einer Genehmigung oder eines richterlichen Entscheids, zustande gekommen ist
      */
     CLASS Eigentumsbeschraenkung =
       /** Status, ob diese Eigentumsbeschränkung in Kraft ist
@@ -125,7 +125,7 @@ VERSION "2021-03-19"  =
     END LegendeDarstellungsdienst;
 
     ASSOCIATION ZustaendigeStelleEigentumsbeschraenkung =
-      /** Zuständige Stelle für die Geobasisdaten (Originaldaten) gem. GeoIG Art. 8 Abs. 1
+      /** Zuständige Stelle für die Geobasisdaten (Originaldaten) gemäss GeoIG Art. 8 Abs. 1
        */
       ZustaendigeStelle (EXTERNAL) -- {1} OeREBKRM_V2_0.Amt.Amt;
       Eigentumsbeschraenkung -<> {0..*} Eigentumsbeschraenkung;
