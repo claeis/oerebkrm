@@ -6,7 +6,7 @@ INTERLIS 2.3;
 !!@ technicalContact=mailto:infovd@swisstopo.ch
 MODEL OeREBKRMbsp_V2_0 (de)
 AT "https://models.geo.admin.ch/V_D/OeREB/"
-VERSION "2021-03-19"  =
+VERSION "2021-04-14"  =
   IMPORTS CHAdminCodes_V1,GeometryCHLV95_V1;
 
   TOPIC Sondernutzung =

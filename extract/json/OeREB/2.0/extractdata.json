@@ -282,22 +282,10 @@
 		"LegendEntry": {
 			"type": "object",
 			"properties": {
-				"PointSymbol": {
+				"Symbol": {
 					"$ref": "#/definitions/base64Binary"
 				},
-				"PointSymbolRef": {
-					"$ref": "#/definitions/anyURI"
-				},
-				"LineSymbol": {
-					"$ref": "#/definitions/base64Binary"
-				},
-				"LineSymbolRef": {
-					"$ref": "#/definitions/anyURI"
-				},
-				"SurfaceSymbol": {
-					"$ref": "#/definitions/base64Binary"
-				},
-				"SurfaceSymbolRef": {
+				"SymbolRef": {
 					"$ref": "#/definitions/anyURI"
 				},
 				"LegendText": {
@@ -475,22 +463,10 @@
 					"minimum": 0,
 					"maximum": 10000000
 				},
-				"PointSymbol": {
+				"Symbol": {
 					"$ref": "#/definitions/base64Binary"
 				},
-				"PointSymbolRef": {
-					"$ref": "#/definitions/anyURI"
-				},
-				"LineSymbol": {
-					"$ref": "#/definitions/base64Binary"
-				},
-				"LineSymbolRef": {
-					"$ref": "#/definitions/anyURI"
-				},
-				"SurfaceSymbol": {
-					"$ref": "#/definitions/base64Binary"
-				},
-				"SurfaceSymbolRef": {
+				"SymbolRef": {
 					"$ref": "#/definitions/anyURI"
 				},
 				"Geometry": {

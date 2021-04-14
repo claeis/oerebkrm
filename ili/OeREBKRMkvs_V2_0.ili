@@ -6,7 +6,7 @@ INTERLIS 2.3;
 !!@ technicalContact=mailto:vermessung@swisstopo.ch
 MODEL OeREBKRMkvs_V2_0 (de)
 AT "https://models.geo.admin.ch/V_D/OeREB/"
-VERSION "2021-03-19"  =
+VERSION "2021-04-14"  =
   IMPORTS OeREBKRM_V2_0,LocalisationCH_V1,CHAdminCodes_V1;
 
   /** Das Teilmodell Konfiguration ist eine Empfehlung für die Daten zur Konfiguration des Web-Services für den Bezug des statischen Auszugs (z.B. Textbausteine oder die in einer Gemeinde freigeschalteten Themen)

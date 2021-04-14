@@ -6,7 +6,7 @@ INTERLIS 2.3;
 !!@ technicalContact=mailto:vermessung@swisstopo.ch
 MODEL OeREBKRM_V2_0 (de)
 AT "https://models.geo.admin.ch/V_D/OeREB/"
-VERSION "2021-03-19"  =
+VERSION "2021-04-14"  =
   IMPORTS LocalisationCH_V1,InternationalCodes_V1,CHAdminCodes_V1;
 
   DOMAIN

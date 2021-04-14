@@ -6,7 +6,7 @@ INTERLIS 2.3;
 !!@ technicalContact=mailto:vermessung@swisstopo.ch
 MODEL OeREBKRMtrsfr_V2_0 (de)
 AT "https://models.geo.admin.ch/V_D/OeREB/"
-VERSION "2021-03-19"  =
+VERSION "2021-04-14"  =
   IMPORTS OeREBKRM_V2_0,CHAdminCodes_V1,LocalisationCH_V1,GeometryCHLV95_V1;
 
   /** Dieses Teilmodell definiert, wie die Rechtsvorschriften und die zugehörigen Geobasisdaten, die zusammen die öffentlich-rechtliche Eigentumsbeschränkung definieren, zwischen der zuständigen Stelle und der für den Kataster verantwortlichen Stelle des Kantons ausgetauscht werden
@@ -66,15 +66,9 @@ VERSION "2021-03-19"  =
     /** Ein Eintrag in der Planlegende
      */
     CLASS LegendeEintrag =
-      /** Falls die Eigentumsbeschränkung als Punktgeometrie definiert ist: Grafischer Teil des Legendeneintrages für die Darstellung im PNG-Format mit 300dpi oder im SVG-Format
+      /** Grafischer Teil des Legendeneintrages für die Darstellung im PNG-Format mit 300dpi oder im SVG-Format
        */
-      SymbolPunkt : BLACKBOX BINARY;
-      /** Falls die Eigentumsbeschränkung als Liniengeometrie definiert ist: Grafischer Teil des Legendeneintrages für die Darstellung im PNG-Format mit 300dpi oder im SVG-Format
-       */
-      SymbolLinie : BLACKBOX BINARY;
-      /** Falls die Eigentumsbeschränkung als Flächengeometrie definiert ist: Grafischer Teil des Legendeneintrages für die Darstellung im PNG-Format mit 300dpi oder im SVG-Format
-       */
-      SymbolFlaeche : BLACKBOX BINARY;
+      Symbol : MANDATORY BLACKBOX BINARY;
       /** Text des Legendeneintrages
        */
       LegendeText : MANDATORY LocalisationCH_V1.MultilingualText;
@@ -90,7 +84,6 @@ VERSION "2021-03-19"  =
       /** Z.B. für «Überlagernde Festlegungen» innerhalb Nutzungsplanung
        */
       SubThema : OeREBKRM_V2_0.Thema;
-      MANDATORY CONSTRAINT DEFINED(SymbolPunkt) OR DEFINED(SymbolLinie) OR DEFINED(SymbolFlaeche);
     END LegendeEintrag;
 
     ASSOCIATION DarstellungsDienstEigentumsbeschraenkung =

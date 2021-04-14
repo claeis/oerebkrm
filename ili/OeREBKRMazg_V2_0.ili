@@ -6,7 +6,7 @@ INTERLIS 2.3;
 !!@ technicalContact=mailto:vermessung@swisstopo.ch
 MODEL OeREBKRMazg_V2_0 (de)
 AT "https://models.geo.admin.ch/V_D/OeREB/"
-VERSION "2021-03-19"  =
+VERSION "2021-04-14"  =
   IMPORTS OeREBKRM_V2_0,CHAdminCodes_V1,LocalisationCH_V1,GeometryCHLV95_V1,Units;
 
   /** Dieses Teilmodell definiert die Struktur der Daten, wie sie von den Nutzern des ÖREB-Katasters von der für den Kataster verantwortlichen Stelle des Kantons bezogen werden können
@@ -97,15 +97,9 @@ VERSION "2021-03-19"  =
     /** Eintrag in der Planlegende
      */
     STRUCTURE LegendeEintrag =
-      /** Falls die Eigentumsbeschränkung als Punktgeometrie definiert ist: Grafischer Teil des Legendeneintrages für die Darstellung im PNG-Format mit 300dpi oder im SVG-Format
+      /** Grafischer Teil des Legendeneintrages für die Darstellung im PNG-Format mit 300dpi oder im SVG-Format
        */
-      SymbolPunkt : BLACKBOX BINARY;
-      /** Falls die Eigentumsbeschränkung als Liniengeometrie definiert ist: Grafischer Teil des Legendeneintrages für die Darstellung im PNG-Format mit 300dpi oder im SVG-Format
-       */
-      SymbolLinie : BLACKBOX BINARY;
-      /** Falls die Eigentumsbeschränkung als Flächengeometrie definiert ist: Grafischer Teil des Legendeneintrages für die Darstellung im PNG-Format mit 300dpi oder im SVG-Format
-       */
-      SymbolFlaeche : BLACKBOX BINARY;
+      Symbol : MANDATORY BLACKBOX BINARY;
       /** Text des Legendeneintrages
        */
       LegendeText : MANDATORY LocalisationCH_V1.MultilingualText;
@@ -121,7 +115,6 @@ VERSION "2021-03-19"  =
       /** Z.B. für «Überlagernde Festlegungen» innerhalb Nutzungsplanung
        */
       SubThema : OeREBKRM_V2_0.Thema;
-      MANDATORY CONSTRAINT DEFINED(SymbolPunkt) OR DEFINED(SymbolLinie) OR DEFINED(SymbolFlaeche);
     END LegendeEintrag;
 
     /** Dokumente im Allgemeinen (Gesetze, Verordnungen, Rechtsvorschriften, weitere Hinweise)
@@ -212,15 +205,9 @@ VERSION "2021-03-19"  =
       /** Falls die Eigentumsbeschränkung als Punktgeometrie definiert ist: Anzahl Punkte der Eigentumsbeschränkung auf dem betroffenen Grundstück
        */
       PunkteAufGrundstueck : 0 .. 10000000;
-      /** Falls die Eigentumsbeschränkung als Punktgeometrie definiert ist: Grafischer Teil des Legendeneintrages für die Darstellung dieser Eigentumsbeschränkung im PNG-Format mit 300dpi oder im SVG-Format
+      /** Grafischer Teil des Legendeneintrages für die Darstellung dieser Eigentumsbeschränkung im PNG-Format mit 300dpi oder im SVG-Format
        */
-      SymbolPunkt : BLACKBOX BINARY;
-      /** Falls die Eigentumsbeschränkung als Liniengeometrie definiert ist: Grafischer Teil des Legendeneintrages für die Darstellung dieser Eigentumsbeschränkung im PNG-Format mit 300dpi oder im SVG-Format
-       */
-      SymbolLinie : BLACKBOX BINARY;
-      /** Falls die Eigentumsbeschränkung als Flächengeometrie definiert ist: Grafischer Teil des Legendeneintrages für die Darstellung dieser Eigentumsbeschränkung im PNG-Format mit 300dpi oder im SVG-Format
-       */
-      SymbolFlaeche : BLACKBOX BINARY;
+      Symbol : MANDATORY BLACKBOX BINARY;
       /** Geometrie der Eigentumsbeschränkung, die Rechtswirkung hat (z.B. für eine Hervorhebung in einer Karte)
        */
       Geometrie : BAG {1..*} OF Geometrie;
@@ -233,7 +220,6 @@ VERSION "2021-03-19"  =
       /** Die für diese Geobasisdaten zuständige Stelle (Fachamt)
        */
       ZustaendigeStelle : MANDATORY Amt;
-      MANDATORY CONSTRAINT DEFINED(SymbolPunkt) OR DEFINED(SymbolLinie) OR DEFINED(SymbolFlaeche);
       MANDATORY CONSTRAINT DEFINED(FlaecheAnteil) OR DEFINED(LaengeAnteil) OR DEFINED(PunkteAufGrundstueck);
     END Eigentumsbeschraenkung;
 

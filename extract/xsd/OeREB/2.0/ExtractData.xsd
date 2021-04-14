@@ -270,17 +270,9 @@
   </xsd:complexType>
   <xsd:complexType name="LegendEntry">
     <xsd:sequence>
-      <xsd:choice minOccurs="0">
-        <xsd:element name="PointSymbol" type="xsd:base64Binary"> </xsd:element>
-        <xsd:element name="PointSymbolRef" type="xsd:anyURI"> </xsd:element>
-      </xsd:choice>
-      <xsd:choice minOccurs="0">
-        <xsd:element name="LineSymbol" type="xsd:base64Binary"> </xsd:element>
-        <xsd:element name="LineSymbolRef" type="xsd:anyURI"> </xsd:element>
-      </xsd:choice>
-      <xsd:choice minOccurs="0">
-        <xsd:element name="SurfaceSymbol" type="xsd:base64Binary"> </xsd:element>
-        <xsd:element name="SurfaceSymbolRef" type="xsd:anyURI"> </xsd:element>
+      <xsd:choice>
+        <xsd:element name="Symbol" type="xsd:base64Binary"> </xsd:element>
+        <xsd:element name="SymbolRef" type="xsd:anyURI"> </xsd:element>
       </xsd:choice>
       <xsd:element name="LegendText" type="MultilingualText"> </xsd:element>
       <xsd:element name="TypeCode" type="RestrictiontypeCode"/>
@@ -373,17 +365,9 @@
           </xsd:restriction>
         </xsd:simpleType>
       </xsd:element>
-      <xsd:choice minOccurs="0">
-        <xsd:element name="PointSymbol" type="xsd:base64Binary"> </xsd:element>
-        <xsd:element name="PointSymbolRef" type="xsd:anyURI"> </xsd:element>
-      </xsd:choice>
-      <xsd:choice minOccurs="0">
-        <xsd:element name="LineSymbol" type="xsd:base64Binary"> </xsd:element>
-        <xsd:element name="LineSymbolRef" type="xsd:anyURI"> </xsd:element>
-      </xsd:choice>
-      <xsd:choice minOccurs="0">
-        <xsd:element name="SurfaceSymbol" type="xsd:base64Binary"> </xsd:element>
-        <xsd:element name="SurfaceSymbolRef" type="xsd:anyURI"> </xsd:element>
+      <xsd:choice>
+        <xsd:element name="Symbol" type="xsd:base64Binary"> </xsd:element>
+        <xsd:element name="SymbolRef" type="xsd:anyURI"> </xsd:element>
       </xsd:choice>
       <xsd:element name="Geometry" type="Geometry" maxOccurs="unbounded"> </xsd:element>
       <xsd:element name="Map" type="Map"> </xsd:element>
