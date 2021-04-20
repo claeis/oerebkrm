@@ -265,7 +265,6 @@
 <DefLangName>OeREBKRMtrsfr_V2_0</DefLangName>
 <SupplierDependency>105</SupplierDependency>
 <ClientDependency>55</ClientDependency>
-<ClientDependency>106</ClientDependency>
 <ClientDependency>107</ClientDependency>
 <ClientDependency>108</ClientDependency>
 <Presentation>30</Presentation>
@@ -374,7 +373,6 @@
 <ClientDependency>37</ClientDependency>
 <ClientDependency>137</ClientDependency>
 <ClientDependency>138</ClientDependency>
-<ClientDependency>139</ClientDependency>
 <Presentation>26</Presentation>
 <OwnedElementLink>140</OwnedElementLink>
 <OwnedElementLink>141</OwnedElementLink>
@@ -427,7 +425,6 @@
 <Contracted>false</Contracted>
 <Documentation>160</Documentation>
 <DefLangName>OeREBKRMgs_V2_0</DefLangName>
-<ClientDependency>161</ClientDependency>
 <ClientDependency>70</ClientDependency>
 <ClientDependency>162</ClientDependency>
 <OwnedElementLink>163</OwnedElementLink>
@@ -438,12 +435,6 @@
 <ch.ehi.basics.types.NlsString TID="156">
 <Entry TID="167" language="de" translation="OeREBKRMgs_V2_0"/>
 </ch.ehi.basics.types.NlsString>
-<ch.ehi.interlis.modeltopicclass.IliImport TID="161">
-<Name>168</Name>
-<Documentation>169</Documentation>
-<DefLangName>IliImport101</DefLangName>
-<Client>153</Client>
-</ch.ehi.interlis.modeltopicclass.IliImport>
 <ch.ehi.basics.types.NlsString TID="40">
 <Entry TID="170" language="en" translation="org.umleditor.config.defaultModellingLanguage"/>
 </ch.ehi.basics.types.NlsString>
@@ -705,12 +696,6 @@
 <ch.ehi.basics.types.NlsString TID="248">
 <Entry TID="250" language="de" translation="IliImport320"/>
 </ch.ehi.basics.types.NlsString>
-<ch.ehi.interlis.modeltopicclass.IliImport TID="139">
-<Name>251</Name>
-<Documentation>252</Documentation>
-<DefLangName>IliImport202</DefLangName>
-<Client>35</Client>
-</ch.ehi.interlis.modeltopicclass.IliImport>
 <ch.ehi.uml1_4.implementation.UmlTaggedValue TID="189">
 <Name>253</Name>
 <DataValue>http://www.geo.admin.ch/internet/geoportal/de/home/topics/geobasedata/models.html</DataValue>
@@ -3075,12 +3060,6 @@
 <Client>605</Client>
 <Supplier>395</Supplier>
 </ch.ehi.uml1_4.implementation.UmlUsage>
-<ch.ehi.interlis.modeltopicclass.IliImport TID="106">
-<Name>944</Name>
-<Documentation>945</Documentation>
-<DefLangName>IliImport104</DefLangName>
-<Client>58</Client>
-</ch.ehi.interlis.modeltopicclass.IliImport>
 <ch.ehi.basics.types.NlsString TID="945">
 </ch.ehi.basics.types.NlsString>
 <ch.ehi.umleditor.umlpresentation.Dependency TID="342">
