@@ -1,4 +1,9 @@
 <?xml version="1.0" encoding="UTF-8"?>
+<!--
+Version    | Who   | Modification
+=======================================================================================
+2021-07-14 | V+D   | Several translations of the themes adapted
+-->
 <TRANSFER xmlns="http://www.interlis.ch/INTERLIS2.3"
 xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
   <HEADERSECTION SENDER="swisstopo, Geodesy and Federal Directorate of Cadastral Surveying" VERSION="2.3">
@@ -6,10 +11,10 @@ xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
       <MODEL NAME="InternationalCodes_V1" VERSION="2011-08-30" URI="http://www.geo.admin.ch"/>
       <MODEL NAME="LocalisationCH_V1" VERSION="2011-08-30" URI="http://www.geo.admin.ch"/>
       <MODEL NAME="CatalogueObjects_V1" VERSION="2011-08-30" URI="http://www.geo.admin.ch"/>
-      <MODEL NAME="OeREBKRMkvs_V2_0" VERSION="2020-08-13" URI="http://models.geo.admin.ch/V_D/OeREB/"/>
+      <MODEL NAME="OeREBKRMkvs_V2_0" VERSION="2021-04-14" URI="https://models.geo.admin.ch/V_D/OeREB/"/>
     </MODELS>
     <!-- Stand der XML-Datei, Etat du fichier XML, Stato del XML-File -->
-    <COMMENT>"2020-08-13"</COMMENT>
+    <COMMENT>"2021-07-14"</COMMENT>
   </HEADERSECTION>
   <DATASECTION>
     <OeREBKRMkvs_V2_0.Thema BID="ch.admin.v_d.oerebkrmkvs_thema">
@@ -24,7 +29,7 @@ xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
               </LocalisationCH_V1.LocalisedText>
               <LocalisationCH_V1.LocalisedText>
                 <Language>fr</Language>
-                <Text>Plans d'affectation (cantonaux/communaux)</Text>
+                <Text>Plans d’affectation (cantonaux/communaux)</Text>
               </LocalisationCH_V1.LocalisedText>
               <LocalisationCH_V1.LocalisedText>
                 <Language>it</Language>
@@ -36,7 +41,7 @@ xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
               </LocalisationCH_V1.LocalisedText>
               <LocalisationCH_V1.LocalisedText>
                 <Language>en</Language>
-                <Text>Land-use planning (cantonal/municipal)</Text>
+                <Text>Land use plans (cantonal/municipal)</Text>
               </LocalisationCH_V1.LocalisedText>
             </LocalisedText>
           </LocalisationCH_V1.MultilingualText>
@@ -66,7 +71,7 @@ xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
               </LocalisationCH_V1.LocalisedText>
               <LocalisationCH_V1.LocalisedText>
                 <Language>rm</Language>
-                <Text>Zonas projectaziun per las vias naziunalas</Text>
+                <Text>Zonas da projectaziun da las vias naziunalas</Text>
               </LocalisationCH_V1.LocalisedText>
               <LocalisationCH_V1.LocalisedText>
                 <Language>en</Language>
@@ -104,7 +109,7 @@ xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
               </LocalisationCH_V1.LocalisedText>
               <LocalisationCH_V1.LocalisedText>
                 <Language>rm</Language>
-                <Text>Lingias da construcziun per las vias naziunalas</Text>
+                <Text>Lingias da construcziun da las vias naziunalas</Text>
               </LocalisationCH_V1.LocalisedText>
               <LocalisationCH_V1.LocalisedText>
                 <Language>en</Language>
@@ -142,11 +147,11 @@ xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
               </LocalisationCH_V1.LocalisedText>
               <LocalisationCH_V1.LocalisedText>
                 <Language>rm</Language>
-                <Text>Zonas projectaziun per implants da viafier</Text>
+                <Text>Zonas da projectaziun dals implants da viafier</Text>
               </LocalisationCH_V1.LocalisedText>
               <LocalisationCH_V1.LocalisedText>
                 <Language>en</Language>
-                <Text>Reserved zones of the railways installations</Text>
+                <Text>Reserved zones for railways</Text>
               </LocalisationCH_V1.LocalisedText>
             </LocalisedText>
           </LocalisationCH_V1.MultilingualText>
@@ -176,11 +181,11 @@ xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
               </LocalisationCH_V1.LocalisedText>
               <LocalisationCH_V1.LocalisedText>
                 <Language>rm</Language>
-                <Text>Lingias da construcziun per implants da viafier</Text>
+                <Text>Lingias da construcziun dals implants da viafier</Text>
               </LocalisationCH_V1.LocalisedText>
               <LocalisationCH_V1.LocalisedText>
                 <Language>en</Language>
-                <Text>Building lines of the railways installations</Text>
+                <Text>Building lines for railways</Text>
               </LocalisationCH_V1.LocalisedText>
             </LocalisedText>
           </LocalisationCH_V1.MultilingualText>
@@ -210,11 +215,11 @@ xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
               </LocalisationCH_V1.LocalisedText>
               <LocalisationCH_V1.LocalisedText>
                 <Language>rm</Language>
-                <Text>Zonas projectaziun per implants d'eroports</Text>
+                <Text>Zonas da projectaziun dals implants d'eroport</Text>
               </LocalisationCH_V1.LocalisedText>
               <LocalisationCH_V1.LocalisedText>
                 <Language>en</Language>
-                <Text>Reserved zones of the airport installations</Text>
+                <Text>Reserved zones for airports</Text>
               </LocalisationCH_V1.LocalisedText>
             </LocalisedText>
           </LocalisationCH_V1.MultilingualText>
@@ -248,11 +253,11 @@ xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
               </LocalisationCH_V1.LocalisedText>
               <LocalisationCH_V1.LocalisedText>
                 <Language>rm</Language>
-                <Text>Lingias da construcziun per implants d'eroports</Text>
+                <Text>Lingias da construcziun dals implants d'eroport</Text>
               </LocalisationCH_V1.LocalisedText>
               <LocalisationCH_V1.LocalisedText>
                 <Language>en</Language>
-                <Text>Building lines of the airport installations</Text>
+                <Text>Building lines for airports</Text>
               </LocalisationCH_V1.LocalisedText>
             </LocalisedText>
           </LocalisationCH_V1.MultilingualText>
@@ -290,7 +295,7 @@ xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
               </LocalisationCH_V1.LocalisedText>
               <LocalisationCH_V1.LocalisedText>
                 <Language>en</Language>
-                <Text>Safety zone plan</Text>
+                <Text>Security zone plan</Text>
               </LocalisationCH_V1.LocalisedText>
             </LocalisedText>
           </LocalisationCH_V1.MultilingualText>
@@ -328,7 +333,7 @@ xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
               </LocalisationCH_V1.LocalisedText>
               <LocalisationCH_V1.LocalisedText>
                 <Language>en</Language>
-                <Text>Register of polluted sites</Text>
+                <Text>Cadastre of contaminated sites</Text>
               </LocalisationCH_V1.LocalisedText>
             </LocalisedText>
           </LocalisationCH_V1.MultilingualText>
@@ -354,7 +359,7 @@ xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
               </LocalisationCH_V1.LocalisedText>
               <LocalisationCH_V1.LocalisedText>
                 <Language>fr</Language>
-                <Text>Cadastre des sites pollués - domaine militaire</Text>
+                <Text>Cadastre des sites pollués – domaine militaire</Text>
               </LocalisationCH_V1.LocalisedText>
               <LocalisationCH_V1.LocalisedText>
                 <Language>it</Language>
@@ -366,7 +371,7 @@ xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
               </LocalisationCH_V1.LocalisedText>
               <LocalisationCH_V1.LocalisedText>
                 <Language>en</Language>
-                <Text>Register of polluted sites in the area of army</Text>
+                <Text>Cadastre of contaminated military sites</Text>
               </LocalisationCH_V1.LocalisedText>
             </LocalisedText>
           </LocalisationCH_V1.MultilingualText>
@@ -392,7 +397,7 @@ xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
               </LocalisationCH_V1.LocalisedText>
               <LocalisationCH_V1.LocalisedText>
                 <Language>fr</Language>
-                <Text>Cadastre des sites pollués - domaine des aérodromes civils</Text>
+                <Text>Cadastre des sites pollués – domaine des aérodromes civils</Text>
               </LocalisationCH_V1.LocalisedText>
               <LocalisationCH_V1.LocalisedText>
                 <Language>it</Language>
@@ -404,7 +409,7 @@ xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
               </LocalisationCH_V1.LocalisedText>
               <LocalisationCH_V1.LocalisedText>
                 <Language>en</Language>
-                <Text>Cadastre of polluted sites on civil aerodromes</Text>
+                <Text>Cadastre of contaminated civil aviation sites</Text>
               </LocalisationCH_V1.LocalisedText>
             </LocalisedText>
           </LocalisationCH_V1.MultilingualText>
@@ -430,7 +435,7 @@ xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
               </LocalisationCH_V1.LocalisedText>
               <LocalisationCH_V1.LocalisedText>
                 <Language>fr</Language>
-                <Text>Cadastre des sites pollués - domaine des transports publics</Text>
+                <Text>Cadastre des sites pollués – domaine des transports publics</Text>
               </LocalisationCH_V1.LocalisedText>
               <LocalisationCH_V1.LocalisedText>
                 <Language>it</Language>
@@ -442,7 +447,7 @@ xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
               </LocalisationCH_V1.LocalisedText>
               <LocalisationCH_V1.LocalisedText>
                 <Language>en</Language>
-                <Text>Register of polluted sites in the area of public transport</Text>
+                <Text>Cadastre of contaminated public transport sites</Text>
               </LocalisationCH_V1.LocalisedText>
             </LocalisedText>
           </LocalisationCH_V1.MultilingualText>
@@ -476,11 +481,11 @@ xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
               </LocalisationCH_V1.LocalisedText>
               <LocalisationCH_V1.LocalisedText>
                 <Language>rm</Language>
-                <Text>Zonas da protecziun da l'aua sutterrana</Text>
+                <Text>Zonas da protecziun da las auas sutterranas</Text>
               </LocalisationCH_V1.LocalisedText>
               <LocalisationCH_V1.LocalisedText>
                 <Language>en</Language>
-                <Text>Groundwater protection zone</Text>
+                <Text>Groundwater protection zones</Text>
               </LocalisationCH_V1.LocalisedText>
             </LocalisedText>
           </LocalisationCH_V1.MultilingualText>
@@ -514,7 +519,7 @@ xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
               </LocalisationCH_V1.LocalisedText>
               <LocalisationCH_V1.LocalisedText>
                 <Language>rm</Language>
-                <Text>Areals da protecziun da l'aua sutterrana</Text>
+                <Text>Areals da protecziun da las auas sutterranas</Text>
               </LocalisationCH_V1.LocalisedText>
               <LocalisationCH_V1.LocalisedText>
                 <Language>en</Language>
@@ -544,19 +549,19 @@ xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
               </LocalisationCH_V1.LocalisedText>
               <LocalisationCH_V1.LocalisedText>
                 <Language>fr</Language>
-                <Text>Degré de sensibilité au bruit (dans les zones d'affectation)</Text>
+                <Text>Degré de sensibilité au bruit (dans les zones d’affectation)</Text>
               </LocalisationCH_V1.LocalisedText>
               <LocalisationCH_V1.LocalisedText>
                 <Language>it</Language>
-                <Text>Gradi di sensibilità al rumore (in zone d'utilizzazione)</Text>
+                <Text>Gradi di sensibilità al rumore (in zone d’utilizzazione)</Text>
               </LocalisationCH_V1.LocalisedText>
               <LocalisationCH_V1.LocalisedText>
                 <Language>rm</Language>
-                <Text>Grads da sensibilitad da canera (en zonas d'utilisaziun)</Text>
+                <Text>Grads da sensibladad da canera (en las zonas d'utilisaziun)</Text>
               </LocalisationCH_V1.LocalisedText>
               <LocalisationCH_V1.LocalisedText>
                 <Language>en</Language>
-                <Text>Noise sensitivity level (in land-use zones)</Text>
+                <Text>Noise sensitivity level (in land use zones)</Text>
               </LocalisationCH_V1.LocalisedText>
             </LocalisedText>
           </LocalisationCH_V1.MultilingualText>
@@ -590,7 +595,7 @@ xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
               </LocalisationCH_V1.LocalisedText>
               <LocalisationCH_V1.LocalisedText>
                 <Language>en</Language>
-                <Text>Static forest perimeter</Text>
+                <Text>Static forest perimeters</Text>
               </LocalisationCH_V1.LocalisedText>
             </LocalisedText>
           </LocalisationCH_V1.MultilingualText>
@@ -628,7 +633,7 @@ xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
               </LocalisationCH_V1.LocalisedText>
               <LocalisationCH_V1.LocalisedText>
                 <Language>en</Language>
-                <Text>Distance from woodland</Text>
+                <Text>Forest distance lines</Text>
               </LocalisationCH_V1.LocalisedText>
             </LocalisedText>
           </LocalisationCH_V1.MultilingualText>
@@ -666,7 +671,7 @@ xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
               </LocalisationCH_V1.LocalisedText>
               <LocalisationCH_V1.LocalisedText>
                 <Language>en</Language>
-                <Text>Planning zone</Text>
+                <Text>Planning zones</Text>
               </LocalisationCH_V1.LocalisedText>
             </LocalisedText>
           </LocalisationCH_V1.MultilingualText>
@@ -700,7 +705,7 @@ xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
               </LocalisationCH_V1.LocalisedText>
               <LocalisationCH_V1.LocalisedText>
                 <Language>en</Language>
-                <Text>Reserved forest</Text>
+                <Text>Forest reserves</Text>
               </LocalisationCH_V1.LocalisedText>
             </LocalisedText>
           </LocalisationCH_V1.MultilingualText>
@@ -753,8 +758,8 @@ xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
         <Thema REF="ch.Gewaesserraum"/>
         <Gesetz REF="ch.admin.bk.sr.814.201"/>
       </OeREBKRMkvs_V2_0.Thema.ThemaGesetz>
-      <OeREBKRMkvs_V2_0.Thema.Thema TID="ch.ProjektierungszonenStarkstrom">
-        <Code>ch.ProjektierungszonenStarkstrom</Code>
+      <OeREBKRMkvs_V2_0.Thema.Thema TID="ch.ProjektierungszonenStarkstromanlagen">
+        <Code>ch.ProjektierungszonenStarkstromanlagen</Code>
         <Titel>
           <LocalisationCH_V1.MultilingualText>
             <LocalisedText>
@@ -776,7 +781,7 @@ xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
               </LocalisationCH_V1.LocalisedText>
               <LocalisationCH_V1.LocalisedText>
                 <Language>en</Language>
-                <Text>xxxx</Text>
+                <Text>Reserved zones for power lines with a nominal voltage of 220 kV or higher</Text>
               </LocalisationCH_V1.LocalisedText>
             </LocalisedText>
           </LocalisationCH_V1.MultilingualText>
@@ -784,11 +789,11 @@ xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
         <AuszugIndex>810</AuszugIndex>
       </OeREBKRMkvs_V2_0.Thema.Thema>
       <OeREBKRMkvs_V2_0.Thema.ThemaGesetz>
-        <Thema REF="ch.ProjektierungszonenStarkstrom"/>
+        <Thema REF="ch.ProjektierungszonenStarkstromanlagen"/>
         <Gesetz REF="ch.admin.bk.sr.734.0"/>
       </OeREBKRMkvs_V2_0.Thema.ThemaGesetz>
-      <OeREBKRMkvs_V2_0.Thema.Thema TID="ch.BaulinienStarkstrom">
-        <Code>ch.BaulinienStarkstrom</Code>
+      <OeREBKRMkvs_V2_0.Thema.Thema TID="ch.BaulinienStarkstromanlagen">
+        <Code>ch.BaulinienStarkstromanlagen</Code>
         <Titel>
           <LocalisationCH_V1.MultilingualText>
             <LocalisedText>
@@ -810,7 +815,7 @@ xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
               </LocalisationCH_V1.LocalisedText>
               <LocalisationCH_V1.LocalisedText>
                 <Language>en</Language>
-                <Text>xxxx</Text>
+                <Text>Building lines for high-voltage installations</Text>
               </LocalisationCH_V1.LocalisedText>
             </LocalisedText>
           </LocalisationCH_V1.MultilingualText>
@@ -818,7 +823,7 @@ xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
         <AuszugIndex>820</AuszugIndex>
       </OeREBKRMkvs_V2_0.Thema.Thema>
       <OeREBKRMkvs_V2_0.Thema.ThemaGesetz>
-        <Thema REF="ch.BaulinienStarkstrom"/>
+        <Thema REF="ch.BaulinienStarkstromanlagen"/>
         <Gesetz REF="ch.admin.bk.sr.734.0"/>
       </OeREBKRMkvs_V2_0.Thema.ThemaGesetz>
     </OeREBKRMkvs_V2_0.Thema>

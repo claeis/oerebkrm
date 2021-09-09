@@ -1,4 +1,9 @@
-﻿<?xml version="1.0" encoding="UTF-8"?>
+<?xml version="1.0" encoding="UTF-8"?>
+<!--
+Version    | Who   | Modification
+=======================================================================================
+2021-07-14 | V+D   | Several translations of the themes in the glossary adapted
+-->
 <TRANSFER xmlns="http://www.interlis.ch/INTERLIS2.3"
 xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
   <HEADERSECTION SENDER="swisstopo, Geodesy and Federal Directorate of Cadastral Surveying" VERSION="2.3">
@@ -6,10 +11,10 @@ xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
       <MODEL NAME="InternationalCodes_V1" VERSION="2011-08-30" URI="http://www.geo.admin.ch"/>
       <MODEL NAME="LocalisationCH_V1" VERSION="2011-08-30" URI="http://www.geo.admin.ch"/>
       <MODEL NAME="CatalogueObjects_V1" VERSION="2011-08-30" URI="http://www.geo.admin.ch"/>
-      <MODEL NAME="OeREBKRMkvs_V2_0" VERSION="2020-08-13" URI="http://models.geo.admin.ch/V_D/OeREB/"/>
+      <MODEL NAME="OeREBKRMkvs_V2_0" VERSION="2021-04-14" URI="https://models.geo.admin.ch/V_D/OeREB/"/>
     </MODELS>
     <!-- Stand der XML-Datei, Etat du fichier XML, Stato del XML-File -->
-    <COMMENT>"2020-08-13"</COMMENT>
+    <COMMENT>"2021-07-14"</COMMENT>
   </HEADERSECTION>
   <DATASECTION>
     <OeREBKRMkvs_V2_0.Konfiguration BID="ch.admin.v_d.oerebkrmkvs_konfiguration">
@@ -65,7 +70,7 @@ xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
               </LocalisationCH_V1.LocalisedText>
               <LocalisationCH_V1.LocalisedText>
                 <Language>en</Language>
-                <Text>Modification with xxx</Text>
+                <Text>Modification with pre-effect</Text>
               </LocalisationCH_V1.LocalisedText>
             </LocalisedText>
           </LocalisationCH_V1.MultilingualText>
@@ -94,7 +99,7 @@ xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
               </LocalisationCH_V1.LocalisedText>
               <LocalisationCH_V1.LocalisedText>
                 <Language>en</Language>
-                <Text>Modification without xxx</Text>
+                <Text>Modification without pre-effect</Text>
               </LocalisationCH_V1.LocalisedText>
             </LocalisedText>
           </LocalisationCH_V1.MultilingualText>
@@ -326,7 +331,7 @@ xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
               </LocalisationCH_V1.LocalisedText>
               <LocalisationCH_V1.LocalisedText>
                 <Language>en</Language>
-                <Text>xxx zu übersetzen, spätestens bis Ende 2020</Text>
+                <Text>other distinct and permanent rights</Text>
               </LocalisationCH_V1.LocalisedText>
             </LocalisedText>
           </LocalisationCH_V1.MultilingualText>
@@ -517,7 +522,7 @@ xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
               </LocalisationCH_V1.LocalisedMText>
               <LocalisationCH_V1.LocalisedMText>
                 <Language>en</Language>
-                <Text>xxx zu übersetzen</Text>
+                <Text>The purpose of all landownership restrictions is to safeguard those interests of other persons or entities that take precedence over those of the landowner in a certain context. The persons or entities concerned may be the owners of neighbouring properties, neighbours, broader circles of private individuals, or ultimately the general public or the state. Restrictions in favour of neighbours or other private individuals are of a private-law nature, while those in favour of the general public or state are classified as public-law restrictions.</Text>
               </LocalisationCH_V1.LocalisedMText>
             </LocalisedText>
           </LocalisationCH_V1.MultilingualMText>
@@ -563,7 +568,7 @@ xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
               </LocalisationCH_V1.LocalisedMText>
               <LocalisationCH_V1.LocalisedMText>
                 <Language>it</Language>
-                <Text>Identificatore federale dei fondi; xxx zu übersetzen, spätestens bis Ende 2020</Text>
+                <Text>Identificatore federale dei fondi; Identificatore federale dei fondi; designazione composta da un prefisso e da un numero che permette di identificare in modo univoco ogni fondo iscritto nel registro fondiario in tutto il Paese e che viene utilizzato per lo scambio di dati tra sistemi informatici.</Text>
               </LocalisationCH_V1.LocalisedMText>
               <LocalisationCH_V1.LocalisedMText>
                 <Language>rm</Language>
@@ -571,7 +576,7 @@ xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
               </LocalisationCH_V1.LocalisedMText>
               <LocalisationCH_V1.LocalisedMText>
                 <Language>en</Language>
-                <Text>Federal parcel identification</Text>
+                <Text>Official real estate identifier: A designation comprising a prefix and a number by means of which every plot recorded in the land register throughout the country can be unequivocally identified; these identifiers are also used for exchanging data between IT systems.</Text>
               </LocalisationCH_V1.LocalisedMText>
             </LocalisedText>
           </LocalisationCH_V1.MultilingualMText>
@@ -599,7 +604,7 @@ xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
               </LocalisationCH_V1.LocalisedText>
               <LocalisationCH_V1.LocalisedText>
                 <Language>en</Language>
-                <Text>xxx zu übersetzen</Text>
+                <Text>FSO number</Text>
               </LocalisationCH_V1.LocalisedText>
             </LocalisedText>
           </LocalisationCH_V1.MultilingualText>
@@ -625,7 +630,7 @@ xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
               </LocalisationCH_V1.LocalisedMText>
               <LocalisationCH_V1.LocalisedMText>
                 <Language>en</Language>
-                <Text>xxx zu übersetzen</Text>
+                <Text>Municipal number from the official directory of municipalities: A number initially allocated by the Swiss Federal Statistical Office in the official directory of municipalities in 1986 for the purpose of unequivocally designating territorial units within Switzerland.</Text>
               </LocalisationCH_V1.LocalisedMText>
             </LocalisedText>
           </LocalisationCH_V1.MultilingualMText>
@@ -679,7 +684,7 @@ xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
               </LocalisationCH_V1.LocalisedMText>
               <LocalisationCH_V1.LocalisedMText>
                 <Language>en</Language>
-                <Text>xxx zu übersetzen</Text>
+                <Text>Building lines may be specified in order to ensure that the necessary land for the ongoing or future construction of railway stretches and installations remains available. No structural alterations or other measures that do not correspond to the specified purpose of the railway operator may be carried out either between the building lines or between a building line and a railway installation.</Text>
               </LocalisationCH_V1.LocalisedMText>
             </LocalisedText>
           </LocalisationCH_V1.MultilingualMText>
@@ -733,7 +738,7 @@ xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
               </LocalisationCH_V1.LocalisedMText>
               <LocalisationCH_V1.LocalisedMText>
                 <Language>en</Language>
-                <Text>xxx zu übersetzen</Text>
+                <Text>Building lines for airports may be defined in order to ensure that airports have the necessary land at their disposal for existing or future facilities. Within these building lines, no structural changes may be carried out that conflict with the purpose of the defined building lines.</Text>
               </LocalisationCH_V1.LocalisedMText>
             </LocalisedText>
           </LocalisationCH_V1.MultilingualMText>
@@ -787,7 +792,7 @@ xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
               </LocalisationCH_V1.LocalisedMText>
               <LocalisationCH_V1.LocalisedMText>
                 <Language>en</Language>
-                <Text>xxx zu übersetzen</Text>
+                <Text>Once the plans for a route have been finalised, building lines are defined along both sides of that route. These lines make it possible to take certain requirements into account, including road safety and public health, as well as the demands associated with the potential future widening of the stretch of road. Without a special permit, the construction of new buildings is prohibited between these lines, as is the renovation of existing structures, even if they only partially protrude into the building lines.</Text>
               </LocalisationCH_V1.LocalisedMText>
             </LocalisedText>
           </LocalisationCH_V1.MultilingualMText>
@@ -815,7 +820,7 @@ xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
               </LocalisationCH_V1.LocalisedText>
               <LocalisationCH_V1.LocalisedText>
                 <Language>en</Language>
-                <Text>xxx zu übersetzen</Text>
+                <Text>Building lines for high-voltage installations</Text>
               </LocalisationCH_V1.LocalisedText>
             </LocalisedText>
           </LocalisationCH_V1.MultilingualText>
@@ -841,7 +846,7 @@ xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
               </LocalisationCH_V1.LocalisedMText>
               <LocalisationCH_V1.LocalisedMText>
                 <Language>en</Language>
-                <Text>xxx zu übersetzen</Text>
+                <Text>Between the designated building lines, no structural alterations may be carried out or other measures implemented that could interfere with the specified purpose of existing or future high-voltage installations.</Text>
               </LocalisationCH_V1.LocalisedMText>
             </LocalisedText>
           </LocalisationCH_V1.MultilingualMText>
@@ -895,7 +900,7 @@ xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
               </LocalisationCH_V1.LocalisedMText>
               <LocalisationCH_V1.LocalisedMText>
                 <Language>en</Language>
-                <Text>xxx zu übersetzen</Text>
+                <Text>Acts, ordinances, etc., that are generally abstract and applicable (generally, because the person concerned is not known, and abstract because the perimeter is defined without a map), and which have been issued at the federal, cantonal or municipal level and merely represent a general legal basis for ownership restriction. The legal basis does not form an integral part of the PLR Cadastre. However, the latter does contain references to the corresponding legal basis.</Text>
               </LocalisationCH_V1.LocalisedMText>
             </LocalisedText>
           </LocalisationCH_V1.MultilingualMText>
@@ -923,7 +928,7 @@ xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
               </LocalisationCH_V1.LocalisedText>
               <LocalisationCH_V1.LocalisedText>
                 <Language>en</Language>
-                <Text>xxx zu übersetzen</Text>
+                <Text>Space provided for waters</Text>
               </LocalisationCH_V1.LocalisedText>
             </LocalisedText>
           </LocalisationCH_V1.MultilingualText>
@@ -949,7 +954,7 @@ xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
               </LocalisationCH_V1.LocalisedMText>
               <LocalisationCH_V1.LocalisedMText>
                 <Language>en</Language>
-                <Text>xxx zu übersetzen</Text>
+                <Text>Flowing bodies of water can only be preserved in their natural state if sufficient space is reserved for their protection. Watercourse corridors must be kept free from new installations, though existing structures may be retained.</Text>
               </LocalisationCH_V1.LocalisedMText>
             </LocalisedText>
           </LocalisationCH_V1.MultilingualMText>
@@ -961,15 +966,15 @@ xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
             <LocalisedText>
               <LocalisationCH_V1.LocalisedText>
                 <Language>de</Language>
-                <Text>Grundwasserschutzareal</Text>
+                <Text>Grundwasserschutzareale</Text>
               </LocalisationCH_V1.LocalisedText>
               <LocalisationCH_V1.LocalisedText>
                 <Language>fr</Language>
-                <Text>Périmètre de protection des eaux souterraines</Text>
+                <Text>Périmètres de protection des eaux souterraines</Text>
               </LocalisationCH_V1.LocalisedText>
               <LocalisationCH_V1.LocalisedText>
                 <Language>it</Language>
-                <Text>Area di protezione delle acque sotterranee</Text>
+                <Text>Aree di protezione delle acque sotterranee</Text>
               </LocalisationCH_V1.LocalisedText>
               <LocalisationCH_V1.LocalisedText>
                 <Language>rm</Language>
@@ -987,11 +992,11 @@ xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
             <LocalisedText>
               <LocalisationCH_V1.LocalisedMText>
                 <Language>de</Language>
-                <Text>Von Kanton festgelegtes Areal, das für die künftige Nutzung und Anreicherung von Grundwasservorkommen von Bedeutung ist und in dem keine Bauten und Anlagen erstellt oder Arbeiten ausgeführt werden, die künftige Nutzungs- und Anreicherungsanlagen beeinträchtigen könnten.</Text>
+                <Text>Von Kanton festgelegte Areale, die für die künftige Nutzung und Anreicherung von Grundwasservorkommen von Bedeutung sind und in dem keine Bauten und Anlagen erstellt oder Arbeiten ausgeführt werden, die künftige Nutzungs- und Anreicherungsanlagen beeinträchtigen könnten.</Text>
               </LocalisationCH_V1.LocalisedMText>
               <LocalisationCH_V1.LocalisedMText>
                 <Language>fr</Language>
-                <Text>Périmètre concentrique dont le but est de protéger l'exploitation et l'alimentation artificielle de nappes souterraines et dans lequel il est interdit de construire des bâtiments ou d'effectuer des travaux qui pourraient compromettre l'établissement futur d'installations d'exploitation ou d'alimentation des eaux souterraines.</Text>
+                <Text>Périmètres concentriques dont le but est de protéger l'exploitation et l'alimentation artificielle de nappes souterraines et dans lequel il est interdit de construire des bâtiments ou d'effectuer des travaux qui pourraient compromettre l'établissement futur d'installations d'exploitation ou d'alimentation des eaux souterraines.</Text>
               </LocalisationCH_V1.LocalisedMText>
               <LocalisationCH_V1.LocalisedMText>
                 <Language>it</Language>
@@ -1003,7 +1008,7 @@ xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
               </LocalisationCH_V1.LocalisedMText>
               <LocalisationCH_V1.LocalisedMText>
                 <Language>en</Language>
-                <Text>xxx zu übersetzen</Text>
+                <Text>The cantons define sites that are of significance in terms of the future use and treatment of groundwater reserves. At these sites, no buildings or installations may be constructed, and no work may be carried out, that could interfere with the future construction of groundwater utilisation and treatment facilities.</Text>
               </LocalisationCH_V1.LocalisedMText>
             </LocalisedText>
           </LocalisationCH_V1.MultilingualMText>
@@ -1015,15 +1020,15 @@ xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
             <LocalisedText>
               <LocalisationCH_V1.LocalisedText>
                 <Language>de</Language>
-                <Text>Grundwasserschutzzone</Text>
+                <Text>Grundwasserschutzzonen</Text>
               </LocalisationCH_V1.LocalisedText>
               <LocalisationCH_V1.LocalisedText>
                 <Language>fr</Language>
-                <Text>Zone de protection des eaux souterraines</Text>
+                <Text>Zones de protection des eaux souterraines</Text>
               </LocalisationCH_V1.LocalisedText>
               <LocalisationCH_V1.LocalisedText>
                 <Language>it</Language>
-                <Text>Zona di protezione delle acque sotterranee</Text>
+                <Text>Zone di protezione delle acque sotterranee</Text>
               </LocalisationCH_V1.LocalisedText>
               <LocalisationCH_V1.LocalisedText>
                 <Language>rm</Language>
@@ -1041,15 +1046,15 @@ xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
             <LocalisedText>
               <LocalisationCH_V1.LocalisedMText>
                 <Language>de</Language>
-                <Text>Grundwasserschutzzone, in der gewährleistet werden soll, dass bei unmittelbar drohenden Gefahren wie Unfällen mit wassergefährdenden Stoffen ausreichend Zeit und Raum für die erforderlichen Massnahmen zur Verfügung stehen.</Text>
+                <Text>Grundwasserschutzzonen, in denen gewährleistet werden soll, dass bei unmittelbar drohenden Gefahren wie Unfällen mit wassergefährdenden Stoffen ausreichend Zeit und Raum für die erforderlichen Massnahmen zur Verfügung stehen.</Text>
               </LocalisationCH_V1.LocalisedMText>
               <LocalisationCH_V1.LocalisedMText>
                 <Language>fr</Language>
-                <Text>Zone de protection des eaux souterraines devant garantir qu'en cas de danger imminent (p. ex. en cas d'accident impliquant des substances pouvant polluer les eaux), on dispose de suffisamment de temps et d'espace pour prendre les mesures qui s'imposent.</Text>
+                <Text>Zones de protection des eaux souterraines devant garantir qu'en cas de danger imminent (p. ex. en cas d'accident impliquant des substances pouvant polluer les eaux), on dispose de suffisamment de temps et d'espace pour prendre les mesures qui s'imposent.</Text>
               </LocalisationCH_V1.LocalisedMText>
               <LocalisationCH_V1.LocalisedMText>
                 <Language>it</Language>
-                <Text>Zona di protezione delle acque sotterranee che deve garantire che, in caso di pericolo immediato (p. es. incidenti con sostanze suscettibili di inquinare le acque), vi sia sufficiente tempo e spazio per le misure di risanamento.</Text>
+                <Text>Zone di protezione delle acque sotterranee che deve garantire che, in caso di pericolo immediato (p. es. incidenti con sostanze suscettibili di inquinare le acque), vi sia sufficiente tempo e spazio per le misure di risanamento.</Text>
               </LocalisationCH_V1.LocalisedMText>
               <LocalisationCH_V1.LocalisedMText>
                 <Language>rm</Language>
@@ -1057,7 +1062,7 @@ xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
               </LocalisationCH_V1.LocalisedMText>
               <LocalisationCH_V1.LocalisedMText>
                 <Language>en</Language>
-                <Text>xxx zu übersetzen</Text>
+                <Text>The cantons define groundwater protection zones for the supply and treatment facilities that are in the public interest, and specify the necessary landownership restrictions.</Text>
               </LocalisationCH_V1.LocalisedMText>
             </LocalisedText>
           </LocalisationCH_V1.MultilingualMText>
@@ -1111,7 +1116,7 @@ xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
               </LocalisationCH_V1.LocalisedMText>
               <LocalisationCH_V1.LocalisedMText>
                 <Language>en</Language>
-                <Text>xxx zu übersetzen</Text>
+                <Text>The Cadastre includes landfills and other sites polluted by waste that have to be decontaminated if they give rise to harmful or undesirable impacts or if there is a specific risk that such impacts could arise. The relevant authority is responsible for identifying contaminated sites by evaluating existing sources such as maps, lists and reports. It is required to enter those sites in the cadastre that have been identified as definitely or almost certainly contaminated.</Text>
               </LocalisationCH_V1.LocalisedMText>
             </LocalisedText>
           </LocalisationCH_V1.MultilingualMText>
@@ -1165,7 +1170,7 @@ xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
               </LocalisationCH_V1.LocalisedMText>
               <LocalisationCH_V1.LocalisedMText>
                 <Language>en</Language>
-                <Text>xxx zu übersetzen</Text>
+                <Text>The office responsible for the cadastre in each canton receives the data to be included in the PLR Cadastre from the relevant authorities. It is responsible for managing the data and placing them at the disposal of the general public via the corresponding cantonal geoportal.</Text>
               </LocalisationCH_V1.LocalisedMText>
             </LocalisedText>
           </LocalisationCH_V1.MultilingualMText>
@@ -1193,7 +1198,7 @@ xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
               </LocalisationCH_V1.LocalisedText>
               <LocalisationCH_V1.LocalisedText>
                 <Language>en</Language>
-                <Text>xxx zu übersetzen</Text>
+                <Text>CCS</Text>
               </LocalisationCH_V1.LocalisedText>
             </LocalisedText>
           </LocalisationCH_V1.MultilingualText>
@@ -1235,7 +1240,7 @@ xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
               </LocalisationCH_V1.LocalisedText>
               <LocalisationCH_V1.LocalisedText>
                 <Language>fr</Language>
-                <Text>Degré de sensibilité au bruit</Text>
+                <Text>Degrés de sensibilité au bruit</Text>
               </LocalisationCH_V1.LocalisedText>
               <LocalisationCH_V1.LocalisedText>
                 <Language>it</Language>
@@ -1273,7 +1278,7 @@ xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
               </LocalisationCH_V1.LocalisedMText>
               <LocalisationCH_V1.LocalisedMText>
                 <Language>en</Language>
-                <Text>xxx zu übersetzen</Text>
+                <Text>Sensitivity levels are specified in order to define certain zones, namely those in which increased noise abatement measures are required, those in which no activities are permitted that result in disturbance due to noise, and those in which activities are permitted that give rise to medium to high levels of noise.</Text>
               </LocalisationCH_V1.LocalisedMText>
             </LocalisedText>
           </LocalisationCH_V1.MultilingualMText>
@@ -1289,19 +1294,19 @@ xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
               </LocalisationCH_V1.LocalisedText>
               <LocalisationCH_V1.LocalisedText>
                 <Language>fr</Language>
-                <Text>Zone réservée</Text>
+                <Text>Zones réservées</Text>
               </LocalisationCH_V1.LocalisedText>
               <LocalisationCH_V1.LocalisedText>
                 <Language>it</Language>
-                <Text>Zona di pianificazione</Text>
+                <Text>Zone di pianificazione</Text>
               </LocalisationCH_V1.LocalisedText>
               <LocalisationCH_V1.LocalisedText>
                 <Language>rm</Language>
-                <Text>Zona da planisaziun</Text>
+                <Text>Zonas da planisaziun</Text>
               </LocalisationCH_V1.LocalisedText>
               <LocalisationCH_V1.LocalisedText>
                 <Language>en</Language>
-                <Text>Planning zone</Text>
+                <Text>Planning zones</Text>
               </LocalisationCH_V1.LocalisedText>
             </LocalisedText>
           </LocalisationCH_V1.MultilingualText>
@@ -1319,7 +1324,7 @@ xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
               </LocalisationCH_V1.LocalisedMText>
               <LocalisationCH_V1.LocalisedMText>
                 <Language>it</Language>
-                <Text>Zona comprendente un territorio per il quale il piano di utilizzazione manca o dev'essere adottato, e all'interno della quale nulla può essere intrapreso che possa rendere più ardua la pianificazione dell'utilizzazione.</Text>
+                <Text>Zone comprendente un territorio per il quale il piano di utilizzazione manca o dev'essere adottato, e all'interno della quale nulla può essere intrapreso che possa rendere più ardua la pianificazione dell'utilizzazione.</Text>
               </LocalisationCH_V1.LocalisedMText>
               <LocalisationCH_V1.LocalisedMText>
                 <Language>rm</Language>
@@ -1347,7 +1352,7 @@ xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
               </LocalisationCH_V1.LocalisedText>
               <LocalisationCH_V1.LocalisedText>
                 <Language>it</Language>
-                <Text>Zone di progettazione per gli impianti ferroviari</Text>
+                <Text>Zone riservate per gli impianti ferroviari</Text>
               </LocalisationCH_V1.LocalisedText>
               <LocalisationCH_V1.LocalisedText>
                 <Language>rm</Language>
@@ -1373,7 +1378,7 @@ xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
               </LocalisationCH_V1.LocalisedMText>
               <LocalisationCH_V1.LocalisedMText>
                 <Language>it</Language>
-                <Text>Al fine di garantire la libera disponibilità dei fondi necessari per i futuri edifici e impianti ferroviari possono essere definite zone di progettazione per aree chiaramente contrassegnate. In queste zone non possono essere apportate modifiche strutturali contrarie allo scopo delle ferrovie.</Text>
+                <Text>Al fine di garantire la libera disponibilità dei fondi necessari per i futuri edifici e impianti ferroviari possono essere definite zone riservate per aree chiaramente contrassegnate. In queste zone non possono essere apportate modifiche strutturali contrarie allo scopo delle ferrovie.</Text>
               </LocalisationCH_V1.LocalisedMText>
               <LocalisationCH_V1.LocalisedMText>
                 <Language>rm</Language>
@@ -1381,7 +1386,7 @@ xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
               </LocalisationCH_V1.LocalisedMText>
               <LocalisationCH_V1.LocalisedMText>
                 <Language>en</Language>
-                <Text>xxx zu übersetzen</Text>
+                <Text>Reserved zones may be specified for precisely defined areas in order to ensure that the necessary land for the future construction of railway stretches and installations is kept in reserve. In these zones, no structural alterations may be carried out that do not correspond to the purpose specified by the railway operator.</Text>
               </LocalisationCH_V1.LocalisedMText>
             </LocalisedText>
           </LocalisationCH_V1.MultilingualMText>
@@ -1401,15 +1406,15 @@ xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
               </LocalisationCH_V1.LocalisedText>
               <LocalisationCH_V1.LocalisedText>
                 <Language>it</Language>
-                <Text>Zone di progettazione per gli impianti aeroportuali</Text>
+                <Text>Zone riservate per gli impianti aeroportuali</Text>
               </LocalisationCH_V1.LocalisedText>
               <LocalisationCH_V1.LocalisedText>
                 <Language>rm</Language>
-                <Text>Zona da projectaziun dals implants d'eroport</Text>
+                <Text>Zonas da projectaziun dals implants d'eroport</Text>
               </LocalisationCH_V1.LocalisedText>
               <LocalisationCH_V1.LocalisedText>
                 <Language>en</Language>
-                <Text>Reserved zones for railways</Text>
+                <Text>Reserved zones for airports</Text>
               </LocalisationCH_V1.LocalisedText>
             </LocalisedText>
           </LocalisationCH_V1.MultilingualText>
@@ -1427,7 +1432,7 @@ xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
               </LocalisationCH_V1.LocalisedMText>
               <LocalisationCH_V1.LocalisedMText>
                 <Language>it</Language>
-                <Text>Al fine di garantire la libera disponibilità dei fondi necessari per i futuri edifici e impianti aeroportuali possono essere definite zone di progettazione per aree chiaramente contrassegnate. In queste zone non possono essere apportate modifiche strutturali contrarie allo scopo degli impianti aeroportuali.</Text>
+                <Text>Al fine di garantire la libera disponibilità dei fondi necessari per i futuri edifici e impianti aeroportuali possono essere definite zone riservate per aree chiaramente contrassegnate. In queste zone non possono essere apportate modifiche strutturali contrarie allo scopo degli impianti aeroportuali.</Text>
               </LocalisationCH_V1.LocalisedMText>
               <LocalisationCH_V1.LocalisedMText>
                 <Language>rm</Language>
@@ -1435,7 +1440,7 @@ xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
               </LocalisationCH_V1.LocalisedMText>
               <LocalisationCH_V1.LocalisedMText>
                 <Language>en</Language>
-                <Text>xxx zu übersetzen</Text>
+                <Text>In order to ensure that airports have the necessary land at their disposal for their various facilities, project zones can be defined, the boundaries of which have to be clearly specified. Within these zones, no structural changes may be carried out that conflict with the purpose of the airport facilities.</Text>
               </LocalisationCH_V1.LocalisedMText>
             </LocalisedText>
           </LocalisationCH_V1.MultilingualMText>
@@ -1463,7 +1468,7 @@ xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
               </LocalisationCH_V1.LocalisedText>
               <LocalisationCH_V1.LocalisedText>
                 <Language>en</Language>
-                <Text>xxx zu übersetzen</Text>
+                <Text>Reserved zones for power lines with a nominal voltage of 220 kV or higher</Text>
               </LocalisationCH_V1.LocalisedText>
             </LocalisedText>
           </LocalisationCH_V1.MultilingualText>
@@ -1481,7 +1486,7 @@ xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
               </LocalisationCH_V1.LocalisedMText>
               <LocalisationCH_V1.LocalisedMText>
                 <Language>it</Language>
-                <Text>Al fine di garantire la libera disponibilità dei fondi necessari per le condotte con una tensione nominale di 220 kV o superiore, è possibile definire zone di progettazione per aree contrassegnate con precisione. In queste zone non possono essere apportate modifiche strutturali che contraddicano lo scopo delle condotte.</Text>
+                <Text>Al fine di garantire la libera disponibilità dei fondi necessari per le condotte con una tensione nominale di 220 kV o superiore, è possibile definire zone riservate per aree contrassegnate con precisione. In queste zone non possono essere apportate modifiche strutturali che contraddicano lo scopo delle condotte.</Text>
               </LocalisationCH_V1.LocalisedMText>
               <LocalisationCH_V1.LocalisedMText>
                 <Language>rm</Language>
@@ -1489,7 +1494,7 @@ xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
               </LocalisationCH_V1.LocalisedMText>
               <LocalisationCH_V1.LocalisedMText>
                 <Language>en</Language>
-                <Text>xxx zu übersetzen</Text>
+                <Text>Reserve zones may be specified in precisely designated regions in order to secure the availability of the necessary plots of land for the use of power lines with a nominal voltage of 200 kV or higher. In these zones, no structural alterations may be carried out that could interfere with the specified purpose of the power lines.</Text>
               </LocalisationCH_V1.LocalisedMText>
             </LocalisedText>
           </LocalisationCH_V1.MultilingualMText>
@@ -1509,7 +1514,7 @@ xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
               </LocalisationCH_V1.LocalisedText>
               <LocalisationCH_V1.LocalisedText>
                 <Language>it</Language>
-                <Text>Zone di progettazione per le strade nazionali</Text>
+                <Text>Zone riservate per le strade nazionali</Text>
               </LocalisationCH_V1.LocalisedText>
               <LocalisationCH_V1.LocalisedText>
                 <Language>rm</Language>
@@ -1535,7 +1540,7 @@ xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
               </LocalisationCH_V1.LocalisedMText>
               <LocalisationCH_V1.LocalisedMText>
                 <Language>it</Language>
-                <Text>Al fine di garantire la libera disponibilità del terreno necessario per la costruzione delle strade nazionali è possibile definire zone di progettazione per aree designate con precisione. In queste zone non possono essere apportate modifiche strutturali che contraddicano lo scopo delle strade nazionali.</Text>
+                <Text>Al fine di garantire la libera disponibilità del terreno necessario per la costruzione delle strade nazionali è possibile definire zone riservate per aree designate con precisione. In queste zone non possono essere apportate modifiche strutturali che contraddicano lo scopo delle strade nazionali.</Text>
               </LocalisationCH_V1.LocalisedMText>
               <LocalisationCH_V1.LocalisedMText>
                 <Language>rm</Language>
@@ -1543,7 +1548,7 @@ xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
               </LocalisationCH_V1.LocalisedMText>
               <LocalisationCH_V1.LocalisedMText>
                 <Language>en</Language>
-                <Text>xxx zu übersetzen</Text>
+                <Text>Building lines may be specified in order to ensure that the necessary land for the ongoing or future construction of railway stretches and installations remains available. No structural alterations or other measures that do not correspond to the specified purpose of the railway operator may be carried out either between the building lines or between a building line and a railway installation.</Text>
               </LocalisationCH_V1.LocalisedMText>
             </LocalisedText>
           </LocalisationCH_V1.MultilingualMText>
@@ -1559,7 +1564,7 @@ xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
               </LocalisationCH_V1.LocalisedText>
               <LocalisationCH_V1.LocalisedText>
                 <Language>fr</Language>
-                <Text>Plan d'affectation</Text>
+                <Text>Plans d’affectation</Text>
               </LocalisationCH_V1.LocalisedText>
               <LocalisationCH_V1.LocalisedText>
                 <Language>it</Language>
@@ -1571,7 +1576,7 @@ xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
               </LocalisationCH_V1.LocalisedText>
               <LocalisationCH_V1.LocalisedText>
                 <Language>en</Language>
-                <Text>Land use planning</Text>
+                <Text>Land use plans</Text>
               </LocalisationCH_V1.LocalisedText>
             </LocalisedText>
           </LocalisationCH_V1.MultilingualText>
@@ -1597,7 +1602,7 @@ xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
               </LocalisationCH_V1.LocalisedMText>
               <LocalisationCH_V1.LocalisedMText>
                 <Language>en</Language>
-                <Text>xxx zu übersetzen</Text>
+                <Text>Land use plans (which are often also referred to as zoning plans) specify the type and use of the land. They divide an area into various zones (building, agricultural, conservation).</Text>
               </LocalisationCH_V1.LocalisedMText>
             </LocalisedText>
           </LocalisationCH_V1.MultilingualMText>
@@ -1651,7 +1656,7 @@ xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
               </LocalisationCH_V1.LocalisedMText>
               <LocalisationCH_V1.LocalisedMText>
                 <Language>en</Language>
-                <Text>xxx zu übersetzen</Text>
+                <Text>General-specific legal provision that together with the attributed official geodata directly describes the landownership restriction and has been adopted within the same process.</Text>
               </LocalisationCH_V1.LocalisedMText>
             </LocalisedText>
           </LocalisationCH_V1.MultilingualMText>
@@ -1705,7 +1710,7 @@ xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
               </LocalisationCH_V1.LocalisedMText>
               <LocalisationCH_V1.LocalisedMText>
                 <Language>en</Language>
-                <Text>xxx zu übersetzen</Text>
+                <Text>Every airport is required to designate a security zone. The Federal Office of Civil Aviation (FOCA) is responsible for deciding on a case by case basis whether a security zone is required for air traffic control systems and flight paths. Without the consent of the applicant, no one may own property that is subject to a security zone plan.</Text>
               </LocalisationCH_V1.LocalisedMText>
             </LocalisedText>
           </LocalisationCH_V1.MultilingualMText>
@@ -1717,23 +1722,23 @@ xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
             <LocalisedText>
               <LocalisationCH_V1.LocalisedText>
                 <Language>de</Language>
-                <Text>Statische Waldgrenze</Text>
+                <Text>Statische Waldgrenzen</Text>
               </LocalisationCH_V1.LocalisedText>
               <LocalisationCH_V1.LocalisedText>
                 <Language>fr</Language>
-                <Text>Limite forestière statique</Text>
+                <Text>Limites forestières statiques</Text>
               </LocalisationCH_V1.LocalisedText>
               <LocalisationCH_V1.LocalisedText>
                 <Language>it</Language>
-                <Text>Margine statico della foresta</Text>
+                <Text>Margini statici della foresta</Text>
               </LocalisationCH_V1.LocalisedText>
               <LocalisationCH_V1.LocalisedText>
                 <Language>rm</Language>
-                <Text>Cunfin static dal guaud</Text>
+                <Text>Cunfins statics dal guaud</Text>
               </LocalisationCH_V1.LocalisedText>
               <LocalisationCH_V1.LocalisedText>
                 <Language>en</Language>
-                <Text>Static forest perimeter</Text>
+                <Text>Static forest perimeters</Text>
               </LocalisationCH_V1.LocalisedText>
             </LocalisedText>
           </LocalisationCH_V1.MultilingualText>
@@ -1759,7 +1764,7 @@ xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
               </LocalisationCH_V1.LocalisedMText>
               <LocalisationCH_V1.LocalisedMText>
                 <Language>en</Language>
-                <Text>xxx zu übersetzen</Text>
+                <Text>Static forest perimeters have to be defined on the basis of legally binding declarations of forested areas. Newly planted trees outside the defined forest perimeter are not regarded as forest.</Text>
               </LocalisationCH_V1.LocalisedMText>
             </LocalisedText>
           </LocalisationCH_V1.MultilingualMText>
@@ -1771,7 +1776,7 @@ xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
             <LocalisedText>
               <LocalisationCH_V1.LocalisedText>
                 <Language>de</Language>
-                <Text>Waldabstandslinie</Text>
+                <Text>Waldabstandslinien</Text>
               </LocalisationCH_V1.LocalisedText>
               <LocalisationCH_V1.LocalisedText>
                 <Language>fr</Language>
@@ -1779,7 +1784,7 @@ xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
               </LocalisationCH_V1.LocalisedText>
               <LocalisationCH_V1.LocalisedText>
                 <Language>it</Language>
-                <Text>Linee di distanza dalle foreste</Text>
+                <Text>Linee di distanza dalla foresta</Text>
               </LocalisationCH_V1.LocalisedText>
               <LocalisationCH_V1.LocalisedText>
                 <Language>rm</Language>
@@ -1813,7 +1818,7 @@ xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
               </LocalisationCH_V1.LocalisedMText>
               <LocalisationCH_V1.LocalisedMText>
                 <Language>en</Language>
-                <Text>xxx zu übersetzen</Text>
+                <Text>Buildings and installations are only permitted near a forested area if they do not interfere with the preservation, management and use of the forest. Based on legally binding forest boundaries, the cantons define an appropriate minimum distance between buildings and facilities and the forest perimeter. The minimum distance is defined while taking the location and the anticipated height of the trees into account.</Text>
               </LocalisationCH_V1.LocalisedMText>
             </LocalisedText>
           </LocalisationCH_V1.MultilingualMText>
@@ -1829,11 +1834,11 @@ xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
               </LocalisationCH_V1.LocalisedText>
               <LocalisationCH_V1.LocalisedText>
                 <Language>fr</Language>
-                <Text>Réserve forestière</Text>
+                <Text>Réserves forestières</Text>
               </LocalisationCH_V1.LocalisedText>
               <LocalisationCH_V1.LocalisedText>
                 <Language>it</Language>
-                <Text>Riserva forestale</Text>
+                <Text>Riserve forestali</Text>
               </LocalisationCH_V1.LocalisedText>
               <LocalisationCH_V1.LocalisedText>
                 <Language>rm</Language>
@@ -1841,7 +1846,7 @@ xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
               </LocalisationCH_V1.LocalisedText>
               <LocalisationCH_V1.LocalisedText>
                 <Language>en</Language>
-                <Text>Forest reserve</Text>
+                <Text>Forest reserves</Text>
               </LocalisationCH_V1.LocalisedText>
             </LocalisedText>
           </LocalisationCH_V1.MultilingualText>
@@ -1867,7 +1872,7 @@ xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
               </LocalisationCH_V1.LocalisedMText>
               <LocalisationCH_V1.LocalisedMText>
                 <Language>en</Language>
-                <Text>xxx zu übersetzen</Text>
+                <Text>Protected forest land for the purpose of preserving the diversity of fauna and flora.</Text>
               </LocalisationCH_V1.LocalisedMText>
             </LocalisedText>
           </LocalisationCH_V1.MultilingualMText>
@@ -1921,7 +1926,7 @@ xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
               </LocalisationCH_V1.LocalisedMText>
               <LocalisationCH_V1.LocalisedMText>
                 <Language>en</Language>
-                <Text>xxx zu übersetzen</Text>
+                <Text>Unit of the federal government, canton or municipality designated by law as responsible for the collection, updating and management of official geodata.</Text>
               </LocalisationCH_V1.LocalisedMText>
             </LocalisedText>
           </LocalisationCH_V1.MultilingualMText>
@@ -1949,7 +1954,7 @@ xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
               </LocalisationCH_V1.LocalisedText>
               <LocalisationCH_V1.LocalisedText>
                 <Language>en</Language>
-                <Text>xxx zu übersetzen</Text>
+                <Text>Pre-effect</Text>
               </LocalisationCH_V1.LocalisedText>
             </LocalisedText>
           </LocalisationCH_V1.MultilingualText>
@@ -1975,7 +1980,7 @@ xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
               </LocalisationCH_V1.LocalisedMText>
               <LocalisationCH_V1.LocalisedMText>
                 <Language>en</Language>
-                <Text>xxx zu übersetzen</Text>
+                <Text>The publication of plans results in a pre-effect: From that moment onwards, construction projects may normally only be approved if they do not conflict with the published planning.</Text>
               </LocalisationCH_V1.LocalisedMText>
             </LocalisedText>
           </LocalisationCH_V1.MultilingualMText>
@@ -1995,7 +2000,7 @@ xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
               </LocalisationCH_V1.LocalisedText>
               <LocalisationCH_V1.LocalisedText>
                 <Language>it</Language>
-                <Text>Indicazioni concernente il registro fondiario</Text>
+                <Text>Restrizioni della proprietà nel re-gistro fondiario</Text>
               </LocalisationCH_V1.LocalisedText>
               <LocalisationCH_V1.LocalisedText>
                 <Language>rm</Language>
@@ -2003,7 +2008,7 @@ xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
               </LocalisationCH_V1.LocalisedText>
               <LocalisationCH_V1.LocalisedText>
                 <Language>en</Language>
-                <Text>xxx zu übersetzen</Text>
+                <Text>Ownership restrictions in the land register</Text>
               </LocalisationCH_V1.LocalisedText>
             </LocalisedText>
           </LocalisationCH_V1.MultilingualText>
@@ -2029,7 +2034,7 @@ xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
               </LocalisationCH_V1.LocalisedMText>
               <LocalisationCH_V1.LocalisedMText>
                 <Language>en</Language>
-                <Text>xxx zu übersetzen</Text>
+                <Text>In addition to the information contained in this extract, ownership restrictions may also be cited in the land register.</Text>
               </LocalisationCH_V1.LocalisedMText>
             </LocalisedText>
           </LocalisationCH_V1.MultilingualMText>
@@ -2111,25 +2116,25 @@ xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
             <LocalisedText>
               <LocalisationCH_V1.LocalisedMText>
                 <Language>de</Language>
-                <Text>Der Inhalt des ÖREB-Katasters wird als bekannt vorausgesetzt. Der Kanton [xxxx] ist für die Genauigkeit und Verlässlichkeit der gesetzgebenden Dokumente in elektronischer Form nicht haftbar. Der Auszug hat rein informativen Charakter und begründet insbesondere keine Rechte und Pflichten. Rechtsverbindlich sind diejenigen Dokumente, welche rechtskräftig verabschiedet oder veröffentlicht worden sind. Weitere Informationen zum ÖREB-Kataster finden Sie unter cadastre.ch</Text>
+                <Text>Der Inhalt des ÖREB-Katasters wird als bekannt vorausgesetzt. Der Kanton ${canton} ist für die Genauigkeit und Verlässlichkeit der gesetzgebenden Dokumente in elektronischer Form nicht haftbar. Der Auszug hat rein informativen Charakter und begründet insbesondere keine Rechte und Pflichten. Massgeblich sind diejenigen Dokumente, welche rechtskräftig verabschiedet oder veröffentlicht worden sind. Weitere Informationen zum ÖREB-Kataster finden Sie unter www.cadastre.ch</Text>
               </LocalisationCH_V1.LocalisedMText>
               <LocalisationCH_V1.LocalisedMText>
                 <Language>fr</Language>
-                <Text>Le contenu du cadastre RDPPF est supposé connu. Le canton de [xxx] n’engage pas sa responsabilité sur l’exactitude ou la fiabilité des documents législatifs dans leur version électronique. L’extrait a un caractère informatif et ne crée aucun droit ou obligation. Les documents juridiquement contraignants sont ceux qui ont été légalement adoptés ou publiés. La certification d’un extrait confirme la concordance de cet extrait avec le cadastre RDPPF à la date d’établissement dudit extrait. Vous trouverez d’autres informations sur le cadastre RDPPF sous cadastre.ch</Text>
+                <Text>Le contenu du cadastre RDPPF est supposé connu. Le canton de ${canton} n’engage pas sa responsabilité sur l’exactitude ou la fiabilité des documents législatifs dans leur version électronique. L’extrait a un caractère informatif et ne crée aucun droit ou obligation. La primauté va aux documents qui ont été légalement adoptés ou publiés. Vous trouverez d’autres informations sur le cadastre RDPPF sous www.cadastre.ch</Text>
               </LocalisationCH_V1.LocalisedMText>
               <LocalisationCH_V1.LocalisedMText>
                 <Language>it</Language>
-                <Text>Il contenuto del Catasto RDPP si considera noto. Il Canton [xxx] non può essere ritenuto responsabile per la precisione e l'affidabilità dei documenti legislativi in formato elettronico. L'estratto ha carattere puramente informativo e non è in particolare costitutivo di diritti e obblighi. Sono considerati giuridicamente vincolanti i documenti approvati o pubblicati passati in giudicato. Con l'autenticazione dell'estratto viene confermata la conformità dell'estratto rispetto al Catasto RDPP al momento della sua redazione. Ulteriori informazioni relative al Catasto RDPP sono disponibili su cadastre.ch</Text>
+                <Text>Il contenuto del Catasto RDPP si considera noto. Il Canton ${canton} non può essere ritenuto responsabile per la precisione e l'affidabilità dei documenti legislativi in formato elettronico. L'estratto ha carattere puramente informativo e non è in particolare costitutivo di diritti e obblighi. Sono considerati determinante i documenti approvati o pubblicati passati in giudicato. Ulteriori informazioni relative al Catasto RDPP sono disponibili su www.cadastre.ch</Text>
               </LocalisationCH_V1.LocalisedMText>
               <LocalisationCH_V1.LocalisedMText>
                 <Language>rm</Language>
-                <Text>Il cuntegn dal cataster RDPP vegn premess sco enconuschent. Il chantun [xxxx] n'è betg responsabel per l'exactadad e per la fidadadad dals documents legislativs electronics. L'extract ha in caracter puramain infurmativ e na motivescha cunzunt nagins dretgs e naginas obligaziuns. Giuridicamain liants èn quels documents ch'èn vegnids deliberads u publitgads cun vigur legala. Ulteriuras infurmaziuns davart il cataster RDPP chattais Vus sut cadastre.ch</Text>
+                <Text>Il cuntegn dal cataster RDPP vegn premess sco enconuschent. Il chantun ${canton} n'è betg responsabel per l'exactadad e per la fidadadad dals documents legislativs electronics. L'extract ha in caracter puramain infurmativ e na motivescha cunzunt nagins dretgs e naginas obligaziuns. Giuridicamain liants èn quels documents ch'èn vegnids deliberads u publitgads cun vigur legala. Ulteriuras infurmaziuns davart il cataster RDPP chattais Vus sut www.cadastre.ch</Text>
               </LocalisationCH_V1.LocalisedMText>
             </LocalisedText>
           </LocalisationCH_V1.MultilingualMText>
         </Inhalt>
         <AuszugIndex>0</AuszugIndex>
-      </OeREBKRMkvs_V2_0.Konfiguration.Information>     
-    </OeREBKRMkvs_V2_0.Konfiguration>
+      </OeREBKRMkvs_V2_0.Konfiguration.Information>
+          </OeREBKRMkvs_V2_0.Konfiguration>
   </DATASECTION>
 </TRANSFER>

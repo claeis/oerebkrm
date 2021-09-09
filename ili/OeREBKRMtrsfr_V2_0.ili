@@ -1,15 +1,15 @@
 INTERLIS 2.3;
 
-/** Transferstruktur: Schnittstelle zwischen der  für die Geobasisdaten zuständigen Stelle und der für den Kataster verantwortlichen Stelle des Kantons
+/** Transferstruktur: Schnittstelle zwischen der für die Geobasisdaten zuständigen Stelle und der für den Kataster verantwortlichen Stelle des Kantons
  */
 !!@ furtherInformation=https://www.cadastre.ch/oereb-public
 !!@ technicalContact=mailto:vermessung@swisstopo.ch
 MODEL OeREBKRMtrsfr_V2_0 (de)
 AT "https://models.geo.admin.ch/V_D/OeREB/"
 VERSION "2021-04-14"  =
-  IMPORTS OeREBKRM_V2_0,CHAdminCodes_V1,LocalisationCH_V1,GeometryCHLV95_V1;
+  IMPORTS OeREBKRM_V2_0,LocalisationCH_V1,GeometryCHLV95_V1;
 
-  /** Dieses Teilmodell definiert, wie die Rechtsvorschriften und die zugehörigen Geobasisdaten, die zusammen die öffentlich-rechtliche Eigentumsbeschränkung definieren, zwischen der zuständigen Stelle und der für den Kataster verantwortlichen Stelle des Kantons ausgetauscht werden
+  /** Dieses Teilmodell definiert die Struktur der Daten, wie diese von der zuständigen Stelle an die für den Kataster verantwortliche Stelle des Kantons geliefert werden müssen
    */
   TOPIC Transferstruktur
   EXTENDS OeREBKRM_V2_0.Dokumente =

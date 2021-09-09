@@ -9,7 +9,7 @@ AT "https://models.geo.admin.ch/V_D/OeREB/"
 VERSION "2021-04-14"  =
   IMPORTS OeREBKRM_V2_0,LocalisationCH_V1,CHAdminCodes_V1;
 
-  /** Das Teilmodell Konfiguration ist eine Empfehlung für die Daten zur Konfiguration des Web-Services für den Bezug des statischen Auszugs (z.B. Textbausteine oder die in einer Gemeinde freigeschalteten Themen)
+  /** Das Teilmodell «Konfiguration» ist eine Empfehlung für die für den Kataster verantwortliche Stelle des Kantons und dient der Konfiguration des Web-Service für den Bezug eines Auszugs oder Teile davon (z.B. einzelne Textbausteine oder die in einer Gemeinde freigeschalteten Themen)
    */
   TOPIC Konfiguration =
 
@@ -158,7 +158,7 @@ VERSION "2021-04-14"  =
 
   END Konfiguration;
 
-  /** Das Teilmodell MetadatenKVS definiert die Metadaten, die innerhalb der für den Kataster verantwortlichen Stelle des Kantons geführt werden müssen
+  /** Dieses Teilmodell definiert die Metadaten, die zum Zweck der Nachvollziehbarkeit innerhalb der für den Kataster verantwortlichen Stelle des Kantons geführt werden müssen
    */
   TOPIC MetadatenKVS
   EXTENDS OeREBKRM_V2_0.Amt =
@@ -176,7 +176,7 @@ VERSION "2021-04-14"  =
 
   END MetadatenKVS;
 
-  /** Das Teilmodell Thema definiert die im Kataster möglichen Themen und ordnet diesen die gesetzlichen Grundlagen zu
+  /** Dieses Teilmodell definiert die im Kataster aufzuführenden ÖREB-Themen (z.B. Nutzungsplanung), ordnet diesen die gesetzlichen Grundlagen (z.B. Bundesgesetz über die Raumplanung) und die zuständige Stelle (z.B. Bundeskanzlei) zu
    */
   TOPIC Thema =
     DEPENDS ON OeREBKRM_V2_0.Dokumente;
@@ -200,6 +200,8 @@ VERSION "2021-04-14"  =
       UNIQUE WHERE DEFINED(SubCode): Code,SubCode;
     END Thema;
 
+    /** Beziehungsklasse um den ÖREB-Themen die gesetzlichen Grundlagen zuzuordnen
+     */
     ASSOCIATION ThemaGesetz =
       Thema -- {0..*} Thema;
       Gesetz (EXTERNAL) -- {0..*} OeREBKRM_V2_0.Dokumente.Dokument;

@@ -9,7 +9,7 @@ AT "https://models.geo.admin.ch/V_D/OeREB/"
 VERSION "2021-04-14"  =
   IMPORTS OeREBKRM_V2_0,CHAdminCodes_V1,LocalisationCH_V1,GeometryCHLV95_V1,Units;
 
-  /** Dieses Teilmodell definiert die Struktur der Daten, wie sie von den Nutzern des ÖREB-Katasters von der für den Kataster verantwortlichen Stelle des Kantons bezogen werden können
+  /** Dieses Teilmodell definiert die Struktur der Daten, wie sie von den Benutzenden des ÖREB-Katasters von der für den Kataster verantwortlichen Stelle des Kantons bezogen werden können
    */
   TOPIC KatasterAuszug =
 
@@ -223,7 +223,7 @@ VERSION "2021-04-14"  =
       MANDATORY CONSTRAINT DEFINED(FlaecheAnteil) OR DEFINED(LaengeAnteil) OR DEFINED(PunkteAufGrundstueck);
     END Eigentumsbeschraenkung;
 
-    /** Liegenschaften und SDR im Sinne von ZGB Art. 655, soweit sie in der amtlichen Vermessung mit Flächengeometrie erfasst sind (d.h. alle Objekte der Tabellen Liegenschaft und SDR gemäss TOPIC Liegenschaften des DM01)
+    /** Liegenschaft und SDR im Sinne von Artikel 655 ZGB, soweit diese in der amtlichen Vermessung mit Flächengeometrie erfasst sind (d.h. alle Objekte der Tabellen Liegenschaft und SDR gemäss TOPIC Liegenschaften des DM.01)
      */
     STRUCTURE Liegenschaft_SDR =
       /** Nummer des Grundstücks, z.B. «4912»
@@ -235,7 +235,7 @@ VERSION "2021-04-14"  =
       /** Wertebereich für die Eidg. Grundstücks-Identifikation, z.B. «CH787701897777»
        */
       EGRID : TEXT*14;
-      /** Art des Grundstücks gemäss Definition im DM01, z.B. «SelbstRecht.Baurecht»
+      /** Art des Grundstücks gemäss Definition im DM.01, z.B. «SelbstRecht.Baurecht»
        */
       Art : MANDATORY OeREBKRM_V2_0.GrundstuecksArt;
       /** In welchem Kanton dieses Grundstück liegt, z.B. «BE» für Bern
@@ -308,7 +308,7 @@ VERSION "2021-04-14"  =
       /** QR-Code (Quick-Response-Code) der diesen Auszug identifiziert im PNG-Format mit 300dpi oder im SVG-Format
        */
       QRCode : BLACKBOX BINARY;
-      /** Allgemeine Information gemäss Textvorgabe in Weisung «Statischer Auszug»
+      /** Allgemeine Information gemäss Textvorgabe, siehe Weisung «ÖREB-Kataster: Inhalt und Darstellung des statischen Auszugs»
        */
       AllgemeineInformation : LIST {0..*} OF LocalisationCH_V1.MultilingualMText;
       /** Aktualisierungsdatum der AV im Katasterportal

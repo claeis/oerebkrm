@@ -118,7 +118,7 @@ VERSION "2021-04-14"  =
   TOPIC Amt =
     OID AS OEREBOID;
 
-    /** Eine Organisationseinheit  innerhalb der öffentlichen Verwaltung, z.B. eine für Geobasisdaten zuständige Stelle
+    /** Eine Organisationseinheit innerhalb der öffentlichen Verwaltung, z.B. eine für Geobasisdaten zuständige Stelle
      */
     CLASS Amt =
       /** Name des Amtes, z.B. «Amt für Gemeinden und Raumordnung des Kantons Bern»

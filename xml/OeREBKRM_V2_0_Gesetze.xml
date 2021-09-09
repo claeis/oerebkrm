@@ -4,10 +4,10 @@ xmlns:ili2c="http://www.interlis.ch/ili2c"
 xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
   <HEADERSECTION SENDER="swisstopo, Geodesy and Federal Directorate of Cadastral Surveying" VERSION="2.3">
     <MODELS>
-      <MODEL NAME="OeREBKRM_V2_0" VERSION="2020-08-13" URI="http://models.geo.admin.ch/V_D/OeREB/"/>
+      <MODEL NAME="OeREBKRM_V2_0" VERSION="2021-04-14" URI="https://models.geo.admin.ch/V_D/OeREB/"/>
     </MODELS>
     <!-- Stand der XML-Datei, Etat du fichier XML, Stato del XML-File -->
-    <COMMENT>"2020-08-13"</COMMENT>
+    <COMMENT>"2021-04-14"</COMMENT>
   </HEADERSECTION>
   <DATASECTION>
     <OeREBKRM_V2_0.Dokumente BID="ch.admin.v_d.oerebkrmvs_vorschriften">
@@ -233,7 +233,6 @@ xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
         <publiziertAb>1960-03-08</publiziertAb>
         <ZustaendigeStelle REF="ch.admin.bk"/>
       </OeREBKRM_V2_0.Dokumente.Dokument>
-
       <OeREBKRM_V2_0.Dokumente.Dokument TID="ch.admin.bk.sr.725.111">
         <Typ>GesetzlicheGrundlage</Typ>
         <Titel>
@@ -558,7 +557,6 @@ xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
         <publiziertAb>1948-12-21</publiziertAb>
         <ZustaendigeStelle REF="ch.admin.bk"/>
       </OeREBKRM_V2_0.Dokumente.Dokument>
-
       <OeREBKRM_V2_0.Dokumente.Dokument TID="ch.admin.bk.sr.748.131.1">
         <Typ>GesetzlicheGrundlage</Typ>
         <Titel>
@@ -777,7 +775,6 @@ xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
         <publiziertAb>1983-10-07</publiziertAb>
         <ZustaendigeStelle REF="ch.admin.bk"/>
       </OeREBKRM_V2_0.Dokumente.Dokument>
-
       <OeREBKRM_V2_0.Dokumente.Dokument TID="ch.admin.bk.sr.814.680">
         <Typ>GesetzlicheGrundlage</Typ>
         <Titel>
@@ -993,7 +990,6 @@ xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
         <publiziertAb>1991-01-24</publiziertAb>
         <ZustaendigeStelle REF="ch.admin.bk"/>
       </OeREBKRM_V2_0.Dokumente.Dokument>
-
       <OeREBKRM_V2_0.Dokumente.Dokument TID="ch.admin.bk.sr.814.201">
         <Typ>GesetzlicheGrundlage</Typ>
         <Titel>
@@ -1198,7 +1194,7 @@ xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
             </LocalisedText>
           </OeREBKRM_V2_0.MultilingualUri>
         </TextImWeb>
-        <AuszugIndex>610</AuszugIndex>
+        <AuszugIndex>620</AuszugIndex>
         <Rechtsstatus>inKraft</Rechtsstatus>
         <publiziertAb>1986-12-15</publiziertAb>
         <ZustaendigeStelle REF="ch.admin.bk"/>
@@ -1315,7 +1311,6 @@ xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
         <publiziertAb>1991-10-04</publiziertAb>
         <ZustaendigeStelle REF="ch.admin.bk"/>
       </OeREBKRM_V2_0.Dokumente.Dokument>
-
       <OeREBKRM_V2_0.Dokumente.Dokument TID="ch.admin.bk.sr.921.01">
         <Typ>GesetzlicheGrundlage</Typ>
         <Titel>
@@ -1528,7 +1523,6 @@ xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
         <publiziertAb>1902-06-24</publiziertAb>
         <ZustaendigeStelle REF="ch.admin.bk"/>
       </OeREBKRM_V2_0.Dokumente.Dokument>
-
       <OeREBKRM_V2_0.Amt.Amt TID="ch.admin.bk">
         <Name>
           <LocalisationCH_V1.MultilingualText>
