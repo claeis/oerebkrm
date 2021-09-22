@@ -1,3 +1,10 @@
+2021-09-22 ceis
+***************
+- 2.0.1
+- UpdateDateOS renamed to UpdateDateCS
+- SubunitOfLandRegisterDesignation[1] changed to [0..1]
+- schemaLocation of http://www.interlis.ch/geometry/1.0 changed to absolute URL
+
 2020-07-02 ceis
 ***************
 - start 2.0
