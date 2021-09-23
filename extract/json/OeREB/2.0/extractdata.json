@@ -685,7 +685,7 @@
 				"PLRCadastreAuthority": {
 					"$ref": "#/definitions/Office"
 				},
-				"UpdateDateOS": {
+				"UpdateDateCS": {
 					"$ref": "#/definitions/dateTime"
 				}
 			}
