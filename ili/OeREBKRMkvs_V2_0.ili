@@ -2,11 +2,16 @@ INTERLIS 2.3;
 
 /** Zusatzstrukturen zur Verwendung innerhalb der für den Kataster verantwortlichen Stelle des Kantons
  */
+
+!! Version    | Who   | Modification
+!!------------------------------------------------------------------------------
+!! 2021-10-21 | KOGIS | Role Thema of the association ThemaGesetz adapted (external)
+
 !!@ furtherInformation=https://www.cadastre.ch/oereb-public
 !!@ technicalContact=mailto:vermessung@swisstopo.ch
 MODEL OeREBKRMkvs_V2_0 (de)
 AT "https://models.geo.admin.ch/V_D/OeREB/"
-VERSION "2021-04-14"  =
+VERSION "2021-10-21"  =
   IMPORTS OeREBKRM_V2_0,LocalisationCH_V1,CHAdminCodes_V1;
 
   /** Das Teilmodell «Konfiguration» ist eine Empfehlung für die für den Kataster verantwortliche Stelle des Kantons und dient der Konfiguration des Web-Service für den Bezug eines Auszugs oder Teile davon (z.B. einzelne Textbausteine oder die in einer Gemeinde freigeschalteten Themen)
@@ -203,7 +208,7 @@ VERSION "2021-04-14"  =
     /** Beziehungsklasse um den ÖREB-Themen die gesetzlichen Grundlagen zuzuordnen
      */
     ASSOCIATION ThemaGesetz =
-      Thema -- {0..*} Thema;
+      Thema (EXTERNAL) -- {0..*} Thema;
       Gesetz (EXTERNAL) -- {0..*} OeREBKRM_V2_0.Dokumente.Dokument;
       /** Hinweis auf spezifische Artikel der gesetzlichen Grundlage
        */

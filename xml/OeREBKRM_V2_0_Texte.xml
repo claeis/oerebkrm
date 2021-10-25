@@ -3,9 +3,10 @@
 Version    | Who   | Modification
 =======================================================================================
 2021-07-14 | V+D   | Several translations of the themes in the glossary adapted
+2021-09-15 | V+D   | 'Modificazione' replaced by 'Modifica' and language code for 'SelbstRecht.Quellenrecht' adapted
+2021-10-21 | KOGIS | BID adapted (uniqueness)
 -->
-<TRANSFER xmlns="http://www.interlis.ch/INTERLIS2.3"
-xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
+<TRANSFER xmlns="http://www.interlis.ch/INTERLIS2.3" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
   <HEADERSECTION SENDER="swisstopo, Geodesy and Federal Directorate of Cadastral Surveying" VERSION="2.3">
     <MODELS>
       <MODEL NAME="InternationalCodes_V1" VERSION="2011-08-30" URI="http://www.geo.admin.ch"/>
@@ -14,10 +15,10 @@ xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
       <MODEL NAME="OeREBKRMkvs_V2_0" VERSION="2021-04-14" URI="https://models.geo.admin.ch/V_D/OeREB/"/>
     </MODELS>
     <!-- Stand der XML-Datei, Etat du fichier XML, Stato del XML-File -->
-    <COMMENT>"2021-07-14"</COMMENT>
+    <COMMENT>"2021-10-21"</COMMENT>
   </HEADERSECTION>
   <DATASECTION>
-    <OeREBKRMkvs_V2_0.Konfiguration BID="ch.admin.v_d.oerebkrmkvs_konfiguration">
+    <OeREBKRMkvs_V2_0.Konfiguration BID="ch.admin.v_d.oerebkrmkvs_konfiguration_texte">
       <OeREBKRMkvs_V2_0.Konfiguration.RechtsStatusTxt TID="1">
         <Code>inKraft</Code>
         <Titel>
@@ -62,7 +63,7 @@ xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
               </LocalisationCH_V1.LocalisedText>
               <LocalisationCH_V1.LocalisedText>
                 <Language>it</Language>
-                <Text>Modificazione con effetto anticipato</Text>
+                <Text>Modifica con effetto anticipato</Text>
               </LocalisationCH_V1.LocalisedText>
               <LocalisationCH_V1.LocalisedText>
                 <Language>rm</Language>
@@ -91,7 +92,7 @@ xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
               </LocalisationCH_V1.LocalisedText>
               <LocalisationCH_V1.LocalisedText>
                 <Language>it</Language>
-                <Text>Modificazione senza effetto anticipato</Text>
+                <Text>Modifica senza effetto anticipato</Text>
               </LocalisationCH_V1.LocalisedText>
               <LocalisationCH_V1.LocalisedText>
                 <Language>rm</Language>
@@ -264,15 +265,15 @@ xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
                 <Text>Droit de source</Text>
               </LocalisationCH_V1.LocalisedText>
               <LocalisationCH_V1.LocalisedText>
-                <Language>de</Language>
+                <Language>it</Language>
                 <Text>Diritto di sorgente</Text>
               </LocalisationCH_V1.LocalisedText>
               <LocalisationCH_V1.LocalisedText>
-                <Language>de</Language>
+                <Language>rm</Language>
                 <Text>Dretg da funtauna</Text>
               </LocalisationCH_V1.LocalisedText>
               <LocalisationCH_V1.LocalisedText>
-                <Language>de</Language>
+                <Language>en</Language>
                 <Text>Right to spring water</Text>
               </LocalisationCH_V1.LocalisedText>
             </LocalisedText>
