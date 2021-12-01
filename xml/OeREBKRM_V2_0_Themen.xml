@@ -3,9 +3,9 @@
 Version    | Who   | Modification
 =======================================================================================
 2021-07-14 | V+D   | Several translations of the themes adapted
+2021-09-15 | V+D   | AuszugIndex 010 and 020 replaced by 10 and 20
 -->
-<TRANSFER xmlns="http://www.interlis.ch/INTERLIS2.3"
-xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
+<TRANSFER xmlns="http://www.interlis.ch/INTERLIS2.3" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
   <HEADERSECTION SENDER="swisstopo, Geodesy and Federal Directorate of Cadastral Surveying" VERSION="2.3">
     <MODELS>
       <MODEL NAME="InternationalCodes_V1" VERSION="2011-08-30" URI="http://www.geo.admin.ch"/>
@@ -14,7 +14,7 @@ xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
       <MODEL NAME="OeREBKRMkvs_V2_0" VERSION="2021-04-14" URI="https://models.geo.admin.ch/V_D/OeREB/"/>
     </MODELS>
     <!-- Stand der XML-Datei, Etat du fichier XML, Stato del XML-File -->
-    <COMMENT>"2021-07-14"</COMMENT>
+    <COMMENT>"2021-09-15"</COMMENT>
   </HEADERSECTION>
   <DATASECTION>
     <OeREBKRMkvs_V2_0.Thema BID="ch.admin.v_d.oerebkrmkvs_thema">
@@ -46,7 +46,7 @@ xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
             </LocalisedText>
           </LocalisationCH_V1.MultilingualText>
         </Titel>
-        <AuszugIndex>020</AuszugIndex>
+        <AuszugIndex>20</AuszugIndex>
       </OeREBKRMkvs_V2_0.Thema.Thema>
       <OeREBKRMkvs_V2_0.Thema.ThemaGesetz>
         <Thema REF="ch.Nutzungsplanung"/>
@@ -676,7 +676,7 @@ xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
             </LocalisedText>
           </LocalisationCH_V1.MultilingualText>
         </Titel>
-        <AuszugIndex>010</AuszugIndex>
+        <AuszugIndex>10</AuszugIndex>
       </OeREBKRMkvs_V2_0.Thema.Thema>
       <OeREBKRMkvs_V2_0.Thema.ThemaGesetz>
         <Thema REF="ch.Planungszonen"/>
